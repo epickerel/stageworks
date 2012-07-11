@@ -1,0 +1,103 @@
+/*!
+ * jQuery wmuSlider v1.0
+ * 
+ * Copyright (c) 2011 Brice Lechatellier
+ * http://brice.lechatellier.com/
+ *
+ * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+ */
+
+/* mwuSlider */
+.wmuSlider {
+    position: relative;
+    overflow: hidden;
+	padding-bottom: 6px;
+}
+.wmuSlider .wmuSliderWrapper {
+    display: none;
+}
+.wmuSlider .wmuSliderWrapper article {
+    position: relative;
+    text-align: center;
+}
+.wmuSlider .wmuSliderWrapper article img {
+    max-width: 100%;
+    //width: auto;
+    height: auto;
+}
+
+/* mwuGallery */
+.wmuGallery .wmuGalleryImage {
+    position: relative;
+    text-align: center;
+}
+.wmuGallery .wmuGalleryImage img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* Default Skin */
+.wmuGallery .wmuGalleryImage {
+    margin-bottom: 10px;
+}
+.wmuSliderPrev, .wmuSliderNext {
+	-moz-transition: opacity .3s linear; 
+	-webkit-transition: opacity .3s linear; 
+	-o-transition: opacity .3s linear; 
+	-ms-transition: opacity .3s linear; 
+	transition: opacity .3s linear; 
+	
+    position: absolute;
+	height: 80px;
+	width: 40px; 
+    text-indent: -9999px;
+    background: url(../images/sprites.png) no-repeat 9% -19px transparent;
+    z-index: 2;
+	opacity: 0.5;
+}
+.wmuSlider:hover .wmuSliderPrev,
+.wmuSlider:hover .wmuSliderNext {
+	opacity: 1;		
+}
+.wmuSliderPrev {
+    background-position: 100% 0;
+	left: 15px;
+    margin-top: -40px;
+    top: 50%;
+}
+.wmuSliderNext {
+	background-position: 0 0;
+	right: 15px;
+    margin-top: -40px;
+    top: 50%;
+}
+.wmuSliderPagination {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+	margin: 0 !important;
+	width: 100%;
+	height: 10px;
+	display: table;
+}
+.wmuSliderPagination li {
+	margin-left: 1px;
+    list-style-type: none;
+	width: 1%;
+	display: table-cell;
+}
+.wmuSliderPagination a {
+    display: block;
+    text-indent: -9999px;
+	height: 10px;
+	background: url(../images/pagination_sprite.png) repeat-x top left transparent;
+	margin-right: 1px;
+}
+.wmuSliderPagination li:last-child a {
+	margin: 0;	
+}
+.wmuSliderPagination a.wmuActive {
+    background: url(../images/pagination_hover.png) repeat-x top left transparent;
+}

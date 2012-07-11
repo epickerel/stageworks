@@ -1,0 +1,104 @@
+
+@import url("http://localhost:8888/stageworks/wp-content/plugins/media-grid/css/frontend.css");
+
+@import url("http://localhost:8888/stageworks/wp-content/plugins/media-grid/js/wmuSlider/css/style.css");
+@import url("http://localhost:8888/stageworks/wp-content/plugins/media-grid/js/jPlayer/skin/media.grid/jplayer.media.grid.css");
+
+
+/* cell shadow & border */
+.mg_box { 
+    margin: 0px; 
+  
+   
+}
+
+/* image border */
+.img_wrap {
+	padding: 0px;
+	border-width: 0px; 
+	
+	}
+
+/* overlay colors */
+.img_wrap .overlays .overlay {
+	background: rgb(255,255,255);}
+.img_wrap:hover .overlays .overlay {
+   
+	filter: alpha(opacity=0);
+	opacity: 0;
+	 
+}
+
+.img_wrap .overlays .cell_more {
+	background-color: #474747;}
+
+span.mg_overlay_tit {
+	color: #222	  
+}
+
+/* icons color */
+
+/* img */
+.mg_image .img_wrap .overlays .cell_more span {
+  background: url(http://localhost:8888/stageworks/wp-content/plugins/media-grid/img/overlay/img_b.png) no-repeat top left transparent;  
+}
+
+/* gallery */
+.mg_gallery .img_wrap .overlays .cell_more span {
+  background: url(http://localhost:8888/stageworks/wp-content/plugins/media-grid/img/overlay/gallery_b.png) no-repeat top left transparent;  
+}
+
+/* video */
+.mg_video .img_wrap .overlays .cell_more span {
+  background: url(http://localhost:8888/stageworks/wp-content/plugins/media-grid/img/overlay/video_b.png) no-repeat top left transparent;  
+}
+
+/* audio */
+.mg_audio .img_wrap .overlays .cell_more span {
+  background: url(http://localhost:8888/stageworks/wp-content/plugins/media-grid/img/overlay/audio_b.png) no-repeat top left transparent;  
+}
+
+/* link */
+.mg_link .img_wrap .overlays .cell_more span {
+  background: url(http://localhost:8888/stageworks/wp-content/plugins/media-grid/img/overlay/link_b.png) no-repeat top left transparent;  
+}
+
+/* custom content */
+.mg_lb_text .img_wrap .overlays .cell_more span {
+  background: url(http://localhost:8888/stageworks/wp-content/plugins/media-grid/img/overlay/lb_text_b.png) no-repeat top left transparent;  
+}
+
+
+/* border radius */
+.mg_box, .img_wrap, .img_wrap .thumb, .img_wrap > div {
+  border-radius: 0px;
+}
+
+
+/* opened item */
+#mg_full_overlay_wrap {
+  
+  background:  #fff;	
+  
+  filter: alpha(opacity=0);
+  opacity: 0;
+    
+}
+#mg_overlay_content {
+  width: 70%;max-width: 960px;}
+
+/* colors */
+#mg_overlay_content,
+.mg_item_load {
+	background-color: #fff;
+    color: #222;
+	
+}
+
+/* icons */
+
+/* border radius */
+#mg_overlay_content {
+	border-radius: 0px;
+}
+

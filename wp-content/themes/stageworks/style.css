@@ -1,0 +1,75 @@
+/*
+Theme Name: Stageworks
+Theme URI: http://docsplendid.com/blah
+Description: A search engine optimized website framework for WordPress.
+Author: Doc Splendid (Emmett Pickerel)
+Author URI: http://docsplendid.com
+Version: 1.0
+Tags: blah
+
+Copyright 2012 Emmett Pickerel.
+.
+*/
+
+html {
+  background: black;
+  color: white;
+  font-family: arial;
+  font-size: 14px;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#wrapper {
+  width: 952px;
+  min-height: 550px;
+  background: black url(images/stages/brightfire1.jpg) no-repeat;
+  margin: 0 auto;
+}
+
+#header {
+  position: relative;
+  width: 665px;
+  left: 150px;
+  height: 100px;
+}
+#branding {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -132px;
+  width: 264px;
+  height: 73px;
+  text-align: center;
+}
+#branding span.chrome1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent url(images/titlebg1.png);
+  opacity: 0.6;
+}
+
+#blog-title {
+  padding-top: 12px;
+}
+#blog-title a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-family: arial-black;
+  font-size: 40px;
+  letter-spacing: -5px;
+}
+
+#blog-description {
+  position: absolute;
+  text-indent: -999em;
+}
+
+
