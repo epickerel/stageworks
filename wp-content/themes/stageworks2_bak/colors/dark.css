@@ -183,6 +183,7 @@ a:active img[class*="wp-image-"] {
 
 /* Author Info */
 .singular #author-info {
+	background: #060606;
 	border-color: #222;
 }
 .archive #author-info {
@@ -249,6 +250,7 @@ a:active img[class*="wp-image-"] {
 /* =error404
 ----------------------------------------------- */
 .error404 #main #searchform {
+	background: #060606;
 	border-color: #222;
 }
 
@@ -262,6 +264,7 @@ h1.showcase-heading {
 
 /* Intro */
 article.intro {
+	background: #060606;
 }
 article.intro .entry-content {
 	color: #eee;
@@ -374,9 +377,11 @@ section.recent-posts .other-recent-posts .comments-link a:hover {
 ----------------------------------------------- */
 
 .image-attachment div.attachment {
+	background: #060606;
 	border-color: #222;
 }
 .image-attachment div.attachment a img {
+	border-color: #060606;
 }
 .image-attachment div.attachment a:focus img,
 .image-attachment div.attachment a:hover img,
@@ -570,6 +575,7 @@ li.bypostauthor a.comment-reply-link:active {
 
 /* Site Generator Line */
 #site-generator {
+	background: #060606;
 	border-color: #000;
 }
 
