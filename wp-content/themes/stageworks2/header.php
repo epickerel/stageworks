@@ -69,6 +69,8 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
+  <span class="chrome1"></span>
+  <span class="chrome2"></span>
 	<header id="branding" role="banner">
 			<hgroup>
 			  <div id="titlearea">

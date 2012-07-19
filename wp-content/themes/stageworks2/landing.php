@@ -142,5 +142,10 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
-
+<script>
+jQuery(function(){
+  jQuery('#page > span.chrome1:first').addClass('active');
+  jQuery('#page > span.chrome2:first').addClass('active');
+});
+</script>
 <?php get_footer(); ?>
