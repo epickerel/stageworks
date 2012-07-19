@@ -134,7 +134,7 @@ body.home {
     width: 952px;
     height: 550px;
     @include transition-property(opacity);
-    @include transition-duration(5s);
+    @include transition-duration(3s);
     @include transition-timing-function(ease-in);
   }
   #page > span.chrome1 {
@@ -144,7 +144,7 @@ body.home {
     //@include opacity(0);
   }
   #page > span.chrome2 {
-    background: url(images/stages/brightfire1sepia.jpg) no-repeat;
+    background: url(images/stages/brightfire1sepia-blur.jpg) no-repeat;
     @include opacity(0);
   }
   #page > span.chrome2.active {
@@ -567,7 +567,7 @@ a:hover {
 body.home #site-title a {
   background: transparent;
   -webkit-perspective-origin: 50% 85%;
-  @include animation(HOMELOGO2, 2s, ease-out, 0, 1);
+  //@include animation(HOMELOGO2, 2s, ease-out, 0, 1);
 }
 body.home #site-title a span.chrome1 {
   background-image: url(images/logos/gobo3.png);
