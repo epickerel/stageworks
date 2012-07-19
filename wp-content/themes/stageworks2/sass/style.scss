@@ -134,8 +134,8 @@ body.home {
     width: 952px;
     height: 550px;
     @include transition-property(opacity);
-    @include transition-duration(3s);
-    @include transition-timing-function(ease-in);
+    @include transition-duration(4s);
+    @include transition-timing-function(ease-in-out);
   }
   #page > span.chrome1 {
     background: url(images/stages/brightfire1.jpg) no-repeat;
