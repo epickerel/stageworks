@@ -482,6 +482,64 @@ a:hover {
   opacity: 0.854;
   @include transform(translate(0px, 0px));
 }
+4.1% {
+  opacity: 0.5;
+}
+4.2% {
+  opacity: 1;
+}
+4.25% {
+  opacity: 0.5;
+}
+4.3% {
+  opacity: 1;
+}
+4.35% {
+  opacity: .3;
+}
+5% {
+  opacity: .5;
+}
+5.05% {
+  opacity: .6;
+}
+5.1% {
+  opacity: .4;
+}
+5.15% {
+  opacity: .6;
+}
+5.2% {
+  opacity: .4;
+}
+5.25% {
+  opacity: .6;
+}
+5.3% {
+  opacity: .4;
+}
+5.35% {
+  opacity: .6;
+}
+5.4% {
+  opacity: .4;
+}
+5.45% {
+  opacity: .6;
+}
+5.5% {
+  opacity: .4;
+}
+5.55% {
+  opacity: .6;
+}
+5.6% {
+  opacity: .4;
+}
+5.65% {
+  opacity: .6;
+}
+
 6% {
   opacity: 0.735;
   @include transform(translate(0px, 1px));
@@ -650,6 +708,9 @@ a:hover {
   opacity: 0.780;
   @include transform(translate(1px, 0px));
 }
+87% {
+  opacity: 0;
+}
 90% {
   opacity: 0.993;
   @include transform(translate(0px, 0px));
@@ -669,6 +730,10 @@ a:hover {
 98% {
   opacity: 0.892;
   @include transform(translate(-1px, 0px));
+}
+100% {
+  opacity: 1;
+  @include transform(translate(0px, 0px));
 }
 }
 
@@ -774,7 +839,7 @@ body.home #site-title a {
   background: transparent;
   -webkit-perspective-origin: 50% 85%;
   //@include animation(HOMELOGO2, 2s, ease-out, 0, 1);
-  @include animation(LOGOSHAKE, 99s, linear, 0, infinite);
+  @include animation(LOGOSHAKE, 99s, linear, 0, 1);
 }
 body.home #site-title a span.chrome1 {
   background-image: url(images/logos/gobo3.png);
