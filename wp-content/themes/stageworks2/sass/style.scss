@@ -468,6 +468,162 @@ a:hover {
 }
 #site-title {
 }
+
+@-webkit-keyframes LOGOSHAKE {
+  0% {
+    @include transform(translate(1px, 0px));
+  }
+  2% {
+    @include transform(translate(1px, 0px));
+  }
+  4% {
+    @include transform(translate(0px, -1px));
+  }
+  6% {
+    @include transform(translate(0px, 1px));
+  }
+  8% {
+    @include transform(translate(0px, 0px));
+  }
+  10% {
+    @include transform(translate(-1px, 0px));
+  }
+  12% {
+    @include transform(translate(1px, 1px));
+  }
+  14% {
+    @include transform(translate(1px, 0px));
+  }
+  16% {
+    @include transform(translate(1px, 0px));
+  }
+  18% {
+    @include transform(translate(0px, 0px));
+  }
+  20% {
+    @include transform(translate(0px, 1px));
+  }
+  22% {
+    @include transform(translate(0px, 1px));
+  }
+  24% {
+    @include transform(translate(0px, 1px));
+  }
+  26% {
+    @include transform(translate(0px, -1px));
+  }
+  28% {
+    @include transform(translate(-1px, 0px));
+  }
+  30% {
+    @include transform(translate(0px, 0px));
+  }
+  32% {
+    @include transform(translate(-1px, 0px));
+  }
+  34% {
+    @include transform(translate(1px, -1px));
+  }
+  36% {
+    @include transform(translate(-1px, 1px));
+  }
+  38% {
+    @include transform(translate(1px, 1px));
+  }
+  40% {
+    @include transform(translate(0px, 1px));
+  }
+  42% {
+    @include transform(translate(-1px, -1px));
+  }
+  44% {
+    @include transform(translate(0px, 1px));
+  }
+  46% {
+    @include transform(translate(0px, 1px));
+  }
+  48% {
+    @include transform(translate(0px, 0px));
+  }
+  50% {
+    @include transform(translate(0px, 0px));
+  }
+  52% {
+    @include transform(translate(-1px, 1px));
+  }
+  54% {
+    @include transform(translate(0px, 1px));
+  }
+  56% {
+    @include transform(translate(1px, 0px));
+  }
+  58% {
+    @include transform(translate(0px, -1px));
+  }
+  60% {
+    @include transform(translate(-1px, 1px));
+  }
+  62% {
+    @include transform(translate(0px, 0px));
+  }
+  64% {
+    @include transform(translate(-1px, -1px));
+  }
+  66% {
+    @include transform(translate(1px, -1px));
+  }
+  68% {
+    @include transform(translate(1px, 0px));
+  }
+  70% {
+    @include transform(translate(-1px, -1px));
+  }
+  72% {
+    @include transform(translate(0px, -1px));
+  }
+  74% {
+    @include transform(translate(-1px, 1px));
+  }
+  76% {
+    @include transform(translate(-1px, -1px));
+  }
+  78% {
+    @include transform(translate(-1px, 1px));
+  }
+  80% {
+    @include transform(translate(-1px, -1px));
+  }
+  82% {
+    @include transform(translate(0px, 0px));
+  }
+  84% {
+    @include transform(translate(1px, 0px));
+  }
+  86% {
+    @include transform(translate(1px, 1px));
+  }
+  88% {
+    @include transform(translate(-1px, 1px));
+  }
+  90% {
+    @include transform(translate(-1px, 0px));
+  }
+  92% {
+    @include transform(translate(0px, -1px));
+  }
+  94% {
+    @include transform(translate(-1px, 0px));
+  }
+  96% {
+    @include transform(translate(1px, 0px));
+  }
+  98% {
+    @include transform(translate(-1px, 0px));
+  }
+}
+
+
+
 @-keyframes HOMELOGO2 {
   0% {
     @include rotateX(80deg, 1px);
@@ -568,6 +724,7 @@ body.home #site-title a {
   background: transparent;
   -webkit-perspective-origin: 50% 85%;
   //@include animation(HOMELOGO2, 2s, ease-out, 0, 1);
+  @include animation(LOGOSHAKE, 99s, linear, 0, infinite);
 }
 body.home #site-title a span.chrome1 {
   background-image: url(images/logos/gobo3.png);
