@@ -472,15 +472,12 @@ a:hover {
 @-webkit-keyframes LOGOSHAKE {
 0% {
   opacity: 0.753;
-  @include transform(translate(1px, 0px));
 }
 2% {
   opacity: 0.804;
-  @include transform(translate(1px, -1px));
 }
 4% {
   opacity: 0.854;
-  @include transform(translate(0px, 0px));
 }
 4.1% {
   opacity: 0.5;
@@ -542,198 +539,150 @@ a:hover {
 
 6% {
   opacity: 0.735;
-  @include transform(translate(0px, 1px));
 }
 8% {
   opacity: 0.668;
-  @include transform(translate(-1px, 0px));
 }
 10% {
   opacity: 0.915;
-  @include transform(translate(0px, 1px));
 }
 12% {
   opacity: 0.752;
-  @include transform(translate(0px, -1px));
 }
 14% {
   opacity: 0.742;
-  @include transform(translate(0px, 0px));
 }
 16% {
   opacity: 0.750;
-  @include transform(translate(0px, 1px));
 }
 18% {
   opacity: 0.774;
-  @include transform(translate(0px, 0px));
 }
 20% {
   opacity: 0.937;
-  @include transform(translate(0px, -1px));
 }
 22% {
   opacity: 0.796;
-  @include transform(translate(0px, -1px));
 }
 24% {
   opacity: 0.885;
-  @include transform(translate(-1px, 1px));
 }
 26% {
   opacity: 0.742;
-  @include transform(translate(-1px, -1px));
 }
 28% {
   opacity: 0.760;
-  @include transform(translate(0px, 1px));
 }
 30% {
   opacity: 0.758;
-  @include transform(translate(1px, 1px));
 }
 32% {
   opacity: 0.857;
-  @include transform(translate(-1px, 0px));
 }
 34% {
   opacity: 0.748;
-  @include transform(translate(0px, 0px));
 }
 36% {
   opacity: 0.985;
-  @include transform(translate(1px, 1px));
 }
 38% {
   opacity: 0.795;
-  @include transform(translate(-1px, 1px));
 }
 40% {
   opacity: 0.749;
-  @include transform(translate(0px, 1px));
 }
 42% {
   opacity: 0.989;
-  @include transform(translate(1px, 0px));
 }
 44% {
   opacity: 0.680;
-  @include transform(translate(0px, -1px));
 }
 46% {
   opacity: 0.731;
-  @include transform(translate(1px, 0px));
 }
 48% {
   opacity: 0.876;
-  @include transform(translate(0px, -1px));
 }
 50% {
   opacity: 0.771;
-  @include transform(translate(1px, 0px));
 }
 52% {
   opacity: 0.901;
-  @include transform(translate(0px, 0px));
 }
 54% {
   opacity: 0.875;
-  @include transform(translate(0px, 0px));
 }
 56% {
   opacity: 0.736;
-  @include transform(translate(0px, 0px));
 }
 58% {
   opacity: 0.857;
-  @include transform(translate(0px, 0px));
 }
 60% {
   opacity: 0.947;
-  @include transform(translate(0px, 0px));
 }
 62% {
   opacity: 0.678;
-  @include transform(translate(0px, 0px));
 }
 64% {
   opacity: 0.937;
-  @include transform(translate(0px, 0px));
 }
 66% {
   opacity: 0.888;
-  @include transform(translate(0px, 0px));
 }
 68% {
   opacity: 0.676;
-  @include transform(translate(0px, 1px));
 }
 70% {
   opacity: 0.709;
-  @include transform(translate(-1px, -1px));
 }
 72% {
   opacity: 0.709;
-  @include transform(translate(0px, 0px));
 }
 74% {
   opacity: 0.830;
-  @include transform(translate(-1px, 0px));
 }
 76% {
   opacity: 0.671;
-  @include transform(translate(0px, 0px));
 }
 78% {
   opacity: 0.725;
-  @include transform(translate(0px, 0px));
 }
 80% {
   opacity: 0.964;
-  @include transform(translate(-1px, 1px));
 }
 82% {
   opacity: 0.740;
-  @include transform(translate(-1px, 1px));
 }
 84% {
   opacity: 0.964;
-  @include transform(translate(0px, 0px));
 }
 86% {
   opacity: 0.960;
-  @include transform(translate(0px, 1px));
 }
 88% {
   opacity: 0.780;
-  @include transform(translate(1px, 0px));
 }
 87% {
   opacity: 0;
 }
 90% {
   opacity: 0.993;
-  @include transform(translate(0px, 0px));
 }
 92% {
   opacity: 0.693;
-  @include transform(translate(0px, 1px));
 }
 94% {
   opacity: 0.990;
-  @include transform(translate(-1px, 1px));
 }
 96% {
   opacity: 0.876;
-  @include transform(translate(-1px, 1px));
 }
 98% {
   opacity: 0.892;
-  @include transform(translate(-1px, 0px));
 }
 100% {
   opacity: 1;
-  @include transform(translate(0px, 0px));
 }
 }
 

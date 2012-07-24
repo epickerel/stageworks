@@ -143,9 +143,48 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 <script>
-jQuery(function(){
-  jQuery('#page > span.chrome1:first').addClass('active');
-  jQuery('#page > span.chrome2:first').addClass('active');
-});
+(function($){
+  $(function(){
+    $('#page > span.chrome1:first').addClass('active');
+    $('#page > span.chrome2:first').addClass('active');
+    //$('#fbgalleries-carrousel');
+    $.fn.FBGallery = function (opts) {
+      console.log(opts);
+      var $el = $(this), template;
+      template = opts.template || '<ul>{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
+        '<img src="{{src_big}}" alt="{{title}}"></a></li>\n{{/items}}</ul>';
+      $.ajax({
+          url: 'http://graph.facebook.com/fql',
+          data: {
+            q: JSON.stringify({
+              query1: 'SELECT src_big, src, pid FROM photo WHERE pid in (select cover_pid from album where owner = "119186754764635")',
+              query2: 'SELECT name, aid, owner, cover_pid, modified, size FROM album WHERE owner = "119186754764635"'
+            })
+          },
+          success: function(o){
+            var photos, albums, i, html;
+            template
+            photos = o.data[0].fql_result_set;
+            albums = o.data[1].fql_result_set;
+            for (i=0; i<albums.length; i++) {
+              //trust in the order for the moment, but fix this
+              $.extend(albums[i], photos[i]);
+              albums[i].src_big = albums[i].src_big || albums[i].src;
+            }
+            html = Mustache.to_html(template, {
+              items: albums
+            });
+            console.log($el);
+            $el.html(html);
+          },
+          error: function(o){
+            console.error('ack', o);
+          },
+          dataType: 'jsonp'
+      });
+    };
+    //$('#fbgalleries-carrousel').FBGallery({});
+  });
+}(jQuery));
 </script>
 <?php get_footer(); ?>
