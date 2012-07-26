@@ -128,5 +128,6 @@
 	</header><!-- #branding -->
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/mustache.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/lib.js"></script>
 
 	<div id="main">

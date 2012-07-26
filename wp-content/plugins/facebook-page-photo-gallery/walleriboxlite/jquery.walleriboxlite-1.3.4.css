@@ -1,0 +1,359 @@
+/*
+ * walleriboxlite - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://walleriboxlite.net
+ * 
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ * That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.
+ * 
+ * Version: 1.3.4 (11/11/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+
+#walleriboxlite-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1104;
+	display: none;
+}
+
+#walleriboxlite-loading div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 480px;
+	background-image: url('walleriboxlite.png');
+}
+
+#walleriboxlite-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1100;
+	display: none;
+}
+
+#walleriboxlite-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: auto;
+	display: none;
+}
+
+#walleriboxlite-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+        background-color:white;
+	padding: 20px;
+	z-index: 1101;
+	outline: none;
+	display: none;
+}
+
+#walleriboxlite-outer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+#walleriboxlite-content {
+	width: 0;
+	height: 0;
+	padding: 0;
+	outline: none;
+	position: relative;
+	overflow: hidden;
+	z-index: 1102;
+	border: 0px solid #fff;
+}
+
+#walleriboxlite-hide-sel-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	z-index: 1101;
+}
+
+#walleriboxlite-close {
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	width: 20px;
+	height: 20px;
+	background: transparent url('cancel.png') no-repeat center  center;
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
+}
+
+#walleriboxlite-error {
+	color: #444;
+	font: normal 12px/20px Arial;
+	padding: 14px;
+	margin: 0;
+}
+
+#walleriboxlite-img {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	line-height: 0;
+	vertical-align: top;
+}
+
+#walleriboxlite-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+
+#walleriboxlite-left, #walleriboxlite-right {
+	position: absolute;
+	bottom: 0px;
+	height: 100%;
+	width: 35%;
+	cursor: pointer;
+	outline: none;
+	background: transparent url('blank.gif');
+	z-index: 1102;
+	display: none;
+}
+
+#walleriboxlite-left {
+	left: 0px;
+}
+
+#walleriboxlite-right {
+	right: 0px;
+}
+
+#walleriboxlite-left-ico, #walleriboxlite-right-ico {
+	position: absolute;
+	top: 50%;
+	left: -9999px;
+	width: 30px;
+	height: 50px;
+	margin-top: -15px;
+	cursor: pointer;
+	z-index: 1102;
+	display: block;
+        
+}
+
+#walleriboxlite-left-ico {
+	background: url('prev.png') no-repeat center center;
+	}
+
+#walleriboxlite-right-ico {
+	background: url('next.png') no-repeat center center;
+	
+}
+
+#walleriboxlite-left:hover, #walleriboxlite-right:hover {
+	visibility: visible; /* IE6 */
+}
+
+#walleriboxlite-left:hover span {
+	left: 20px;
+}
+
+#walleriboxlite-right:hover span {
+	left: auto;
+	right: 20px;
+}
+
+.walleriboxlite-bg {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	z-index: 1001;
+}
+
+#walleriboxlite-bg-n {
+	top: -20px;
+	left: 0;
+	
+}
+
+#walleriboxlite-bg-ne {
+	top: -20px;
+	right: -20px;
+	
+	background-position: -40px -162px;
+}
+
+#walleriboxlite-bg-e {
+	top: 0;
+	right: -20px;
+	height: 100%;
+	
+	background-position: -20px 0px;
+}
+
+#walleriboxlite-bg-se {
+	bottom: -20px;
+	right: -20px;
+	
+	background-position: -40px -182px; 
+}
+
+#walleriboxlite-bg-s {
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	
+	background-position: 0px -20px;
+}
+
+#walleriboxlite-bg-sw {
+	bottom: -20px;
+	left: -20px;
+	
+	background-position: -40px -142px;
+}
+
+#walleriboxlite-bg-w {
+	top: 0;
+	left: -20px;
+	height: 100%;
+	
+}
+
+#walleriboxlite-bg-nw {
+	top: -20px;
+	left: -20px;
+	
+	background-position: -40px -122px;
+}
+
+#walleriboxlite-title {
+	font-family: Helvetica;
+	font-size: 12px;
+	z-index: 1102;
+}
+
+.walleriboxlite-title-inside {
+	padding-bottom: 10px;
+	text-align: center;
+	color: #333;
+	background: #fff;
+	position: relative;
+}
+
+.walleriboxlite-title-outside {
+	padding-top: 10px;
+	color: #000;
+}
+
+.walleriboxlite-title-over {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #FFF;
+	text-align: left;
+}
+
+#walleriboxlite-title-over {
+	padding: 10px;
+	background-image: url('fancy_title_over.png');
+	display: block;
+}
+
+.walleriboxlite-title-float {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	height: 32px;
+}
+
+#walleriboxlite-title-float-wrap {
+	border: none;
+	border-collapse: collapse;
+	width: auto;
+}
+
+#walleriboxlite-title-float-wrap td {
+	border: none;
+	white-space: nowrap;
+}
+
+#walleriboxlite-title-float-left {
+	padding: 0 0 0 15px;
+	background: url('walleriboxlite.png') -40px -90px no-repeat;
+}
+
+#walleriboxlite-title-float-main {
+	color: #FFF;
+	line-height: 29px;
+	font-weight: bold;
+	padding: 0 0 3px 0;
+	background: url('walleriboxlite-x.png') 0px -40px;
+}
+
+#walleriboxlite-title-float-right {
+	padding: 0 0 0 15px;
+	background: url('walleriboxlite.png') -55px -90px no-repeat;
+}
+
+/* IE6 */
+
+.walleriboxlite-ie6 #walleriboxlite-close { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_close.png', sizingMethod='scale'); }
+
+.walleriboxlite-ie6 #walleriboxlite-left-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_nav_left.png', sizingMethod='scale'); }
+.walleriboxlite-ie6 #walleriboxlite-right-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_nav_right.png', sizingMethod='scale'); }
+
+.walleriboxlite-ie6 #walleriboxlite-title-over { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.walleriboxlite-ie6 #walleriboxlite-title-float-left { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_title_left.png', sizingMethod='scale'); }
+.walleriboxlite-ie6 #walleriboxlite-title-float-main { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_title_main.png', sizingMethod='scale'); }
+.walleriboxlite-ie6 #walleriboxlite-title-float-right { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_title_right.png', sizingMethod='scale'); }
+
+.walleriboxlite-ie6 #walleriboxlite-bg-w, .walleriboxlite-ie6 #walleriboxlite-bg-e, .walleriboxlite-ie6 #walleriboxlite-left, .walleriboxlite-ie6 #walleriboxlite-right, #walleriboxlite-hide-sel-frame {
+	height: expression(this.parentNode.clientHeight + "px");
+}
+
+#walleriboxlite-loading.walleriboxlite-ie6 {
+	position: absolute; margin-top: 0;
+	top: expression( (-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
+}
+
+#walleriboxlite-loading.walleriboxlite-ie6 div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_loading.png', sizingMethod='scale'); }
+
+/* IE6, IE7, IE8 */
+
+.walleriboxlite-ie .walleriboxlite-bg { background: transparent !important; }
+
+.walleriboxlite-ie #walleriboxlite-bg-n { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_shadow_n.png', sizingMethod='scale'); }
+.walleriboxlite-ie #walleriboxlite-bg-ne { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_shadow_ne.png', sizingMethod='scale'); }
+.walleriboxlite-ie #walleriboxlite-bg-e { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_shadow_e.png', sizingMethod='scale'); }
+.walleriboxlite-ie #walleriboxlite-bg-se { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_shadow_se.png', sizingMethod='scale'); }
+.walleriboxlite-ie #walleriboxlite-bg-s { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_shadow_s.png', sizingMethod='scale'); }
+.walleriboxlite-ie #walleriboxlite-bg-sw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_shadow_sw.png', sizingMethod='scale'); }
+.walleriboxlite-ie #walleriboxlite-bg-w { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_shadow_w.png', sizingMethod='scale'); }
+.walleriboxlite-ie #walleriboxlite-bg-nw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='walleriboxlite/fancy_shadow_nw.png', sizingMethod='scale'); }

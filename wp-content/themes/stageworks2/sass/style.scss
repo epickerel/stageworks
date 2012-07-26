@@ -30,11 +30,11 @@ Text Domain: stageworks2
 }
 
 $cornerRadius: 35px;
-
-
+$glowColour1: #d1c261;
+$glowColour2: #e4741f;
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
-----------------------t---------------------------------------- */
+-------------------------------------------------------------- */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -469,290 +469,324 @@ a:hover {
 #site-title {
 }
 
-@-webkit-keyframes LOGOSHAKE {
-0% {
-  opacity: 0.753;
+@-keyframes LOGOFASTTHROB {
+  0% {opacity: 1;}
+  50% {opacity: 0.2;}
+  100% {opacity: 1;}
 }
-2% {
-  opacity: 0.804;
+@-webkit-keyframes LOGOFASTTHROB {
+  0% {opacity: 1;}
+  50% {opacity: 0.2;}
+  100% {opacity: 1;}
 }
-4% {
-  opacity: 0.854;
+@-moz-keyframes LOGOFASTTHROB {
+  0% {opacity: 1;}
+  50% {opacity: 0.2;}
+  100% {opacity: 1;}
 }
-4.1% {
-  opacity: 0.5;
-}
-4.2% {
-  opacity: 1;
-}
-4.25% {
-  opacity: 0.5;
-}
-4.3% {
-  opacity: 1;
-}
-4.35% {
-  opacity: .3;
-}
-5% {
-  opacity: .5;
-}
-5.05% {
-  opacity: .6;
-}
-5.1% {
-  opacity: .4;
-}
-5.15% {
-  opacity: .6;
-}
-5.2% {
-  opacity: .4;
-}
-5.25% {
-  opacity: .6;
-}
-5.3% {
-  opacity: .4;
-}
-5.35% {
-  opacity: .6;
-}
-5.4% {
-  opacity: .4;
-}
-5.45% {
-  opacity: .6;
-}
-5.5% {
-  opacity: .4;
-}
-5.55% {
-  opacity: .6;
-}
-5.6% {
-  opacity: .4;
-}
-5.65% {
-  opacity: .6;
+@-o-keyframes LOGOFASTTHROB {
+  0% {opacity: 1;}
+  50% {opacity: 0.2;}
+  100% {opacity: 1;}
 }
 
-6% {
-  opacity: 0.735;
+@-keyframes LOGOSLOWTHROB {
+  0% {opacity:0.753}
+  2% {opacity:0.804}
+  4% {opacity:0.854}
+  4.1% {opacity:0.5}
+  4.2% {opacity:1}
+  4.25% {opacity:0.5}
+  4.3% {opacity:1}
+  4.35% {opacity:.3}
+  5% {opacity:.5}
+  5.05% {opacity:.6}
+  5.1% {opacity:.4}
+  5.15% {opacity:.6}
+  5.2% {opacity:.4}
+  5.25% {opacity:.6}
+  5.3% {opacity:.4}
+  5.35% {opacity:.6}
+  5.4% {opacity:.4}
+  5.45% {opacity:.6}
+  5.5% {opacity:.4}
+  5.55% {opacity:.6}
+  5.6% {opacity:.4}
+  5.65% {opacity:.6}
+  6% {opacity:0.735}
+  8% {opacity:0.668}
+  10% {opacity:0.915}
+  12% {opacity:0.752}
+  14% {opacity:0.742}
+  16% {opacity:0.750}
+  18% {opacity:0.774}
+  20% {opacity:0.937}
+  22% {opacity:0.796}
+  24% {opacity:0.885}
+  26% {opacity:0.742}
+  28% {opacity:0.760}
+  30% {opacity:0.758}
+  32% {opacity:0.857}
+  34% {opacity:0.748}
+  36% {opacity:0.985}
+  38% {opacity:0.73}
+  39% {opacity:1}
+  40% {opacity:0.749}
+  42% {opacity:0.989}
+  44% {opacity:0.680}
+  46% {opacity:0.731}
+  48% {opacity:0.876}
+  50% {opacity:0.771}
+  52% {opacity:0.901}
+  54% {opacity:0.875}
+  56% {opacity:0.736}
+  58% {opacity:0.857}
+  60% {opacity:0.947}
+  62% {opacity:0.678}
+  64% {opacity:0.937}
+  66% {opacity:0.888}
+  68% {opacity:0.676}
+  70% {opacity:0.709}
+  72% {opacity:0.709}
+  74% {opacity:0.830}
+  76% {opacity:0.671}
+  78% {opacity:0.725}
+  80% {opacity:0.964}
+  82% {opacity:0.740}
+  84% {opacity:0.964}
+  86% {opacity:0.960}
+  88% {opacity:0.780}
+  87% {opacity:0}
+  90% {opacity:0.993}
+  92% {opacity:0.693}
+  94% {opacity:0.990}
+  96% {opacity:0.876}
+  98% {opacity:0.892}
+  100% {opacity:1}
 }
-8% {
-  opacity: 0.668;
+@-webkit-keyframes LOGOSLOWTHROB {
+  0% {opacity:0.753}
+  2% {opacity:0.804}
+  4% {opacity:0.854}
+  4.1% {opacity:0.5}
+  4.2% {opacity:1}
+  4.25% {opacity:0.5}
+  4.3% {opacity:1}
+  4.35% {opacity:.3}
+  5% {opacity:.5}
+  5.05% {opacity:.6}
+  5.1% {opacity:.4}
+  5.15% {opacity:.6}
+  5.2% {opacity:.4}
+  5.25% {opacity:.6}
+  5.3% {opacity:.4}
+  5.35% {opacity:.6}
+  5.4% {opacity:.4}
+  5.45% {opacity:.6}
+  5.5% {opacity:.4}
+  5.55% {opacity:.6}
+  5.6% {opacity:.4}
+  5.65% {opacity:.6}
+  6% {opacity:0.735}
+  8% {opacity:0.668}
+  10% {opacity:0.915}
+  12% {opacity:0.752}
+  14% {opacity:0.742}
+  16% {opacity:0.750}
+  18% {opacity:0.774}
+  20% {opacity:0.937}
+  22% {opacity:0.796}
+  24% {opacity:0.885}
+  26% {opacity:0.742}
+  28% {opacity:0.760}
+  30% {opacity:0.758}
+  32% {opacity:0.857}
+  34% {opacity:0.748}
+  36% {opacity:0.985}
+  38% {opacity:0.73}
+  39% {opacity:1}
+  40% {opacity:0.749}
+  42% {opacity:0.989}
+  44% {opacity:0.680}
+  46% {opacity:0.731}
+  48% {opacity:0.876}
+  50% {opacity:0.771}
+  52% {opacity:0.901}
+  54% {opacity:0.875}
+  56% {opacity:0.736}
+  58% {opacity:0.857}
+  60% {opacity:0.947}
+  62% {opacity:0.678}
+  64% {opacity:0.937}
+  66% {opacity:0.888}
+  68% {opacity:0.676}
+  70% {opacity:0.709}
+  72% {opacity:0.709}
+  74% {opacity:0.830}
+  76% {opacity:0.671}
+  78% {opacity:0.725}
+  80% {opacity:0.964}
+  82% {opacity:0.740}
+  84% {opacity:0.964}
+  86% {opacity:0.960}
+  88% {opacity:0.780}
+  87% {opacity:0}
+  90% {opacity:0.993}
+  92% {opacity:0.693}
+  94% {opacity:0.990}
+  96% {opacity:0.876}
+  98% {opacity:0.892}
+  100% {opacity:1}
 }
-10% {
-  opacity: 0.915;
+@-moz-keyframes LOGOSLOWTHROB {
+  0% {opacity:0.753}
+  2% {opacity:0.804}
+  4% {opacity:0.854}
+  4.1% {opacity:0.5}
+  4.2% {opacity:1}
+  4.25% {opacity:0.5}
+  4.3% {opacity:1}
+  4.35% {opacity:.3}
+  5% {opacity:.5}
+  5.05% {opacity:.6}
+  5.1% {opacity:.4}
+  5.15% {opacity:.6}
+  5.2% {opacity:.4}
+  5.25% {opacity:.6}
+  5.3% {opacity:.4}
+  5.35% {opacity:.6}
+  5.4% {opacity:.4}
+  5.45% {opacity:.6}
+  5.5% {opacity:.4}
+  5.55% {opacity:.6}
+  5.6% {opacity:.4}
+  5.65% {opacity:.6}
+  6% {opacity:0.735}
+  8% {opacity:0.668}
+  10% {opacity:0.915}
+  12% {opacity:0.752}
+  14% {opacity:0.742}
+  16% {opacity:0.750}
+  18% {opacity:0.774}
+  20% {opacity:0.937}
+  22% {opacity:0.796}
+  24% {opacity:0.885}
+  26% {opacity:0.742}
+  28% {opacity:0.760}
+  30% {opacity:0.758}
+  32% {opacity:0.857}
+  34% {opacity:0.748}
+  36% {opacity:0.985}
+  38% {opacity:0.73}
+  39% {opacity:1}
+  40% {opacity:0.749}
+  42% {opacity:0.989}
+  44% {opacity:0.680}
+  46% {opacity:0.731}
+  48% {opacity:0.876}
+  50% {opacity:0.771}
+  52% {opacity:0.901}
+  54% {opacity:0.875}
+  56% {opacity:0.736}
+  58% {opacity:0.857}
+  60% {opacity:0.947}
+  62% {opacity:0.678}
+  64% {opacity:0.937}
+  66% {opacity:0.888}
+  68% {opacity:0.676}
+  70% {opacity:0.709}
+  72% {opacity:0.709}
+  74% {opacity:0.830}
+  76% {opacity:0.671}
+  78% {opacity:0.725}
+  80% {opacity:0.964}
+  82% {opacity:0.740}
+  84% {opacity:0.964}
+  86% {opacity:0.960}
+  88% {opacity:0.780}
+  87% {opacity:0}
+  90% {opacity:0.993}
+  92% {opacity:0.693}
+  94% {opacity:0.990}
+  96% {opacity:0.876}
+  98% {opacity:0.892}
+  100% {opacity:1}
 }
-12% {
-  opacity: 0.752;
-}
-14% {
-  opacity: 0.742;
-}
-16% {
-  opacity: 0.750;
-}
-18% {
-  opacity: 0.774;
-}
-20% {
-  opacity: 0.937;
-}
-22% {
-  opacity: 0.796;
-}
-24% {
-  opacity: 0.885;
-}
-26% {
-  opacity: 0.742;
-}
-28% {
-  opacity: 0.760;
-}
-30% {
-  opacity: 0.758;
-}
-32% {
-  opacity: 0.857;
-}
-34% {
-  opacity: 0.748;
-}
-36% {
-  opacity: 0.985;
-}
-38% {
-  opacity: 0.795;
-}
-40% {
-  opacity: 0.749;
-}
-42% {
-  opacity: 0.989;
-}
-44% {
-  opacity: 0.680;
-}
-46% {
-  opacity: 0.731;
-}
-48% {
-  opacity: 0.876;
-}
-50% {
-  opacity: 0.771;
-}
-52% {
-  opacity: 0.901;
-}
-54% {
-  opacity: 0.875;
-}
-56% {
-  opacity: 0.736;
-}
-58% {
-  opacity: 0.857;
-}
-60% {
-  opacity: 0.947;
-}
-62% {
-  opacity: 0.678;
-}
-64% {
-  opacity: 0.937;
-}
-66% {
-  opacity: 0.888;
-}
-68% {
-  opacity: 0.676;
-}
-70% {
-  opacity: 0.709;
-}
-72% {
-  opacity: 0.709;
-}
-74% {
-  opacity: 0.830;
-}
-76% {
-  opacity: 0.671;
-}
-78% {
-  opacity: 0.725;
-}
-80% {
-  opacity: 0.964;
-}
-82% {
-  opacity: 0.740;
-}
-84% {
-  opacity: 0.964;
-}
-86% {
-  opacity: 0.960;
-}
-88% {
-  opacity: 0.780;
-}
-87% {
-  opacity: 0;
-}
-90% {
-  opacity: 0.993;
-}
-92% {
-  opacity: 0.693;
-}
-94% {
-  opacity: 0.990;
-}
-96% {
-  opacity: 0.876;
-}
-98% {
-  opacity: 0.892;
-}
-100% {
-  opacity: 1;
-}
+@-o-keyframes LOGOSLOWTHROB {
+  0% {opacity:0.753}
+  2% {opacity:0.804}
+  4% {opacity:0.854}
+  4.1% {opacity:0.5}
+  4.2% {opacity:1}
+  4.25% {opacity:0.5}
+  4.3% {opacity:1}
+  4.35% {opacity:.3}
+  5% {opacity:.5}
+  5.05% {opacity:.6}
+  5.1% {opacity:.4}
+  5.15% {opacity:.6}
+  5.2% {opacity:.4}
+  5.25% {opacity:.6}
+  5.3% {opacity:.4}
+  5.35% {opacity:.6}
+  5.4% {opacity:.4}
+  5.45% {opacity:.6}
+  5.5% {opacity:.4}
+  5.55% {opacity:.6}
+  5.6% {opacity:.4}
+  5.65% {opacity:.6}
+  6% {opacity:0.735}
+  8% {opacity:0.668}
+  10% {opacity:0.915}
+  12% {opacity:0.752}
+  14% {opacity:0.742}
+  16% {opacity:0.750}
+  18% {opacity:0.774}
+  20% {opacity:0.937}
+  22% {opacity:0.796}
+  24% {opacity:0.885}
+  26% {opacity:0.742}
+  28% {opacity:0.760}
+  30% {opacity:0.758}
+  32% {opacity:0.857}
+  34% {opacity:0.748}
+  36% {opacity:0.985}
+  38% {opacity:0.73}
+  39% {opacity:1}
+  40% {opacity:0.749}
+  42% {opacity:0.989}
+  44% {opacity:0.680}
+  46% {opacity:0.731}
+  48% {opacity:0.876}
+  50% {opacity:0.771}
+  52% {opacity:0.901}
+  54% {opacity:0.875}
+  56% {opacity:0.736}
+  58% {opacity:0.857}
+  60% {opacity:0.947}
+  62% {opacity:0.678}
+  64% {opacity:0.937}
+  66% {opacity:0.888}
+  68% {opacity:0.676}
+  70% {opacity:0.709}
+  72% {opacity:0.709}
+  74% {opacity:0.830}
+  76% {opacity:0.671}
+  78% {opacity:0.725}
+  80% {opacity:0.964}
+  82% {opacity:0.740}
+  84% {opacity:0.964}
+  86% {opacity:0.960}
+  88% {opacity:0.780}
+  87% {opacity:0}
+  90% {opacity:0.993}
+  92% {opacity:0.693}
+  94% {opacity:0.990}
+  96% {opacity:0.876}
+  98% {opacity:0.892}
+  100% {opacity:1}
 }
 
-
-
-@-keyframes HOMELOGO2 {
-  0% {
-    @include rotateX(80deg, 1px);
-    @include opacity(0);
-  }
-  75% {
-    opacity: .25;
-  }
-  100% {
-    @include rotateX(0deg, 100px);
-    @include opacity(1);
-  }
-}
-@-webkit-keyframes HOMELOGO2 {
-  0% {
-    @include rotateX(80deg, 1px);
-    opacity: 0;
-  }
-  75% {
-    opacity: .25;
-  }
-  100% {
-    @include rotateX(0deg, 100px);
-    opacity: 1;
-  }
-}
-@-moz-keyframes HOMELOGO2 {
-  0% {
-    @include rotateX(80deg, 1px);
-    opacity: 0;
-  }
-  75% {
-    opacity: .25;
-  }
-  100% {
-    @include rotateX(0deg, 100px);
-    opacity: 1;
-  }
-}
-@-o-keyframes HOMELOGO2 {
-  0% {
-    @include rotateX(80deg, 1px);
-    opacity: 0;
-  }
-  75% {
-    opacity: .25;
-  }
-  100% {
-    @include rotateX(0deg, 100px);
-    opacity: 1;
-  }
-}
-@-ms-keyframes HOMELOGO2 {
-  0% {
-    @include rotateX(80deg, 1px);
-    @include opacity(0);
-  }
-  75% {
-    @include opacity(.25);
-  }
-  100% {
-    @include rotateX(0deg, 100px);
-    @include opacity(1);
-  }
-}
 
 #site-title a {
   $top: 54px;
@@ -782,22 +816,26 @@ a:hover {
   }
 }
 #site-title a:hover {
-  background: orange;
+  background: $glowColour1;
 }
 body.home #site-title a {
   background: transparent;
   -webkit-perspective-origin: 50% 85%;
   //@include animation(HOMELOGO2, 2s, ease-out, 0, 1);
-  @include animation(LOGOSHAKE, 99s, linear, 0, 1);
+  @include animation(LOGOSLOWTHROB, 99s, linear, 0, 1);
+  @include transition-property(all);
+  @include transition-duration(.2s);
 }
 body.home #site-title a span.chrome1 {
   background-image: url(images/logos/gobo3.png);
 }
 body.home #site-title a:hover {
+  @include animation(LOGOFASTTHROB, 1s, ease-out, 0, infinite);
+  @include transform( scale(1.02, 1.02) );
   background: transparent;
 }
 body.home #site-title a:hover span.chrome1 {
-  background-position: 0 -111px;
+  //background-position: 0 -111px;
 }
 
 
@@ -1435,87 +1473,188 @@ object {
 @-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba(#e4741f, 0.2) 0 0 25px,
-      rgba(#e4741f, 0.2) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba(#e4741f, .4) 0 0 25px,
-      rgba(#e4741f, .4) 0 0 25px
+      rgba($glowColour2, .4) 0 0 25px,
+      rgba($glowColour2, .4) 0 0 25px
     );
 	}
 }
 @-webkit-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba(#e4741f, 0.2) 0 0 25px,
-      rgba(#e4741f, 0.2) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba(#e4741f, .3) 0 0 25px,
-      rgba(#e4741f, .3) 0 0 25px
+      rgba($glowColour2, .3) 0 0 25px,
+      rgba($glowColour2, .3) 0 0 25px
     );
 	}
 }
 @-moz-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba(#e4741f, 0.2) 0 0 25px,
-      rgba(#e4741f, 0.2) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba(#e4741f, .3) 0 0 25px,
-      rgba(#e4741f, .3) 0 0 25px
+      rgba($glowColour2, .3) 0 0 25px,
+      rgba($glowColour2, .3) 0 0 25px
     );
 	}
 }
 @-o-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba(#e4741f, 0.2) 0 0 25px,
-      rgba(#e4741f, 0.2) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba(#e4741f, .3) 0 0 25px,
-      rgba(#e4741f, .3) 0 0 25px
+      rgba($glowColour2, .3) 0 0 25px,
+      rgba($glowColour2, .3) 0 0 25px
     );
 	}
 }
 @-ms-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba(#e4741f, 0.2) 0 0 25px,
-      rgba(#e4741f, 0.2) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba(#e4741f, .3) 0 0 25px,
-      rgba(#e4741f, .3) 0 0 25px
+      rgba($glowColour2, .3) 0 0 25px,
+      rgba($glowColour2, .3) 0 0 25px
     );
 	}
 }
 #fbgalleries-carrousel {
-  width: 600px;
-  height: 320px;
+  $wholeWidth: 600px;
+  $wholeHeight: 320px;
+  $Hpadding: 15px;
+  $Vpadding: 15px;
+  $innerWidth: $wholeWidth - (2*$Hpadding);
+  $innerHeight: $wholeHeight - (2*$Vpadding);
+  width: $innerWidth;
+  height: $innerHeight;
   background: black;
+  position: relative;
   margin: 0 auto;
+  padding: $Vpadding $Hpadding;
   @include border-top-left-radius($cornerRadius/2);
 	@include border-top-right-radius($cornerRadius/2);
   @include border-bottom-left-radius($cornerRadius/4);
 	@include border-bottom-right-radius($cornerRadius/4);
+	//-webkit-border-radius: 0;
   @include box-shadow(
-    rgba(#e4741f, 0) 0 0 25px,
-    rgba(#e4741f, 0) 0 0 25px
+    rgba($glowColour2, 0) 0 0 25px,
+    rgba($glowColour2, 0) 0 0 25px
   );
   @include animation(GLOWPULSE, 2s, linear, 0, infinite);
+  
+  /* Using old methods because webkit needs to fix many bugs with
+     rounded corner clipping */
+  span.chrome1 {
+    
+    b {
+      position: absolute;
+      top: $Vpadding;
+      left: $Hpadding;
+      display: block;
+      width: 11px;
+      height: 11px;
+      background: url(images/fbgallerycorners.png);
+    }
+    b + b {
+      left: auto;
+      right: $Hpadding;
+      background-position: top right;
+    }
+    b + b + b {
+      width: 10px;
+      height: 10px;
+      top: auto;
+      bottom: $Vpadding;
+      background-position: bottom right;
+    }
+    b + b + b + b {
+      right: auto;
+      left: $Hpadding;
+      background-position: bottom left;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: $innerWidth;
+    height: $innerHeight;
+    overflow: hidden;
+    position: relative;
+  }
+  li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  li + li {
+    @include opacity(0);
+    display: none;
+  }
+  a {
+    display: block;
+    width: $innerWidth;
+    height: $innerHeight;
+    text-align: center;
+    text-decoration: none;
+    
+    .imgwrap {
+      display: block;
+    }
+    img {
+      opacity: 0;
+      max-width: none;
+      @include transition-property(opacity);
+      @include transition-duration(1s);
+    }
+    img.loaded {
+      opacity: 1;
+    }
+    .title {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 280px;
+      right: 7%;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      @include text-shadow(
+        rgba(black, 1) -2px -2px 0,
+        rgba(black, 1) 2px -2px 0,
+        rgba(black, 1) 2px 2px 0,
+        rgba(black, 1) -2px 2px 0,
+        rgba(black, 1) -2px -0px 0,
+        rgba(black, 1) 2px -0px 0,
+        rgba(black, 1) 0px 2px 0,
+        rgba(black, 1) 0px 2px 0
+      );
+    }
+  }
 }
 #services {
   .ngg-album {
@@ -1543,10 +1682,10 @@ object {
   .ngg-albumtitle a:hover {
     color: black;
     @include text-shadow(
-      rgba(#e4741f, 1) -1px -1px 3px,
-      rgba(#e4741f, 1) 1px -1px 3px,
-      rgba(#e4741f, 1) 1px 1px 3px,
-      rgba(#e4741f, 1) -1px 1px 3px
+      rgba($glowColour1, 1) -1px -1px 4px,
+      rgba($glowColour1, 1) 1px -1px 4px,
+      rgba($glowColour1, 1) 1px 1px 4px,
+      rgba($glowColour1, 1) -1px 1px 4px
     );
     text-decoration: none;
   }
@@ -1567,14 +1706,14 @@ object {
       width: 148px;
       @include border-radius(10px);
       @include box-shadow(
-        rgba(#e4741f, 0.2) 0 0 25px,
-        rgba(#e4741f, 0.2) 0 0 25px
+        rgba($glowColour1, 0.2) 0 0 25px,
+        rgba($glowColour1, 0.2) 0 0 25px
       );
     }
     img:hover {
       @include box-shadow(
-        rgba(#e4741f, 0.8) 0 0 25px,
-        rgba(#e4741f, 0.8) 0 0 25px
+        rgba($glowColour1, 0.8) 0 0 25px,
+        rgba($glowColour1, 0.8) 0 0 25px
       );
     }
   }
