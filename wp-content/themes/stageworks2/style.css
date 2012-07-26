@@ -3137,7 +3137,7 @@ object {
   /* Using old methods because webkit needs to fix many bugs with
      rounded corner clipping */
 }
-/* line 1571, sass/style.scss */
+/* line 1570, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b {
   position: absolute;
   top: 15px;
@@ -3147,13 +3147,13 @@ object {
   height: 11px;
   background: url(images/fbgallerycorners.png);
 }
-/* line 1580, sass/style.scss */
+/* line 1579, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b {
   left: auto;
   right: 15px;
   background-position: top right;
 }
-/* line 1585, sass/style.scss */
+/* line 1584, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b {
   width: 10px;
   height: 10px;
@@ -3161,13 +3161,13 @@ object {
   bottom: 15px;
   background-position: bottom right;
 }
-/* line 1592, sass/style.scss */
+/* line 1591, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b + b {
   right: auto;
   left: 15px;
   background-position: bottom left;
 }
-/* line 1598, sass/style.scss */
+/* line 1597, sass/style.scss */
 #fbgalleries-carrousel ul {
   margin: 0;
   padding: 0;
@@ -3177,36 +3177,13 @@ object {
   overflow: hidden;
   position: relative;
 }
-/* line 1607, sass/style.scss */
+/* line 1606, sass/style.scss */
 #fbgalleries-carrousel li {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -999em;
   margin: 0;
   padding: 0;
-}
-/* line 1614, sass/style.scss */
-#fbgalleries-carrousel li + li {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  display: none;
-}
-/* line 1618, sass/style.scss */
-#fbgalleries-carrousel a {
-  display: block;
-  width: 570px;
-  height: 290px;
-  text-align: center;
-  text-decoration: none;
-}
-/* line 1625, sass/style.scss */
-#fbgalleries-carrousel a .imgwrap {
-  display: block;
-}
-/* line 1628, sass/style.scss */
-#fbgalleries-carrousel a img {
-  opacity: 0;
-  max-width: none;
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
   -o-transition-property: opacity;
@@ -3215,18 +3192,44 @@ object {
   -moz-transition-duration: 1s;
   -o-transition-duration: 1s;
   transition-duration: 1s;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 1616, sass/style.scss */
+#fbgalleries-carrousel li.active {
+  left: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 1620, sass/style.scss */
+#fbgalleries-carrousel li.fading {
+  left: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 1624, sass/style.scss */
+#fbgalleries-carrousel a {
+  display: block;
+  width: 570px;
+  height: 290px;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 1631, sass/style.scss */
+#fbgalleries-carrousel a .imgwrap {
+  display: block;
 }
 /* line 1634, sass/style.scss */
-#fbgalleries-carrousel a img.loaded {
-  opacity: 1;
+#fbgalleries-carrousel a img {
+  max-width: none;
 }
 /* line 1637, sass/style.scss */
 #fbgalleries-carrousel a .title {
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 280px;
-  right: 7%;
+  bottom: 10px;
+  right: 20px;
   color: white;
   font-weight: bold;
   font-size: 18px;

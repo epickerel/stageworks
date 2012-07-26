@@ -1567,7 +1567,6 @@ object {
   /* Using old methods because webkit needs to fix many bugs with
      rounded corner clipping */
   span.chrome1 {
-    
     b {
       position: absolute;
       top: $Vpadding;
@@ -1607,13 +1606,20 @@ object {
   li {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -999em;
     margin: 0;
     padding: 0;
-  }
-  li + li {
+    @include transition-property(opacity);
+    @include transition-duration(1s);
     @include opacity(0);
-    display: none;
+  }
+  li.active {
+    left: 0;
+    @include opacity(1);
+  }
+  li.fading {
+    left: 0;
+    @include opacity(0);
   }
   a {
     display: block;
@@ -1626,20 +1632,14 @@ object {
       display: block;
     }
     img {
-      opacity: 0;
       max-width: none;
-      @include transition-property(opacity);
-      @include transition-duration(1s);
-    }
-    img.loaded {
-      opacity: 1;
     }
     .title {
       padding: 0;
       margin: 0;
       position: absolute;
-      top: 280px;
-      right: 7%;
+      bottom: 10px;
+      right: 20px;
       color: white;
       font-weight: bold;
       font-size: 18px;
