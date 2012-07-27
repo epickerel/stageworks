@@ -14,6 +14,8 @@
 
 	<footer id="colophon" role="contentinfo">
 
+	    <?php wp_nav_menu( array( 'theme_location' => 'footermenu' ) ); ?>
+
 			<?php
 				/* A sidebar in the footer? Yep. You can can customize
 				 * your footer with three columns of widgets.
