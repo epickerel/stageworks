@@ -163,8 +163,10 @@
       var i, album, newAlbums = [];
       for (i=0; i<albums.length; i++) {
         album = albums[i];
-        if (album.name !== 'Cover Photos' && album.name !== 'Wall Photos'
-            && album.name.indexOf('Crew') === -1) {
+        if (album.name !== 'Cover Photos' &&
+            album.name !== 'Wall Photos' &&
+            album.name.indexOf('Crew') === -1 &&
+            album.name !== 'Profile Photos') {
           newAlbums.push(album);
         }
       }
@@ -191,7 +193,15 @@
     opts = $.extend({}, defaults, opts);
     $.ajax({
         url: 'http://graph.facebook.com/fql',
+        /*
         data: {
+          q: JSON.stringify({
+            query1: 'SELECT src_big, src, pid FROM photo WHERE pid in (select cover_pid from album where owner = "119186754764635")',
+            query2: 'SELECT name, aid, owner, name, description, cover_pid, modified, size FROM album WHERE owner = "119186754764635"'
+          })
+        },*/
+        data: {
+          //q: 'SELECT src_big FROM photo WHERE 
           q: JSON.stringify({
             query1: 'SELECT src_big, src, pid FROM photo WHERE pid in (select cover_pid from album where owner = "119186754764635")',
             query2: 'SELECT name, aid, owner, name, description, cover_pid, modified, size FROM album WHERE owner = "119186754764635"'

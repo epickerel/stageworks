@@ -3024,80 +3024,80 @@ object {
 @-keyframes GLOWPULSE {
   /* line 1474, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
   }
 
   /* line 1480, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, rgba(228, 116, 31, 0.4) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, rgba(228, 116, 31, 0.4) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, rgba(228, 116, 31, 0.4) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
   }
 }
 
 @-webkit-keyframes GLOWPULSE {
   /* line 1488, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
   }
 
   /* line 1494, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
   }
 }
 
 @-moz-keyframes GLOWPULSE {
   /* line 1502, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
   }
 
   /* line 1508, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
   }
 }
 
 @-o-keyframes GLOWPULSE {
   /* line 1516, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
   }
 
   /* line 1522, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
   }
 }
 
 @-ms-keyframes GLOWPULSE {
   /* line 1530, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
   }
 
   /* line 1536, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, rgba(228, 116, 31, 0.3) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
   }
 }
 
@@ -3121,9 +3121,6 @@ object {
   -moz-border-radius-bottomright: 8.75px;
   -webkit-border-bottom-right-radius: 8.75px;
   border-bottom-right-radius: 8.75px;
-  -webkit-box-shadow: rgba(228, 116, 31, 0) 0 0 25px, rgba(228, 116, 31, 0) 0 0 25px;
-  -moz-box-shadow: rgba(228, 116, 31, 0) 0 0 25px, rgba(228, 116, 31, 0) 0 0 25px;
-  box-shadow: rgba(228, 116, 31, 0) 0 0 25px, rgba(228, 116, 31, 0) 0 0 25px;
   animation: GLOWPULSE 2s linear 0 infinite normal;
   -webkit-animation: GLOWPULSE 2s linear 0 infinite normal;
   -ms-animation: GLOWPULSE 2s linear 0 infinite normal;
@@ -3137,7 +3134,7 @@ object {
   /* Using old methods because webkit needs to fix many bugs with
      rounded corner clipping */
 }
-/* line 1570, sass/style.scss */
+/* line 1566, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b {
   position: absolute;
   top: 15px;
@@ -3147,13 +3144,13 @@ object {
   height: 11px;
   background: url(images/fbgallerycorners.png);
 }
-/* line 1579, sass/style.scss */
+/* line 1575, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b {
   left: auto;
   right: 15px;
   background-position: top right;
 }
-/* line 1584, sass/style.scss */
+/* line 1580, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b {
   width: 10px;
   height: 10px;
@@ -3161,13 +3158,13 @@ object {
   bottom: 15px;
   background-position: bottom right;
 }
-/* line 1591, sass/style.scss */
+/* line 1587, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b + b {
   right: auto;
   left: 15px;
   background-position: bottom left;
 }
-/* line 1597, sass/style.scss */
+/* line 1593, sass/style.scss */
 #fbgalleries-carrousel ul {
   margin: 0;
   padding: 0;
@@ -3177,7 +3174,7 @@ object {
   overflow: hidden;
   position: relative;
 }
-/* line 1606, sass/style.scss */
+/* line 1602, sass/style.scss */
 #fbgalleries-carrousel li {
   position: absolute;
   top: 0;
@@ -3195,19 +3192,19 @@ object {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 1616, sass/style.scss */
+/* line 1612, sass/style.scss */
 #fbgalleries-carrousel li.active {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 1620, sass/style.scss */
+/* line 1616, sass/style.scss */
 #fbgalleries-carrousel li.fading {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 1624, sass/style.scss */
+/* line 1620, sass/style.scss */
 #fbgalleries-carrousel a {
   display: block;
   width: 570px;
@@ -3215,15 +3212,15 @@ object {
   text-align: center;
   text-decoration: none;
 }
-/* line 1631, sass/style.scss */
+/* line 1627, sass/style.scss */
 #fbgalleries-carrousel a .imgwrap {
   display: block;
 }
-/* line 1634, sass/style.scss */
+/* line 1630, sass/style.scss */
 #fbgalleries-carrousel a img {
   max-width: none;
 }
-/* line 1637, sass/style.scss */
+/* line 1633, sass/style.scss */
 #fbgalleries-carrousel a .title {
   padding: 0;
   margin: 0;
@@ -3236,7 +3233,7 @@ object {
   text-shadow: black -2px -2px 0, black 2px -2px 0, black 2px 2px 0, black -2px 2px 0, black -2px 0px 0, black 2px 0px 0, black 0px 2px 0, black 0px 2px 0;
 }
 
-/* line 1660, sass/style.scss */
+/* line 1656, sass/style.scss */
 #services .ngg-album {
   border: none;
   width: 25%;
@@ -3244,12 +3241,12 @@ object {
   padding: 0 0 15px 0;
   margin: 0;
 }
-/* line 1667, sass/style.scss */
+/* line 1663, sass/style.scss */
 #services .ngg-albumtitle {
   margin: 0;
   text-align: center;
 }
-/* line 1671, sass/style.scss */
+/* line 1667, sass/style.scss */
 #services .ngg-albumtitle a {
   -webkit-transition-property: color;
   -moz-transition-property: color;
@@ -3262,22 +3259,22 @@ object {
   color: white;
   text-shadow: black -2px -2px 0, black 2px -2px 0, black 2px 2px 0, black -2px 2px 0;
 }
-/* line 1682, sass/style.scss */
+/* line 1678, sass/style.scss */
 #services .ngg-albumtitle a:hover {
   color: black;
   text-shadow: #d1c261 -1px -1px 4px, #d1c261 1px -1px 4px, #d1c261 1px 1px 4px, #d1c261 -1px 1px 4px;
   text-decoration: none;
 }
-/* line 1692, sass/style.scss */
+/* line 1688, sass/style.scss */
 #services .ngg-thumbnail {
   float: none;
   margin: 0;
 }
-/* line 1696, sass/style.scss */
+/* line 1692, sass/style.scss */
 #services .ngg-thumbnail a {
   display: block;
 }
-/* line 1699, sass/style.scss */
+/* line 1695, sass/style.scss */
 #services .ngg-thumbnail img {
   -webkit-transition-property: box-shadow;
   -moz-transition-property: box-shadow;
@@ -3301,61 +3298,61 @@ object {
   -moz-box-shadow: rgba(209, 194, 97, 0.2) 0 0 25px, rgba(209, 194, 97, 0.2) 0 0 25px;
   box-shadow: rgba(209, 194, 97, 0.2) 0 0 25px, rgba(209, 194, 97, 0.2) 0 0 25px;
 }
-/* line 1713, sass/style.scss */
+/* line 1709, sass/style.scss */
 #services .ngg-thumbnail img:hover {
   -webkit-box-shadow: rgba(209, 194, 97, 0.8) 0 0 25px, rgba(209, 194, 97, 0.8) 0 0 25px;
   -moz-box-shadow: rgba(209, 194, 97, 0.8) 0 0 25px, rgba(209, 194, 97, 0.8) 0 0 25px;
   box-shadow: rgba(209, 194, 97, 0.8) 0 0 25px, rgba(209, 194, 97, 0.8) 0 0 25px;
 }
-/* line 1720, sass/style.scss */
+/* line 1716, sass/style.scss */
 #services .ngg-description {
   display: none;
 }
 
-/* line 1724, sass/style.scss */
+/* line 1720, sass/style.scss */
 .gallerypage {
   /*background: #000;*/
 }
 
-/* line 1727, sass/style.scss */
+/* line 1723, sass/style.scss */
 .gallerypage article {
   padding: 0;
 }
 
-/* line 1731, sass/style.scss */
+/* line 1727, sass/style.scss */
 .gallerypage header,
 .gallerypage .entry-content {
   width: 85%;
 }
 
-/* line 1734, sass/style.scss */
+/* line 1730, sass/style.scss */
 .gallerypage header.entry-header {
   width: 85%;
 }
 
-/* line 1737, sass/style.scss */
+/* line 1733, sass/style.scss */
 .gallerypage h2.entry-title {
   display: block;
 }
 
-/* line 1741, sass/style.scss */
+/* line 1737, sass/style.scss */
 .featured-posts {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 1745, sass/style.scss */
+/* line 1741, sass/style.scss */
 .featured-posts h1 {
   display: none;
 }
 
-/* line 1748, sass/style.scss */
+/* line 1744, sass/style.scss */
 .featured-posts section {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 1752, sass/style.scss */
+/* line 1748, sass/style.scss */
 .featured-post {
   position: static;
   top: 0;
@@ -3365,18 +3362,18 @@ object {
 ----------------------------------------------- */
 @media (max-width: 800px) {
   /* Simplify the basic layout */
-  /* line 1762, sass/style.scss */
+  /* line 1758, sass/style.scss */
   #main #content {
     margin: 0 7.6%;
     width: auto;
   }
 
-  /* line 1766, sass/style.scss */
+  /* line 1762, sass/style.scss */
   #nav-below {
     margin-bottom: 1.625em;
   }
 
-  /* line 1769, sass/style.scss */
+  /* line 1765, sass/style.scss */
   #main #secondary {
     float: none;
     margin: 0 7.6%;
@@ -3384,37 +3381,37 @@ object {
   }
 
   /* Simplify the showcase template */
-  /* line 1775, sass/style.scss */
+  /* line 1771, sass/style.scss */
   .page-template-showcase-php .featured-posts {
     min-height: 280px;
   }
 
-  /* line 1778, sass/style.scss */
+  /* line 1774, sass/style.scss */
   .featured-posts section.featured-post {
     height: auto;
   }
 
-  /* line 1781, sass/style.scss */
+  /* line 1777, sass/style.scss */
   .page-template-showcase-php section.recent-posts {
     float: none;
     margin: 0;
     width: 100%;
   }
 
-  /* line 1786, sass/style.scss */
+  /* line 1782, sass/style.scss */
   .page-template-showcase-php #main .widget-area {
     float: none;
     margin: 0;
     width: auto;
   }
 
-  /* line 1791, sass/style.scss */
+  /* line 1787, sass/style.scss */
   .page-template-showcase-php .other-recent-posts {
     border-bottom: 1px solid #ddd;
   }
 
   /* Simplify the showcase template when small feature */
-  /* line 1796, sass/style.scss */
+  /* line 1792, sass/style.scss */
   section.featured-post .attachment-small-feature,
   .one-column section.featured-post .attachment-small-feature {
     border: none;
@@ -3426,19 +3423,19 @@ object {
     position: static;
   }
 
-  /* line 1805, sass/style.scss */
+  /* line 1801, sass/style.scss */
   article.feature-image.small {
     float: right;
     margin: 0 0 1.625em;
     width: 64%;
   }
 
-  /* line 1810, sass/style.scss */
+  /* line 1806, sass/style.scss */
   .one-column article.feature-image.small .entry-summary {
     height: auto;
   }
 
-  /* line 1813, sass/style.scss */
+  /* line 1809, sass/style.scss */
   article.feature-image.small .entry-summary p a {
     left: 0;
     padding-left: 20px;
@@ -3447,7 +3444,7 @@ object {
   }
 
   /* Remove the margin on singular articles */
-  /* line 1823, sass/style.scss */
+  /* line 1819, sass/style.scss */
   .singular .entry-header,
   .singular .entry-content,
   .singular footer.entry-meta,
@@ -3456,41 +3453,41 @@ object {
   }
 
   /* Simplify the pullquotes and pull styles */
-  /* line 1827, sass/style.scss */
+  /* line 1823, sass/style.scss */
   .singular blockquote.pull {
     margin: 0 0 1.625em;
   }
 
-  /* line 1830, sass/style.scss */
+  /* line 1826, sass/style.scss */
   .singular .pull.alignleft {
     margin: 0 1.625em 0 0;
   }
 
-  /* line 1833, sass/style.scss */
+  /* line 1829, sass/style.scss */
   .singular .pull.alignright {
     margin: 0 0 0 1.625em;
   }
 
-  /* line 1836, sass/style.scss */
+  /* line 1832, sass/style.scss */
   .singular .entry-meta .edit-link a {
     left: 0;
     position: absolute;
     top: 40px;
   }
 
-  /* line 1841, sass/style.scss */
+  /* line 1837, sass/style.scss */
   .singular #author-info {
     margin: 2.2em -8.8% 0;
     padding: 20px 8.8%;
   }
 
   /* Make sure we have room for our comment avatars */
-  /* line 1846, sass/style.scss */
+  /* line 1842, sass/style.scss */
   .commentlist {
     width: 100%;
   }
 
-  /* line 1850, sass/style.scss */
+  /* line 1846, sass/style.scss */
   .commentlist > li.comment,
   .commentlist .pingback {
     margin-left: 102px;
@@ -3498,13 +3495,13 @@ object {
   }
 
   /* And a full-width comment form */
-  /* line 1855, sass/style.scss */
+  /* line 1851, sass/style.scss */
   #respond {
     width: auto;
   }
 
   /* No need to float footer widgets at this size */
-  /* line 1859, sass/style.scss */
+  /* line 1855, sass/style.scss */
   #colophon #supplementary .widget-area {
     float: none;
     margin-right: 0;
@@ -3512,7 +3509,7 @@ object {
   }
 
   /* No need to float 404 widgets at this size */
-  /* line 1865, sass/style.scss */
+  /* line 1861, sass/style.scss */
   .error404 #main .widget {
     float: none;
     margin-right: 0;
@@ -3521,81 +3518,81 @@ object {
 }
 @media (max-width: 650px) {
   /* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
-  /* line 1874, sass/style.scss */
+  /* line 1870, sass/style.scss */
   body, input, textarea {
     font-size: 13px;
   }
 
-  /* line 1877, sass/style.scss */
+  /* line 1873, sass/style.scss */
   #site-title a {
     font-size: 24px;
   }
 
-  /* line 1880, sass/style.scss */
+  /* line 1876, sass/style.scss */
   #site-description {
     font-size: 12px;
   }
 
-  /* line 1883, sass/style.scss */
+  /* line 1879, sass/style.scss */
   #access ul {
     font-size: 12px;
   }
 
-  /* line 1886, sass/style.scss */
+  /* line 1882, sass/style.scss */
   article.intro .entry-content {
     font-size: 12px;
   }
 
-  /* line 1889, sass/style.scss */
+  /* line 1885, sass/style.scss */
   .entry-title {
     font-size: 21px;
   }
 
-  /* line 1892, sass/style.scss */
+  /* line 1888, sass/style.scss */
   .featured-post .entry-title {
     font-size: 14px;
   }
 
-  /* line 1895, sass/style.scss */
+  /* line 1891, sass/style.scss */
   .singular .entry-title {
     font-size: 28px;
   }
 
-  /* line 1898, sass/style.scss */
+  /* line 1894, sass/style.scss */
   .entry-meta {
     font-size: 12px;
   }
 
-  /* line 1901, sass/style.scss */
+  /* line 1897, sass/style.scss */
   blockquote {
     margin: 0;
   }
 
-  /* line 1904, sass/style.scss */
+  /* line 1900, sass/style.scss */
   blockquote.pull {
     font-size: 17px;
   }
 
   /* Reposition the site title and description slightly */
-  /* line 1908, sass/style.scss */
+  /* line 1904, sass/style.scss */
   #site-title {
     padding: 5.30625em 0 0;
   }
 
-  /* line 1912, sass/style.scss */
+  /* line 1908, sass/style.scss */
   #site-title,
   #site-description {
     margin-right: 0;
   }
 
   /* Make sure the logo and search form don't collide */
-  /* line 1916, sass/style.scss */
+  /* line 1912, sass/style.scss */
   #branding #searchform {
     top: 1.625em !important;
   }
 
   /* Floated content doesn't work well at this size */
-  /* line 1921, sass/style.scss */
+  /* line 1917, sass/style.scss */
   .alignleft,
   .alignright {
     display: block;
@@ -3605,30 +3602,30 @@ object {
   }
 
   /* Make sure the post-post navigation doesn't collide with anything */
-  /* line 1928, sass/style.scss */
+  /* line 1924, sass/style.scss */
   #nav-single {
     display: block;
     position: static;
   }
 
-  /* line 1932, sass/style.scss */
+  /* line 1928, sass/style.scss */
   .singular .hentry {
     padding: 1.625em 0 0;
   }
 
-  /* line 1935, sass/style.scss */
+  /* line 1931, sass/style.scss */
   .singular.page .hentry {
     padding: 1.625em 0 0;
   }
 
   /* Talking avatars take up too much room at this size */
-  /* line 1940, sass/style.scss */
+  /* line 1936, sass/style.scss */
   .commentlist > li.comment,
   .commentlist > li.pingback {
     margin-left: 0 !important;
   }
 
-  /* line 1943, sass/style.scss */
+  /* line 1939, sass/style.scss */
   .commentlist .avatar {
     background: transparent;
     display: block;
@@ -3636,7 +3633,7 @@ object {
     position: static;
   }
 
-  /* line 1949, sass/style.scss */
+  /* line 1945, sass/style.scss */
   .commentlist .children .avatar {
     background: none;
     left: 2.2em;
@@ -3646,54 +3643,54 @@ object {
   }
 
   /* Use the available space in the smaller comment form */
-  /* line 1957, sass/style.scss */
+  /* line 1953, sass/style.scss */
   #respond input[type="text"] {
     width: 95%;
   }
 
-  /* line 1961, sass/style.scss */
+  /* line 1957, sass/style.scss */
   #respond .comment-form-author .required,
   #respond .comment-form-email .required {
     left: 95%;
   }
 
-  /* line 1964, sass/style.scss */
+  /* line 1960, sass/style.scss */
   #content .gallery-columns-3 .gallery-item {
     width: 31%;
     padding-right: 2%;
   }
 
-  /* line 1968, sass/style.scss */
+  /* line 1964, sass/style.scss */
   #content .gallery-columns-3 .gallery-item img {
     width: 100%;
     height: auto;
   }
 }
 @media (max-width: 450px) {
-  /* line 1975, sass/style.scss */
+  /* line 1971, sass/style.scss */
   #content .gallery-columns-2 .gallery-item {
     width: 45%;
     padding-right: 4%;
   }
 
-  /* line 1979, sass/style.scss */
+  /* line 1975, sass/style.scss */
   #content .gallery-columns-2 .gallery-item img {
     width: 100%;
     height: auto;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* line 1986, sass/style.scss */
+  /* line 1982, sass/style.scss */
   body {
     padding: 0;
   }
 
-  /* line 1989, sass/style.scss */
+  /* line 1985, sass/style.scss */
   #page {
     margin-top: 0;
   }
 
-  /* line 1992, sass/style.scss */
+  /* line 1988, sass/style.scss */
   #branding {
     border-top: none;
   }
@@ -3701,20 +3698,20 @@ object {
 /* =Print
 ----------------------------------------------- */
 @media print {
-  /* line 2003, sass/style.scss */
+  /* line 1999, sass/style.scss */
   body {
     background: none !important;
     font-size: 10pt;
   }
 
-  /* line 2008, sass/style.scss */
+  /* line 2004, sass/style.scss */
   footer.entry-meta a[rel=bookmark]:link:after,
   footer.entry-meta a[rel=bookmark]:visited:after {
     content: " [" attr(href) "] ";
     /* Show URLs */
   }
 
-  /* line 2011, sass/style.scss */
+  /* line 2007, sass/style.scss */
   #page {
     clear: both !important;
     display: block !important;
@@ -3723,83 +3720,83 @@ object {
     position: relative !important;
   }
 
-  /* line 2018, sass/style.scss */
+  /* line 2014, sass/style.scss */
   #branding {
     border-top: none !important;
     padding: 0;
   }
 
-  /* line 2022, sass/style.scss */
+  /* line 2018, sass/style.scss */
   #branding hgroup {
     margin: 0;
   }
 
-  /* line 2025, sass/style.scss */
+  /* line 2021, sass/style.scss */
   #site-title a {
     font-size: 21pt;
   }
 
-  /* line 2028, sass/style.scss */
+  /* line 2024, sass/style.scss */
   #site-description {
     font-size: 10pt;
   }
 
-  /* line 2031, sass/style.scss */
+  /* line 2027, sass/style.scss */
   #branding #searchform {
     display: none;
   }
 
-  /* line 2034, sass/style.scss */
+  /* line 2030, sass/style.scss */
   #branding img {
     display: none;
   }
 
-  /* line 2037, sass/style.scss */
+  /* line 2033, sass/style.scss */
   #access {
     display: none;
   }
 
-  /* line 2040, sass/style.scss */
+  /* line 2036, sass/style.scss */
   #main {
     border-top: none;
     box-shadow: none;
   }
 
-  /* line 2044, sass/style.scss */
+  /* line 2040, sass/style.scss */
   #primary {
     float: left;
     margin: 0;
     width: 100%;
   }
 
-  /* line 2049, sass/style.scss */
+  /* line 2045, sass/style.scss */
   #content {
     margin: 0;
     width: auto;
   }
 
-  /* line 2053, sass/style.scss */
+  /* line 2049, sass/style.scss */
   .singular #content {
     margin: 0;
     width: 100%;
   }
 
-  /* line 2057, sass/style.scss */
+  /* line 2053, sass/style.scss */
   .singular .entry-header .entry-meta {
     position: static;
   }
 
-  /* line 2060, sass/style.scss */
+  /* line 2056, sass/style.scss */
   .entry-meta .edit-link a {
     display: none;
   }
 
-  /* line 2063, sass/style.scss */
+  /* line 2059, sass/style.scss */
   #content nav {
     display: none;
   }
 
-  /* line 2069, sass/style.scss */
+  /* line 2065, sass/style.scss */
   .singular .entry-header,
   .singular .entry-content,
   .singular footer.entry-meta,
@@ -3808,33 +3805,33 @@ object {
     width: 100%;
   }
 
-  /* line 2073, sass/style.scss */
+  /* line 2069, sass/style.scss */
   .singular .hentry {
     padding: 0;
   }
 
-  /* line 2077, sass/style.scss */
+  /* line 2073, sass/style.scss */
   .entry-title,
   .singular .entry-title {
     font-size: 21pt;
   }
 
-  /* line 2080, sass/style.scss */
+  /* line 2076, sass/style.scss */
   .entry-meta {
     font-size: 10pt;
   }
 
-  /* line 2083, sass/style.scss */
+  /* line 2079, sass/style.scss */
   .entry-header .comments-link {
     display: none;
   }
 
-  /* line 2086, sass/style.scss */
+  /* line 2082, sass/style.scss */
   .page-link {
     display: none;
   }
 
-  /* line 2089, sass/style.scss */
+  /* line 2085, sass/style.scss */
   .singular #author-info {
     background: none;
     border-bottom: none;
@@ -3843,23 +3840,23 @@ object {
     padding: 0;
   }
 
-  /* line 2096, sass/style.scss */
+  /* line 2092, sass/style.scss */
   #respond {
     display: none;
   }
 
-  /* line 2099, sass/style.scss */
+  /* line 2095, sass/style.scss */
   .widget-area {
     display: none;
   }
 
-  /* line 2102, sass/style.scss */
+  /* line 2098, sass/style.scss */
   #colophon {
     display: none;
   }
 
   /* Comments */
-  /* line 2107, sass/style.scss */
+  /* line 2103, sass/style.scss */
   .commentlist > li.comment {
     background: none;
     border: 1px solid #ddd;
@@ -3871,7 +3868,7 @@ object {
     width: auto;
   }
 
-  /* line 2117, sass/style.scss */
+  /* line 2113, sass/style.scss */
   .commentlist .avatar {
     height: 39px;
     left: 2.2em;
@@ -3879,62 +3876,62 @@ object {
     width: 39px;
   }
 
-  /* line 2123, sass/style.scss */
+  /* line 2119, sass/style.scss */
   .commentlist li.comment .comment-meta {
     line-height: 1.625em;
     margin-left: 50px;
   }
 
-  /* line 2127, sass/style.scss */
+  /* line 2123, sass/style.scss */
   .commentlist li.comment .fn {
     display: block;
   }
 
-  /* line 2130, sass/style.scss */
+  /* line 2126, sass/style.scss */
   .commentlist li.comment .comment-content {
     margin: 1.625em 0 0;
   }
 
-  /* line 2133, sass/style.scss */
+  /* line 2129, sass/style.scss */
   .commentlist .comment-edit-link {
     display: none;
   }
 
-  /* line 2137, sass/style.scss */
+  /* line 2133, sass/style.scss */
   .commentlist > li::before,
   .commentlist > li.bypostauthor::before {
     content: '';
   }
 
-  /* line 2140, sass/style.scss */
+  /* line 2136, sass/style.scss */
   .commentlist .reply {
     display: none;
   }
 
   /* Post author highlighting */
-  /* line 2145, sass/style.scss */
+  /* line 2141, sass/style.scss */
   .commentlist > li.bypostauthor {
     color: #444;
   }
 
-  /* line 2148, sass/style.scss */
+  /* line 2144, sass/style.scss */
   .commentlist > li.bypostauthor .comment-meta {
     color: #666;
   }
 
-  /* line 2151, sass/style.scss */
+  /* line 2147, sass/style.scss */
   .commentlist > li.bypostauthor:before {
     content: none;
   }
 
   /* Post Author threaded comments */
-  /* line 2156, sass/style.scss */
+  /* line 2152, sass/style.scss */
   .commentlist .children > li.bypostauthor {
     background: #fff;
     border-color: #ddd;
   }
 
-  /* line 2161, sass/style.scss */
+  /* line 2157, sass/style.scss */
   .commentlist .children > li.bypostauthor > article,
   .commentlist .children > li.bypostauthor > article .comment-meta {
     color: #666;
@@ -3942,7 +3939,7 @@ object {
 }
 /* =IE7
 ----------------------------------------------- */
-/* line 2171, sass/style.scss */
+/* line 2167, sass/style.scss */
 #ie7 article.intro {
   margin-left: -7.6%;
   margin-right: -7.6%;
@@ -3951,21 +3948,21 @@ object {
   max-width: 1000px;
 }
 
-/* line 2178, sass/style.scss */
+/* line 2174, sass/style.scss */
 #ie7 section.featured-post {
   margin-left: -7.6%;
   margin-right: -7.6%;
   max-width: 850px;
 }
 
-/* line 2183, sass/style.scss */
+/* line 2179, sass/style.scss */
 #ie7 section.recent-posts {
   margin-right: 7.6%;
 }
 
 /* =IE8 
 ----------------------------------------------- */
-/* line 2190, sass/style.scss */
+/* line 2186, sass/style.scss */
 #ie8 section.feature-image.large img {
   width: 100%;
 }

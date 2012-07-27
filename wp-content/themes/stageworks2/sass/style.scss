@@ -1473,70 +1473,70 @@ object {
 @-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px,
+      inset rgba($glowColour2, 0.3) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, .4) 0 0 25px,
-      rgba($glowColour2, .4) 0 0 25px
+      rgba($glowColour2, 0.4) 0 0 25px,
+      inset rgba($glowColour2, 0.4) 0 0 25px
     );
 	}
 }
 @-webkit-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px,
+      inset rgba($glowColour2, 0.3) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, .3) 0 0 25px,
-      rgba($glowColour2, .3) 0 0 25px
+      rgba($glowColour2, 0.4) 0 0 25px,
+      inset rgba($glowColour2, 0.4) 0 0 25px
     );
 	}
 }
 @-moz-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px,
+      inset rgba($glowColour2, 0.3) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, .3) 0 0 25px,
-      rgba($glowColour2, .3) 0 0 25px
+      rgba($glowColour2, 0.4) 0 0 25px,
+      inset rgba($glowColour2, 0.4) 0 0 25px
     );
 	}
 }
 @-o-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px,
+      inset rgba($glowColour2, 0.3) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, .3) 0 0 25px,
-      rgba($glowColour2, .3) 0 0 25px
+      rgba($glowColour2, 0.4) 0 0 25px,
+      inset rgba($glowColour2, 0.4) 0 0 25px
     );
 	}
 }
 @-ms-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px,
+      inset rgba($glowColour2, 0.3) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, .3) 0 0 25px,
-      rgba($glowColour2, .3) 0 0 25px
+      rgba($glowColour2, 0.4) 0 0 25px,
+      inset rgba($glowColour2, 0.4) 0 0 25px
     );
 	}
 }
@@ -1558,10 +1558,6 @@ object {
   @include border-bottom-left-radius($cornerRadius/4);
 	@include border-bottom-right-radius($cornerRadius/4);
 	//-webkit-border-radius: 0;
-  @include box-shadow(
-    rgba($glowColour2, 0) 0 0 25px,
-    rgba($glowColour2, 0) 0 0 25px
-  );
   @include animation(GLOWPULSE, 2s, linear, 0, infinite);
   
   /* Using old methods because webkit needs to fix many bugs with
