@@ -2554,84 +2554,84 @@ article header .entry-meta {
 @-keyframes GLOWPULSE {
   /* line 1171, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 1177, sass/style.scss */
+  /* line 1176, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
   }
 }
 
 @-webkit-keyframes GLOWPULSE {
-  /* line 1185, sass/style.scss */
+  /* line 1183, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 1191, sass/style.scss */
+  /* line 1188, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
   }
 }
 
 @-moz-keyframes GLOWPULSE {
-  /* line 1199, sass/style.scss */
+  /* line 1195, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 1205, sass/style.scss */
+  /* line 1200, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
   }
 }
 
 @-o-keyframes GLOWPULSE {
-  /* line 1213, sass/style.scss */
+  /* line 1207, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 1219, sass/style.scss */
+  /* line 1212, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
   }
 }
 
 @-ms-keyframes GLOWPULSE {
-  /* line 1227, sass/style.scss */
+  /* line 1219, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 1233, sass/style.scss */
+  /* line 1224, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
   }
 }
 
-/* line 1240, sass/style.scss */
+/* line 1230, sass/style.scss */
 #fbgalleries-carrousel {
   width: 570px;
   height: 290px;
@@ -2664,7 +2664,7 @@ article header .entry-meta {
   /* Using old methods because webkit needs to fix many bugs with
      rounded corner clipping */
 }
-/* line 1263, sass/style.scss */
+/* line 1253, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b {
   position: absolute;
   top: 15px;
@@ -2674,13 +2674,13 @@ article header .entry-meta {
   height: 11px;
   background: url(images/fbgallerycorners.png);
 }
-/* line 1272, sass/style.scss */
+/* line 1262, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b {
   left: auto;
   right: 15px;
   background-position: top right;
 }
-/* line 1277, sass/style.scss */
+/* line 1267, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b {
   width: 10px;
   height: 10px;
@@ -2688,13 +2688,13 @@ article header .entry-meta {
   bottom: 15px;
   background-position: bottom right;
 }
-/* line 1284, sass/style.scss */
+/* line 1274, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b + b {
   right: auto;
   left: 15px;
   background-position: bottom left;
 }
-/* line 1290, sass/style.scss */
+/* line 1280, sass/style.scss */
 #fbgalleries-carrousel ul {
   margin: 0;
   padding: 0;
@@ -2704,7 +2704,7 @@ article header .entry-meta {
   overflow: hidden;
   position: relative;
 }
-/* line 1299, sass/style.scss */
+/* line 1289, sass/style.scss */
 #fbgalleries-carrousel li {
   position: absolute;
   top: 0;
@@ -2722,19 +2722,19 @@ article header .entry-meta {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 1309, sass/style.scss */
+/* line 1299, sass/style.scss */
 #fbgalleries-carrousel li.active {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 1313, sass/style.scss */
+/* line 1303, sass/style.scss */
 #fbgalleries-carrousel li.fading {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 1317, sass/style.scss */
+/* line 1307, sass/style.scss */
 #fbgalleries-carrousel a {
   display: block;
   width: 570px;
@@ -2742,15 +2742,15 @@ article header .entry-meta {
   text-align: center;
   text-decoration: none;
 }
-/* line 1324, sass/style.scss */
+/* line 1314, sass/style.scss */
 #fbgalleries-carrousel a .imgwrap {
   display: block;
 }
-/* line 1327, sass/style.scss */
+/* line 1317, sass/style.scss */
 #fbgalleries-carrousel a img {
   max-width: none;
 }
-/* line 1330, sass/style.scss */
+/* line 1320, sass/style.scss */
 #fbgalleries-carrousel a .title {
   padding: 0;
   margin: 0;
@@ -2763,13 +2763,13 @@ article header .entry-meta {
   text-shadow: black -2px -2px 0, black 2px -2px 0, black 2px 2px 0, black -2px 2px 0, black -2px 0px 0, black 2px 0px 0, black 0px 2px 0, black 0px 2px 0;
 }
 
-/* line 1359, sass/style.scss */
+/* line 1349, sass/style.scss */
 #fbcontent .fbalbum ul {
   width: 472px;
   margin: 0 auto;
   padding: 0;
 }
-/* line 1364, sass/style.scss */
+/* line 1354, sass/style.scss */
 #fbcontent .fbalbum li {
   margin: 0;
   padding: 0;
@@ -2781,7 +2781,7 @@ article header .entry-meta {
   padding: 2px;
   background: white;
 }
-/* line 1374, sass/style.scss */
+/* line 1364, sass/style.scss */
 #fbcontent .fbalbum li a {
   position: relative;
   display: block;
@@ -2789,12 +2789,12 @@ article header .entry-meta {
   width: 100px;
   height: 100px;
 }
-/* line 1382, sass/style.scss */
+/* line 1372, sass/style.scss */
 #fbcontent .fbalbum li a img {
   display: block;
 }
 
-/* line 1389, sass/style.scss */
+/* line 1379, sass/style.scss */
 #services .ngg-album {
   border: none;
   width: 25%;
@@ -2802,12 +2802,12 @@ article header .entry-meta {
   padding: 0 0 15px 0;
   margin: 0;
 }
-/* line 1396, sass/style.scss */
+/* line 1386, sass/style.scss */
 #services .ngg-albumtitle {
   margin: 0;
   text-align: center;
 }
-/* line 1400, sass/style.scss */
+/* line 1390, sass/style.scss */
 #services .ngg-albumtitle a {
   -webkit-transition-property: color;
   -moz-transition-property: color;
@@ -2820,22 +2820,22 @@ article header .entry-meta {
   color: white;
   text-shadow: black -2px -2px 0, black 2px -2px 0, black 2px 2px 0, black -2px 2px 0;
 }
-/* line 1411, sass/style.scss */
+/* line 1401, sass/style.scss */
 #services .ngg-albumtitle a:hover {
   color: black;
   text-shadow: #d1c261 -1px -1px 4px, #d1c261 1px -1px 4px, #d1c261 1px 1px 4px, #d1c261 -1px 1px 4px;
   text-decoration: none;
 }
-/* line 1421, sass/style.scss */
+/* line 1411, sass/style.scss */
 #services .ngg-thumbnail {
   float: none;
   margin: 0;
 }
-/* line 1425, sass/style.scss */
+/* line 1415, sass/style.scss */
 #services .ngg-thumbnail a {
   display: block;
 }
-/* line 1428, sass/style.scss */
+/* line 1418, sass/style.scss */
 #services .ngg-thumbnail img {
   -webkit-transition-property: box-shadow;
   -moz-transition-property: box-shadow;
@@ -2859,13 +2859,13 @@ article header .entry-meta {
   -moz-box-shadow: rgba(209, 194, 97, 0.2) 0 0 25px, rgba(209, 194, 97, 0.2) 0 0 25px;
   box-shadow: rgba(209, 194, 97, 0.2) 0 0 25px, rgba(209, 194, 97, 0.2) 0 0 25px;
 }
-/* line 1442, sass/style.scss */
+/* line 1432, sass/style.scss */
 #services .ngg-thumbnail img:hover {
   -webkit-box-shadow: rgba(209, 194, 97, 0.8) 0 0 25px, rgba(209, 194, 97, 0.8) 0 0 25px;
   -moz-box-shadow: rgba(209, 194, 97, 0.8) 0 0 25px, rgba(209, 194, 97, 0.8) 0 0 25px;
   box-shadow: rgba(209, 194, 97, 0.8) 0 0 25px, rgba(209, 194, 97, 0.8) 0 0 25px;
 }
-/* line 1449, sass/style.scss */
+/* line 1439, sass/style.scss */
 #services .ngg-description {
   display: none;
 }
@@ -2887,7 +2887,7 @@ article header .entry-meta {
   display: block;
 }
 */
-/* line 1471, sass/style.scss */
+/* line 1461, sass/style.scss */
 .edit-link {
   display: block;
   position: absolute;
@@ -2902,7 +2902,7 @@ article header .entry-meta {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 1480, sass/style.scss */
+/* line 1470, sass/style.scss */
 .edit-link a {
   font-size: 14px;
   color: #aaf;

@@ -31,7 +31,7 @@ Text Domain: stageworks2
 
 $cornerRadius: 35px;
 $glowColour1: #d1c261;
-$glowColour2: #e4741f;
+$glowColour2: #fff;
 $linkColour: #e4741f;
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
@@ -1170,70 +1170,60 @@ article {
 @-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      inset rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px,
-      inset rgba($glowColour2, 0.25) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px
     );
 	}
 }
 @-webkit-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      inset rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px,
-      inset rgba($glowColour2, 0.25) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px
     );
 	}
 }
 @-moz-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      inset rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px,
-      inset rgba($glowColour2, 0.25) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px
     );
 	}
 }
 @-o-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      inset rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px,
-      inset rgba($glowColour2, 0.25) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px
     );
 	}
 }
 @-ms-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.2) 0 0 25px,
-      inset rgba($glowColour2, 0.2) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px,
-      inset rgba($glowColour2, 0.25) 0 0 25px
+      rgba($glowColour2, 0.3) 0 0 25px
     );
 	}
 }
