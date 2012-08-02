@@ -155,7 +155,7 @@ body.home #page > span.chrome1 {
 }
 /* line 144, sass/style.scss */
 body.home #page > span.chrome2 {
-  background: url(images/stages/brightfire1sepia-blur.jpg) no-repeat;
+  background: url(images/stages/brightfire1gray-blur.jpg) no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
@@ -581,7 +581,7 @@ a:hover {
 
   /* line 460, sass/style.scss */
   50% {
-    opacity: 0.2;
+    opacity: 0.7;
   }
 
   /* line 461, sass/style.scss */
@@ -598,7 +598,7 @@ a:hover {
 
   /* line 465, sass/style.scss */
   50% {
-    opacity: 0.2;
+    opacity: 0.7;
   }
 
   /* line 466, sass/style.scss */
@@ -615,7 +615,7 @@ a:hover {
 
   /* line 470, sass/style.scss */
   50% {
-    opacity: 0.2;
+    opacity: 0.7;
   }
 
   /* line 471, sass/style.scss */
@@ -632,7 +632,7 @@ a:hover {
 
   /* line 475, sass/style.scss */
   50% {
-    opacity: 0.2;
+    opacity: 0.7;
   }
 
   /* line 476, sass/style.scss */
@@ -2129,24 +2129,6 @@ a:hover {
 body.home #site-title a {
   background: transparent;
   -webkit-perspective-origin: 50% 85%;
-  animation: LOGOSLOWTHROB 99s linear 0 1 normal;
-  -webkit-animation: LOGOSLOWTHROB 99s linear 0 1 normal;
-  -ms-animation: LOGOSLOWTHROB 99s linear 0 1 normal;
-  -o-animation: LOGOSLOWTHROB 99s linear 0 1 normal;
-  -moz-animation-name: LOGOSLOWTHROB;
-  -moz-animation-duration: 99s;
-  -moz-animation-timing-function: linear;
-  -moz-animation-delay: 0;
-  -moz-animation-iteration-count: 1;
-  -moz-animation-direction: normal;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
 }
 
 /* line 815, sass/style.scss */
@@ -2166,15 +2148,10 @@ body.home #site-title a:hover {
   -moz-animation-delay: 0;
   -moz-animation-iteration-count: infinite;
   -moz-animation-direction: normal;
-  -webkit-transform: scale(1.02, 1.02);
-  -moz-transform: scale(1.02, 1.02);
-  -ms-transform: scale(1.02, 1.02);
-  -o-transform: scale(1.02, 1.02);
-  transform: scale(1.02, 1.02);
   background: transparent;
 }
 
-/* line 828, sass/style.scss */
+/* line 827, sass/style.scss */
 #site-description {
   position: absolute;
   text-indent: -999em;
@@ -2182,18 +2159,18 @@ body.home #site-title a:hover {
 
 /* =Menu
 -------------------------------------------------------------- */
-/* line 837, sass/style.scss */
+/* line 836, sass/style.scss */
 #access {
   position: absolute;
   top: 65px;
   left: 50%;
 }
-/* line 843, sass/style.scss */
+/* line 842, sass/style.scss */
 #access ul {
   padding: 0;
   margin: 0;
 }
-/* line 847, sass/style.scss */
+/* line 846, sass/style.scss */
 #access li {
   list-style: none;
   padding: 0;
@@ -2202,19 +2179,20 @@ body.home #site-title a:hover {
   top: 0;
   left: -250px;
 }
-/* line 855, sass/style.scss */
+/* line 854, sass/style.scss */
 #access li a {
   color: #ccc;
   font-weight: bold;
   font-size: 18px;
-  text-shadow: black -1px -1px 0, black 2px -1px 0, black 2px 2px 0, black -1px 2px 0, black -1px 0px 0, black 1px 0px 0, black 0px 2px 0, black 0px 2px 0;
+  text-shadow: black -1px -1px 0, black 2px -1px 0, black 2px 2px 0, black -1px 2px 0, s black -1px 0, s black -1px 0px 0, black 1px 0px 0, black 0px 2px 0, black 0px 2px 0;
+  text-shadow: black -1px -1px 0, black 2px -1px 0, black 2px 2px 0, black -1px 2px 0, s black -1px 0px 0, s black -1px 0px 0, black 1px 0px 0, black 0px 2px 0, black 0px 2px 0;
 }
-/* line 870, sass/style.scss */
+/* line 869, sass/style.scss */
 #access li a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 875, sass/style.scss */
+/* line 874, sass/style.scss */
 #access li + li {
   left: auto;
   right: -250px;
@@ -2222,33 +2200,32 @@ body.home #site-title a:hover {
 
 /* =Content
 ----------------------------------------------- */
-/* line 885, sass/style.scss */
+/* line 884, sass/style.scss */
 #main {
   clear: both;
 }
 
-/* line 889, sass/style.scss */
+/* line 888, sass/style.scss */
 body.home #main,
 body.home #main article {
   padding-top: 0;
 }
 
-/* line 892, sass/style.scss */
+/* line 891, sass/style.scss */
 body.home #content > article.intro {
   margin-top: 0;
 }
 
-/* line 895, sass/style.scss */
+/* line 894, sass/style.scss */
 body.home #content > article.intro .entry-content {
   padding-top: 0;
 }
 
 /* Images */
-/* line 902, sass/style.scss */
+/* line 901, sass/style.scss */
 .entry-content img,
 .comment-content img,
 .widget img {
-  max-width: 97.5%;
   /* Fluid images for posts, comments, and widgets */
 }
 
@@ -2496,7 +2473,7 @@ article header .entry-meta {
 ----------------------------------------------- */
 /* line 1108, sass/style.scss */
 .menu-footer-container ul {
-  padding: 40px 0 0;
+  padding: 20px 0 40px;
   margin: 0;
   text-align: center;
 }
@@ -2577,80 +2554,80 @@ article header .entry-meta {
 @-keyframes GLOWPULSE {
   /* line 1171, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
   }
 
   /* line 1177, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
   }
 }
 
 @-webkit-keyframes GLOWPULSE {
   /* line 1185, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
   }
 
   /* line 1191, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
   }
 }
 
 @-moz-keyframes GLOWPULSE {
   /* line 1199, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
   }
 
   /* line 1205, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
   }
 }
 
 @-o-keyframes GLOWPULSE {
   /* line 1213, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
   }
 
   /* line 1219, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
   }
 }
 
 @-ms-keyframes GLOWPULSE {
   /* line 1227, sass/style.scss */
   0%, 100% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.3) 0 0 25px, inset rgba(228, 116, 31, 0.3) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.2) 0 0 25px, inset rgba(228, 116, 31, 0.2) 0 0 25px;
   }
 
   /* line 1233, sass/style.scss */
   50% {
-    -webkit-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    -moz-box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
-    box-shadow: rgba(228, 116, 31, 0.4) 0 0 25px, inset rgba(228, 116, 31, 0.4) 0 0 25px;
+    -webkit-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    -moz-box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
+    box-shadow: rgba(228, 116, 31, 0.25) 0 0 25px, inset rgba(228, 116, 31, 0.25) 0 0 25px;
   }
 }
 
@@ -2786,7 +2763,38 @@ article header .entry-meta {
   text-shadow: black -2px -2px 0, black 2px -2px 0, black 2px 2px 0, black -2px 2px 0, black -2px 0px 0, black 2px 0px 0, black 0px 2px 0, black 0px 2px 0;
 }
 
-/* line 1353, sass/style.scss */
+/* line 1359, sass/style.scss */
+#fbcontent .fbalbum ul {
+  width: 472px;
+  margin: 0 auto;
+  padding: 0;
+}
+/* line 1364, sass/style.scss */
+#fbcontent .fbalbum li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 0 5px 15px;
+  padding: 2px;
+  background: white;
+}
+/* line 1374, sass/style.scss */
+#fbcontent .fbalbum li a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+/* line 1382, sass/style.scss */
+#fbcontent .fbalbum li a img {
+  display: block;
+}
+
+/* line 1389, sass/style.scss */
 #services .ngg-album {
   border: none;
   width: 25%;
@@ -2794,12 +2802,12 @@ article header .entry-meta {
   padding: 0 0 15px 0;
   margin: 0;
 }
-/* line 1360, sass/style.scss */
+/* line 1396, sass/style.scss */
 #services .ngg-albumtitle {
   margin: 0;
   text-align: center;
 }
-/* line 1364, sass/style.scss */
+/* line 1400, sass/style.scss */
 #services .ngg-albumtitle a {
   -webkit-transition-property: color;
   -moz-transition-property: color;
@@ -2812,22 +2820,22 @@ article header .entry-meta {
   color: white;
   text-shadow: black -2px -2px 0, black 2px -2px 0, black 2px 2px 0, black -2px 2px 0;
 }
-/* line 1375, sass/style.scss */
+/* line 1411, sass/style.scss */
 #services .ngg-albumtitle a:hover {
   color: black;
   text-shadow: #d1c261 -1px -1px 4px, #d1c261 1px -1px 4px, #d1c261 1px 1px 4px, #d1c261 -1px 1px 4px;
   text-decoration: none;
 }
-/* line 1385, sass/style.scss */
+/* line 1421, sass/style.scss */
 #services .ngg-thumbnail {
   float: none;
   margin: 0;
 }
-/* line 1389, sass/style.scss */
+/* line 1425, sass/style.scss */
 #services .ngg-thumbnail a {
   display: block;
 }
-/* line 1392, sass/style.scss */
+/* line 1428, sass/style.scss */
 #services .ngg-thumbnail img {
   -webkit-transition-property: box-shadow;
   -moz-transition-property: box-shadow;
@@ -2851,13 +2859,13 @@ article header .entry-meta {
   -moz-box-shadow: rgba(209, 194, 97, 0.2) 0 0 25px, rgba(209, 194, 97, 0.2) 0 0 25px;
   box-shadow: rgba(209, 194, 97, 0.2) 0 0 25px, rgba(209, 194, 97, 0.2) 0 0 25px;
 }
-/* line 1406, sass/style.scss */
+/* line 1442, sass/style.scss */
 #services .ngg-thumbnail img:hover {
   -webkit-box-shadow: rgba(209, 194, 97, 0.8) 0 0 25px, rgba(209, 194, 97, 0.8) 0 0 25px;
   -moz-box-shadow: rgba(209, 194, 97, 0.8) 0 0 25px, rgba(209, 194, 97, 0.8) 0 0 25px;
   box-shadow: rgba(209, 194, 97, 0.8) 0 0 25px, rgba(209, 194, 97, 0.8) 0 0 25px;
 }
-/* line 1413, sass/style.scss */
+/* line 1449, sass/style.scss */
 #services .ngg-description {
   display: none;
 }
@@ -2879,7 +2887,7 @@ article header .entry-meta {
   display: block;
 }
 */
-/* line 1435, sass/style.scss */
+/* line 1471, sass/style.scss */
 .edit-link {
   display: block;
   position: absolute;
@@ -2894,7 +2902,7 @@ article header .entry-meta {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 1444, sass/style.scss */
+/* line 1480, sass/style.scss */
 .edit-link a {
   font-size: 14px;
   color: #aaf;

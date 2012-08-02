@@ -142,7 +142,7 @@ body.home {
     //@include opacity(0);
   }
   #page > span.chrome2 {
-    background: url(images/stages/brightfire1sepia-blur.jpg) no-repeat;
+    background: url(images/stages/brightfire1gray-blur.jpg) no-repeat;
     @include opacity(0);
   }
   #page > span.chrome2.active {
@@ -457,22 +457,22 @@ a:hover {
 
 @-keyframes LOGOFASTTHROB {
   0% {opacity: 1;}
-  50% {opacity: 0.2;}
+  50% {opacity: 0.7;}
   100% {opacity: 1;}
 }
 @-webkit-keyframes LOGOFASTTHROB {
   0% {opacity: 1;}
-  50% {opacity: 0.2;}
+  50% {opacity: 0.7;}
   100% {opacity: 1;}
 }
 @-moz-keyframes LOGOFASTTHROB {
   0% {opacity: 1;}
-  50% {opacity: 0.2;}
+  50% {opacity: 0.7;}
   100% {opacity: 1;}
 }
 @-o-keyframes LOGOFASTTHROB {
   0% {opacity: 1;}
-  50% {opacity: 0.2;}
+  50% {opacity: 0.7;}
   100% {opacity: 1;}
 }
 
@@ -808,16 +808,15 @@ body.home #site-title a {
   background: transparent;
   -webkit-perspective-origin: 50% 85%;
   //@include animation(HOMELOGO2, 2s, ease-out, 0, 1);
-  @include animation(LOGOSLOWTHROB, 99s, linear, 0, 1);
-  @include transition-property(all);
-  @include transition-duration(.2s);
+  //@include animation(LOGOSLOWTHROB, 99s, linear, 0, 1);
+  //@include transition-property(all);
+  //@include transition-duration(.2s);
 }
 body.home #site-title a span.chrome1 {
   background-image: url(images/logos/gobo3.png);
 }
 body.home #site-title a:hover {
   @include animation(LOGOFASTTHROB, 1s, ease-out, 0, infinite);
-  @include transform( scale(1.02, 1.02) );
   background: transparent;
 }
 body.home #site-title a:hover span.chrome1 {
@@ -860,7 +859,7 @@ body.home #site-title a:hover span.chrome1 {
         rgba(black, 1) -1px -1px 0,
         rgba(black, 1) 2px -1px 0,
         rgba(black, 1) 2px 2px 0,
-        rgba(black, 1) -1px 2px 0,
+        rgba(black, 1) -1px 2px 0,s
         rgba(black, 1) -1px -0px 0,
         rgba(black, 1) 1px -0px 0,
         rgba(black, 1) 0px 2px 0,
@@ -900,7 +899,8 @@ body.home #content > article.intro .entry-content {
 .entry-content img,
 .comment-content img,
 .widget img {
-	max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+	//max-width: 97.5%;
+	/* Fluid images for posts, comments, and widgets */
 }
 img[class*="align"],
 img[class*="wp-image-"],
@@ -1106,7 +1106,7 @@ article {
 
 .menu-footer-container {
   ul {
-    padding: 40px 0 0;
+    padding: 20px 0 40px;
     margin: 0;
     text-align: center;
   }
@@ -1170,70 +1170,70 @@ article {
 @-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px,
-      inset rgba($glowColour2, 0.3) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      inset rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.4) 0 0 25px,
-      inset rgba($glowColour2, 0.4) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px,
+      inset rgba($glowColour2, 0.25) 0 0 25px
     );
 	}
 }
 @-webkit-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px,
-      inset rgba($glowColour2, 0.3) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      inset rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.4) 0 0 25px,
-      inset rgba($glowColour2, 0.4) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px,
+      inset rgba($glowColour2, 0.25) 0 0 25px
     );
 	}
 }
 @-moz-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px,
-      inset rgba($glowColour2, 0.3) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      inset rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.4) 0 0 25px,
-      inset rgba($glowColour2, 0.4) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px,
+      inset rgba($glowColour2, 0.25) 0 0 25px
     );
 	}
 }
 @-o-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px,
-      inset rgba($glowColour2, 0.3) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      inset rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.4) 0 0 25px,
-      inset rgba($glowColour2, 0.4) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px,
+      inset rgba($glowColour2, 0.25) 0 0 25px
     );
 	}
 }
 @-ms-keyframes GLOWPULSE {
 	0%, 100%   {
 	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px,
-      inset rgba($glowColour2, 0.3) 0 0 25px
+      rgba($glowColour2, 0.2) 0 0 25px,
+      inset rgba($glowColour2, 0.2) 0 0 25px
     );
   }
 	50% {
 	  @include box-shadow(
-      rgba($glowColour2, 0.4) 0 0 25px,
-      inset rgba($glowColour2, 0.4) 0 0 25px
+      rgba($glowColour2, 0.25) 0 0 25px,
+      inset rgba($glowColour2, 0.25) 0 0 25px
     );
 	}
 }
@@ -1346,6 +1346,42 @@ article {
         rgba(black, 1) 0px 2px 0,
         rgba(black, 1) 0px 2px 0
       );
+    }
+  }
+}
+
+#fbcontent .fbalbum {
+  $thumbWidth: 100px;
+  $thumbHeight: 100px;
+  $thumbHMargin: 7px;
+  $thumbsAcross: 4;
+  $thumbPadding: 2px;
+  ul {
+    width: ((($thumbPadding + $thumbHMargin)*2) + $thumbWidth) * $thumbsAcross;
+    margin: 0 auto;
+    padding: 0;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    width: $thumbWidth;
+    height: $thumbHeight;
+    margin: 0 5px 15px;
+    padding: $thumbPadding;
+    background: white;
+    a {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      width: $thumbWidth;
+      height: $thumbHeight;
+      //outline: 1px solid red;
+      
+      img {
+        display: block;
+      }
     }
   }
 }

@@ -47,6 +47,7 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>">
+<link href="<?php echo get_template_directory_uri(); ?>/js/lightbox/css/lightbox.css" type="text/css" media="all" rel="stylesheet" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -129,5 +130,6 @@
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/mustache.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lib.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/lightbox/js/lightbox.js"></script>
 
 	<div id="main">

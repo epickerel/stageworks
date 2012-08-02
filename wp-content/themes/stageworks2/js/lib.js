@@ -1,3 +1,15 @@
+(function ($) {
+  $.pageQuery = function () {
+    var arr, kvp = {}, i, kv;
+    arr = window.location.search.substring(1).split('&');
+    for (i=0; i<arr.length; i++) {
+      kv = arr[i].split('=');
+      kvp[decodeURIComponent(kv[0])] = decodeURIComponent(kv[1]);
+    }
+    return kvp;
+  };
+}(jQuery));
+
 (function($){
   var defaults, tick, start;
   defaults = {
@@ -152,7 +164,8 @@
 }(jQuery));
 
 
-(function($){
+(function ($) {
+  // Facebook album covers
   var defaults, mergeAlbumsAndPhotos;
   defaults = {
     template: '<ul>{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
@@ -242,3 +255,49 @@
     });
   };
 }(jQuery));
+
+
+(function ($) {
+  //
+  var defaults;
+  defaults = {
+    template: '<div class="fbalbum"><h2>{{name}}</h2>' +
+      '<p>{{description}}</p>' +
+      '<ul>{{#photos}}\n<li><a href="{{src_big}}" rel="lightbox[{{name}}]" title="{{caption}}">' +
+      '<img src="{{src_big}}">' +
+      '</a></li>\n{{/photos}}</ul></div>'
+  };
+  $.fn.fbAlbum = function (aid, opts) {
+    var $el = this;
+    opts = $.extend({}, defaults, opts);
+    $.ajax({
+        url: 'http://graph.facebook.com/fql',
+        data: {
+          //q: 'SELECT src_big FROM photo WHERE 
+          q: JSON.stringify({
+            query1: 'SELECT pid, src_small, src_small_width, src_small_height,' +
+              'src_big, src_big_width, src_big_height, ' +
+              'src, src_width, src_height, caption, position ' +
+              'FROM photo WHERE aid="' + aid + '"',
+            query2: 'SELECT name, photo_count, owner, name, description, cover_pid, ' +
+              'modified, size, description FROM album WHERE aid="' + aid + '"'
+          })
+        },
+        success: function(o){
+          var album, html, $images, $firstImgContext;
+          album = o.data[1].fql_result_set[0];
+          album.photos = o.data[0].fql_result_set.sort(function(a, b){
+            return a.position - b.position;
+          });
+          //album.description = album.description.replace('\n', '<br>');
+          html = Mustache.to_html(opts.template, album);
+          $el.html(html);
+          $images = $el.find('img');
+          $firstImgContext = $images.eq(0).closest('a');
+          $images.fitImageTo($firstImgContext.width(), $firstImgContext.height());
+        },
+        dataType: 'jsonp'
+    });
+  };
+}(jQuery));
+
