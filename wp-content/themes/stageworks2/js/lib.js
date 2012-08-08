@@ -173,13 +173,10 @@
       '<span class="title">{{name}}</span></a></li>\n{{/items}}</ul>' +
       '<span class="chrome1"><b></b><b></b><b></b><b></b></span>',
     albumFilter: function(albums){
-      var i, album, newAlbums = [];
+      var i, album, newAlbums = [], re = /\*\*$/;
       for (i=0; i<albums.length; i++) {
         album = albums[i];
-        if (album.name !== 'Cover Photos' &&
-            album.name !== 'Wall Photos' &&
-            album.name.indexOf('Crew') === -1 &&
-            album.name !== 'Profile Photos') {
+        if (album.description.match(re)) {
           newAlbums.push(album);
         }
       }
@@ -217,7 +214,7 @@
           //q: 'SELECT src_big FROM photo WHERE 
           q: JSON.stringify({
             query1: 'SELECT src_big, src, pid FROM photo WHERE pid in (select cover_pid from album where owner = "119186754764635")',
-            query2: 'SELECT name, aid, owner, name, description, cover_pid, modified, size FROM album WHERE owner = "119186754764635"'
+            query2: 'SELECT name, aid, owner, name, description, cover_pid, modified, size FROM album WHERE owner = "119186754764635" ORDER BY created desc'
           })
         },
         success: function(o){

@@ -12,6 +12,30 @@ Tags: dark, light, white, black, gray, one-column, fixed-width, flexible-width, 
 Text Domain: stageworks2
 */
 
+@mixin linkGlowStyle ($colour1, $colour2) {
+  a {
+    @include transition-property(color);
+    @include transition-duration(.2s);
+    color: $colour1;
+    @include text-shadow(
+      rgba($colour2, 1) -2px -2px 0,
+      rgba($colour2, 1) 2px -2px 0,
+      rgba($colour2, 1) 2px 2px 0,
+      rgba($colour2, 1) -2px 2px 0
+    );
+  }
+  a:hover {
+    color: $colour2;
+    @include text-shadow(
+      rgba($colour1, 1) -1px -1px 4px,
+      rgba($colour1, 1) 1px -1px 4px,
+      rgba($colour1, 1) 1px 1px 4px,
+      rgba($colour1, 1) -1px 1px 4px
+    );
+    text-decoration: none;
+  }
+}
+
 @mixin animation ($name, $duration,
       $timing-function:linear,
       $delay:0,
@@ -30,7 +54,7 @@ Text Domain: stageworks2
 }
 
 $cornerRadius: 35px;
-$glowColour1: #d1c261;
+$glowColour1: #fff;
 $glowColour2: #fff;
 $linkColour: #e4741f;
 
@@ -137,9 +161,12 @@ body.home {
   }
   #page > span.chrome1 {
     background: url(images/stages/brightfire1.jpg) no-repeat;
+    @include transition-timing-function(ease-in);
+    @include transition-duration(1.5s);
+    @include opacity(0.1);
   }
   #page > span.chrome1.active {
-    //@include opacity(0);
+    @include opacity(1);
   }
   #page > span.chrome2 {
     background: url(images/stages/brightfire1gray-blur.jpg) no-repeat;
@@ -476,303 +503,6 @@ a:hover {
   100% {opacity: 1;}
 }
 
-@-keyframes LOGOSLOWTHROB {
-  0% {opacity:0.753}
-  2% {opacity:0.804}
-  4% {opacity:0.854}
-  4.1% {opacity:0.5}
-  4.2% {opacity:1}
-  4.25% {opacity:0.5}
-  4.3% {opacity:1}
-  4.35% {opacity:.3}
-  5% {opacity:.5}
-  5.05% {opacity:.6}
-  5.1% {opacity:.4}
-  5.15% {opacity:.6}
-  5.2% {opacity:.4}
-  5.25% {opacity:.6}
-  5.3% {opacity:.4}
-  5.35% {opacity:.6}
-  5.4% {opacity:.4}
-  5.45% {opacity:.6}
-  5.5% {opacity:.4}
-  5.55% {opacity:.6}
-  5.6% {opacity:.4}
-  5.65% {opacity:.6}
-  6% {opacity:0.735}
-  8% {opacity:0.668}
-  10% {opacity:0.915}
-  12% {opacity:0.752}
-  14% {opacity:0.742}
-  16% {opacity:0.750}
-  18% {opacity:0.774}
-  20% {opacity:0.937}
-  22% {opacity:0.796}
-  24% {opacity:0.885}
-  26% {opacity:0.742}
-  28% {opacity:0.760}
-  30% {opacity:0.758}
-  32% {opacity:0.857}
-  34% {opacity:0.748}
-  36% {opacity:0.985}
-  38% {opacity:0.73}
-  39% {opacity:1}
-  40% {opacity:0.749}
-  42% {opacity:0.989}
-  44% {opacity:0.680}
-  46% {opacity:0.731}
-  48% {opacity:0.876}
-  50% {opacity:0.771}
-  52% {opacity:0.901}
-  54% {opacity:0.875}
-  56% {opacity:0.736}
-  58% {opacity:0.857}
-  60% {opacity:0.947}
-  62% {opacity:0.678}
-  64% {opacity:0.937}
-  66% {opacity:0.888}
-  68% {opacity:0.676}
-  70% {opacity:0.709}
-  72% {opacity:0.709}
-  74% {opacity:0.830}
-  76% {opacity:0.671}
-  78% {opacity:0.725}
-  80% {opacity:0.964}
-  82% {opacity:0.740}
-  84% {opacity:0.964}
-  86% {opacity:0.960}
-  88% {opacity:0.780}
-  87% {opacity:0}
-  90% {opacity:0.993}
-  92% {opacity:0.693}
-  94% {opacity:0.990}
-  96% {opacity:0.876}
-  98% {opacity:0.892}
-  100% {opacity:1}
-}
-@-webkit-keyframes LOGOSLOWTHROB {
-  0% {opacity:0.753}
-  2% {opacity:0.804}
-  4% {opacity:0.854}
-  4.1% {opacity:0.5}
-  4.2% {opacity:1}
-  4.25% {opacity:0.5}
-  4.3% {opacity:1}
-  4.35% {opacity:.3}
-  5% {opacity:.5}
-  5.05% {opacity:.6}
-  5.1% {opacity:.4}
-  5.15% {opacity:.6}
-  5.2% {opacity:.4}
-  5.25% {opacity:.6}
-  5.3% {opacity:.4}
-  5.35% {opacity:.6}
-  5.4% {opacity:.4}
-  5.45% {opacity:.6}
-  5.5% {opacity:.4}
-  5.55% {opacity:.6}
-  5.6% {opacity:.4}
-  5.65% {opacity:.6}
-  6% {opacity:0.735}
-  8% {opacity:0.668}
-  10% {opacity:0.915}
-  12% {opacity:0.752}
-  14% {opacity:0.742}
-  16% {opacity:0.750}
-  18% {opacity:0.774}
-  20% {opacity:0.937}
-  22% {opacity:0.796}
-  24% {opacity:0.885}
-  26% {opacity:0.742}
-  28% {opacity:0.760}
-  30% {opacity:0.758}
-  32% {opacity:0.857}
-  34% {opacity:0.748}
-  36% {opacity:0.985}
-  38% {opacity:0.73}
-  39% {opacity:1}
-  40% {opacity:0.749}
-  42% {opacity:0.989}
-  44% {opacity:0.680}
-  46% {opacity:0.731}
-  48% {opacity:0.876}
-  50% {opacity:0.771}
-  52% {opacity:0.901}
-  54% {opacity:0.875}
-  56% {opacity:0.736}
-  58% {opacity:0.857}
-  60% {opacity:0.947}
-  62% {opacity:0.678}
-  64% {opacity:0.937}
-  66% {opacity:0.888}
-  68% {opacity:0.676}
-  70% {opacity:0.709}
-  72% {opacity:0.709}
-  74% {opacity:0.830}
-  76% {opacity:0.671}
-  78% {opacity:0.725}
-  80% {opacity:0.964}
-  82% {opacity:0.740}
-  84% {opacity:0.964}
-  86% {opacity:0.960}
-  88% {opacity:0.780}
-  87% {opacity:0}
-  90% {opacity:0.993}
-  92% {opacity:0.693}
-  94% {opacity:0.990}
-  96% {opacity:0.876}
-  98% {opacity:0.892}
-  100% {opacity:1}
-}
-@-moz-keyframes LOGOSLOWTHROB {
-  0% {opacity:0.753}
-  2% {opacity:0.804}
-  4% {opacity:0.854}
-  4.1% {opacity:0.5}
-  4.2% {opacity:1}
-  4.25% {opacity:0.5}
-  4.3% {opacity:1}
-  4.35% {opacity:.3}
-  5% {opacity:.5}
-  5.05% {opacity:.6}
-  5.1% {opacity:.4}
-  5.15% {opacity:.6}
-  5.2% {opacity:.4}
-  5.25% {opacity:.6}
-  5.3% {opacity:.4}
-  5.35% {opacity:.6}
-  5.4% {opacity:.4}
-  5.45% {opacity:.6}
-  5.5% {opacity:.4}
-  5.55% {opacity:.6}
-  5.6% {opacity:.4}
-  5.65% {opacity:.6}
-  6% {opacity:0.735}
-  8% {opacity:0.668}
-  10% {opacity:0.915}
-  12% {opacity:0.752}
-  14% {opacity:0.742}
-  16% {opacity:0.750}
-  18% {opacity:0.774}
-  20% {opacity:0.937}
-  22% {opacity:0.796}
-  24% {opacity:0.885}
-  26% {opacity:0.742}
-  28% {opacity:0.760}
-  30% {opacity:0.758}
-  32% {opacity:0.857}
-  34% {opacity:0.748}
-  36% {opacity:0.985}
-  38% {opacity:0.73}
-  39% {opacity:1}
-  40% {opacity:0.749}
-  42% {opacity:0.989}
-  44% {opacity:0.680}
-  46% {opacity:0.731}
-  48% {opacity:0.876}
-  50% {opacity:0.771}
-  52% {opacity:0.901}
-  54% {opacity:0.875}
-  56% {opacity:0.736}
-  58% {opacity:0.857}
-  60% {opacity:0.947}
-  62% {opacity:0.678}
-  64% {opacity:0.937}
-  66% {opacity:0.888}
-  68% {opacity:0.676}
-  70% {opacity:0.709}
-  72% {opacity:0.709}
-  74% {opacity:0.830}
-  76% {opacity:0.671}
-  78% {opacity:0.725}
-  80% {opacity:0.964}
-  82% {opacity:0.740}
-  84% {opacity:0.964}
-  86% {opacity:0.960}
-  88% {opacity:0.780}
-  87% {opacity:0}
-  90% {opacity:0.993}
-  92% {opacity:0.693}
-  94% {opacity:0.990}
-  96% {opacity:0.876}
-  98% {opacity:0.892}
-  100% {opacity:1}
-}
-@-o-keyframes LOGOSLOWTHROB {
-  0% {opacity:0.753}
-  2% {opacity:0.804}
-  4% {opacity:0.854}
-  4.1% {opacity:0.5}
-  4.2% {opacity:1}
-  4.25% {opacity:0.5}
-  4.3% {opacity:1}
-  4.35% {opacity:.3}
-  5% {opacity:.5}
-  5.05% {opacity:.6}
-  5.1% {opacity:.4}
-  5.15% {opacity:.6}
-  5.2% {opacity:.4}
-  5.25% {opacity:.6}
-  5.3% {opacity:.4}
-  5.35% {opacity:.6}
-  5.4% {opacity:.4}
-  5.45% {opacity:.6}
-  5.5% {opacity:.4}
-  5.55% {opacity:.6}
-  5.6% {opacity:.4}
-  5.65% {opacity:.6}
-  6% {opacity:0.735}
-  8% {opacity:0.668}
-  10% {opacity:0.915}
-  12% {opacity:0.752}
-  14% {opacity:0.742}
-  16% {opacity:0.750}
-  18% {opacity:0.774}
-  20% {opacity:0.937}
-  22% {opacity:0.796}
-  24% {opacity:0.885}
-  26% {opacity:0.742}
-  28% {opacity:0.760}
-  30% {opacity:0.758}
-  32% {opacity:0.857}
-  34% {opacity:0.748}
-  36% {opacity:0.985}
-  38% {opacity:0.73}
-  39% {opacity:1}
-  40% {opacity:0.749}
-  42% {opacity:0.989}
-  44% {opacity:0.680}
-  46% {opacity:0.731}
-  48% {opacity:0.876}
-  50% {opacity:0.771}
-  52% {opacity:0.901}
-  54% {opacity:0.875}
-  56% {opacity:0.736}
-  58% {opacity:0.857}
-  60% {opacity:0.947}
-  62% {opacity:0.678}
-  64% {opacity:0.937}
-  66% {opacity:0.888}
-  68% {opacity:0.676}
-  70% {opacity:0.709}
-  72% {opacity:0.709}
-  74% {opacity:0.830}
-  76% {opacity:0.671}
-  78% {opacity:0.725}
-  80% {opacity:0.964}
-  82% {opacity:0.740}
-  84% {opacity:0.964}
-  86% {opacity:0.960}
-  88% {opacity:0.780}
-  87% {opacity:0}
-  90% {opacity:0.993}
-  92% {opacity:0.693}
-  94% {opacity:0.990}
-  96% {opacity:0.876}
-  98% {opacity:0.892}
-  100% {opacity:1}
-}
-
 
 #site-title a {
   $top: 54px;
@@ -807,8 +537,6 @@ a:hover {
 body.home #site-title a {
   background: transparent;
   -webkit-perspective-origin: 50% 85%;
-  //@include animation(HOMELOGO2, 2s, ease-out, 0, 1);
-  //@include animation(LOGOSLOWTHROB, 99s, linear, 0, 1);
   //@include transition-property(all);
   //@include transition-duration(.2s);
 }
@@ -851,25 +579,12 @@ body.home #site-title a:hover span.chrome1 {
     top: 0;
     left: $centreOffset;
     
+    
     a {
-      color: #ccc;
       font-weight: bold;
       font-size: 18px;
-      @include text-shadow(
-        rgba(black, 1) -1px -1px 0,
-        rgba(black, 1) 2px -1px 0,
-        rgba(black, 1) 2px 2px 0,
-        rgba(black, 1) -1px 2px 0,s
-        rgba(black, 1) -1px -0px 0,
-        rgba(black, 1) 1px -0px 0,
-        rgba(black, 1) 0px 2px 0,
-        rgba(black, 1) 0px 2px 0
-      );
     }
-    a:hover {
-      color: white;
-      text-decoration: none;
-    }
+    @include linkGlowStyle(white, black);
   }
   li + li {
     left: auto;
@@ -1386,27 +1101,7 @@ article {
   .ngg-albumtitle {
     margin: 0;
     text-align: center;
-  }
-  .ngg-albumtitle a {
-    @include transition-property(color);
-    @include transition-duration(.2s);
-    color: white;
-    @include text-shadow(
-      rgba(black, 1) -2px -2px 0,
-      rgba(black, 1) 2px -2px 0,
-      rgba(black, 1) 2px 2px 0,
-      rgba(black, 1) -2px 2px 0
-    );
-  }
-  .ngg-albumtitle a:hover {
-    color: black;
-    @include text-shadow(
-      rgba($glowColour1, 1) -1px -1px 4px,
-      rgba($glowColour1, 1) 1px -1px 4px,
-      rgba($glowColour1, 1) 1px 1px 4px,
-      rgba($glowColour1, 1) -1px 1px 4px
-    );
-    text-decoration: none;
+    @include linkGlowStyle(white, black);
   }
   .ngg-thumbnail {
     float: none;
@@ -1425,14 +1120,14 @@ article {
       width: 148px;
       @include border-radius(10px);
       @include box-shadow(
-        rgba($glowColour1, 0.2) 0 0 25px,
-        rgba($glowColour1, 0.2) 0 0 25px
+        rgba($glowColour1, 0.1) 0 0 25px,
+        rgba($glowColour1, 0.1) 0 0 25px
       );
     }
     img:hover {
       @include box-shadow(
-        rgba($glowColour1, 0.8) 0 0 25px,
-        rgba($glowColour1, 0.8) 0 0 25px
+        rgba($glowColour1, 0.4) 0 0 25px,
+        rgba($glowColour1, 0.4) 0 0 25px
       );
     }
   }
