@@ -24,6 +24,7 @@ Text Domain: stageworks2
       rgba($colour2, 1) -2px 2px 0
     );
   }
+  a:active,
   a:hover {
     color: $colour2;
     @include text-shadow(
@@ -84,7 +85,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 html {
   color: white;
-  font-family: arial;
+  font-family: 'Allerta Stencil', sans-serif;
   font-size: 14px;
 }
 body {
@@ -123,7 +124,7 @@ footer, header, hgroup, menu, nav, section {
 ----------------------------------------------- */
 
 html {
-	background: black url(images/backgrounds/steelplate1.jpg) repeat-x;
+	background: black url(images/backgrounds/steelplate2.jpg) repeat-x;
 }
 body {
 	padding: 0 2em;
@@ -169,7 +170,7 @@ body.home {
     @include opacity(1);
   }
   #page > span.chrome2 {
-    background: url(images/stages/brightfire1gray-blur.jpg) no-repeat;
+    background: url(images/stages/brightfire3gray-blur.jpg) no-repeat;
     @include opacity(0);
   }
   #page > span.chrome2.active {
@@ -181,8 +182,6 @@ body.home {
 	margin: 0 -26.4% 0 0;
 	width: 100%;
 	background: black;
-	@include border-top-left-radius($cornerRadius);
-	@include border-top-right-radius($cornerRadius);
 }
 body.home #primary {
   background: transparent;
@@ -280,7 +279,6 @@ body.home #primary {
 
 body, input, textarea {
 	color: #ccc;
-	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	line-height: 1.625;
 }
@@ -340,7 +338,6 @@ cite, em, i {
 	font-style: italic;
 }
 blockquote {
-	font-family: Georgia, "Bitstream Charter", serif;
 	font-style: italic;
 	font-weight: normal;
 	margin: 0 3em;
@@ -350,7 +347,6 @@ blockquote em, blockquote i, blockquote cite {
 }
 blockquote cite {
 	color: #666;
-	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
@@ -462,6 +458,29 @@ a:hover {
 /* =Header
 ----------------------------------------------- */
 
+#page > header > span.chrome1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  background: -webkit-linear-gradient(bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 90%,
+      rgba(0, 0, 0, 0) 100%),
+     -webkit-linear-gradient(left,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.1) 15%,
+      rgba(0, 0, 0, 1) 45%,
+      rgba(0, 0, 0, 1) 55%,
+      rgba(0, 0, 0, 0.1) 85%,
+      rgba(0, 0, 0, 0) 100%);
+}
+body.home #page > header > span.chrome1 {
+  display: none;
+}
 #branding {
 	position: relative;
   z-index: 10;
@@ -481,6 +500,7 @@ a:hover {
 }
 #site-title {
 }
+
 
 @-keyframes LOGOFASTTHROB {
   0% {opacity: 1;}
@@ -534,21 +554,23 @@ a:hover {
 #site-title a:hover {
   background: $glowColour1;
 }
-body.home #site-title a {
-  background: transparent;
-  -webkit-perspective-origin: 50% 85%;
-  //@include transition-property(all);
-  //@include transition-duration(.2s);
-}
-body.home #site-title a span.chrome1 {
-  background-image: url(images/logos/gobo3.png);
-}
-body.home #site-title a:hover {
-  @include animation(LOGOFASTTHROB, 1s, ease-out, 0, infinite);
-  background: transparent;
-}
-body.home #site-title a:hover span.chrome1 {
-  //background-position: 0 -111px;
+#site-title {
+  a {
+    background: transparent;
+    -webkit-perspective-origin: 50% 85%;
+    //@include transition-property(all);
+    //@include transition-duration(.2s);
+  }
+  a span.chrome1 {
+    background-image: url(images/logos/gobo3.png);
+  }
+  a:hover {
+    @include animation(LOGOFASTTHROB, 1s, ease-out, 0, infinite);
+    background: transparent;
+  }
+  a:hover span.chrome1 {
+    //background-position: 0 -111px;
+  }
 }
 
 
@@ -581,7 +603,6 @@ body.home #site-title a:hover span.chrome1 {
     
     
     a {
-      font-weight: bold;
       font-size: 18px;
     }
     @include linkGlowStyle(white, black);
@@ -657,7 +678,6 @@ p img,
 .wp-caption .wp-caption-text,
 .gallery-caption {
 	color: #666;
-	font-family: Georgia, serif;
 	font-size: 12px;
 }
 .wp-caption .wp-caption-text {
@@ -1039,7 +1059,6 @@ article {
       bottom: 10px;
       right: 20px;
       color: white;
-      font-weight: bold;
       font-size: 18px;
       @include text-shadow(
         rgba(black, 1) -2px -2px 0,
@@ -1101,6 +1120,7 @@ article {
   .ngg-albumtitle {
     margin: 0;
     text-align: center;
+    font-weight: normal;
     @include linkGlowStyle(white, black);
   }
   .ngg-thumbnail {
@@ -1188,4 +1208,16 @@ article {
 @media print {
 }
 
+@-webkit-keyframes FADEIN {
+  0% {opacity: 0;}
+  70% {opacity: 0;}
+  100% {opacity: 1;}
+}
+body.home #page {
+  > header,
+  > #main,
+  > footer {
+    @include animation(FADEIN, 4s, ease-in, 0, 1);
+  }
+}
 

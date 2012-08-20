@@ -260,9 +260,16 @@
   defaults = {
     template: '<div class="fbalbum"><h2>{{name}}</h2>' +
       '<p>{{description}}</p>' +
+      '<ul>{{#photos}}\n<li>' +
+      '<img src="{{src}}" ref="{{src_big}}">{{caption}}' +
+      '</li>\n{{/photos}}</ul></div>'
+/* lightbox
+    template: '<div class="fbalbum"><h2>{{name}}</h2>' +
+      '<p>{{description}}</p>' +
       '<ul>{{#photos}}\n<li><a href="{{src_big}}" rel="lightbox[{{name}}]" title="{{caption}}">' +
       '<img src="{{src_big}}">' +
       '</a></li>\n{{/photos}}</ul></div>'
+*/
   };
   $.fn.fbAlbum = function (aid, opts) {
     var $el = this;
@@ -289,9 +296,10 @@
           //album.description = album.description.replace('\n', '<br>');
           html = Mustache.to_html(opts.template, album);
           $el.html(html);
-          $images = $el.find('img');
-          $firstImgContext = $images.eq(0).closest('a');
-          $images.fitImageTo($firstImgContext.width(), $firstImgContext.height());
+          //$images = $el.find('img');
+          //$firstImgContext = $images.eq(0).closest('a');
+          //$images.fitImageTo($firstImgContext.width(), $firstImgContext.height());
+          $el.find('ul:first').PikaChoose();
         },
         dataType: 'jsonp'
     });

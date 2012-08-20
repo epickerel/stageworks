@@ -47,7 +47,9 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>">
+<link href='http://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
 <link href="<?php echo get_template_directory_uri(); ?>/js/lightbox/css/lightbox.css" type="text/css" media="all" rel="stylesheet" />
+<link href="<?php echo get_template_directory_uri(); ?>/js/pikachoose/styles/bottom.css" type="text/css" media="all" rel="stylesheet" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -73,6 +75,7 @@
   <span class="chrome1"></span>
   <span class="chrome2"></span>
 	<header id="branding" role="banner">
+	    <span class="chrome1"></span>
 			<hgroup>
 			  <div id="titlearea">
           <h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?><span class="chrome1"></span></a></span></h1>
@@ -131,5 +134,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/mustache.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lib.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lightbox/js/lightbox.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/pikachoose/lib/jquery.jcarousel.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/pikachoose/lib/jquery.pikachoose.js"></script>
 
 	<div id="main">
