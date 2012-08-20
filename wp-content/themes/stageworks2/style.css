@@ -1307,24 +1307,7 @@ article header .entry-meta {
   display: none;
 }
 
-/*
-.gallerypage {
-}
-.gallerypage article {
-  padding: 0;
-}
-.gallerypage header,
-.gallerypage .entry-content {
-  width: 85%;
-}
-.gallerypage header.entry-header {
-  width: 85%;
-}
-.gallerypage h2.entry-title {
-  display: block;
-}
-*/
-/* line 1069, sass/style.scss */
+/* line 1053, sass/style.scss */
 .edit-link {
   display: block;
   position: absolute;
@@ -1339,7 +1322,7 @@ article header .entry-meta {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 1078, sass/style.scss */
+/* line 1062, sass/style.scss */
 .edit-link a {
   font-size: 14px;
   color: #aaf;
@@ -1350,91 +1333,91 @@ article header .entry-meta {
 /* =Print
 ----------------------------------------------- */
 @keyframes FADEINLANDING {
-  /* line 1105, sass/style.scss */
+  /* line 1089, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1106, sass/style.scss */
+  /* line 1090, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1107, sass/style.scss */
+  /* line 1091, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-webkit-keyframes FADEINLANDING {
-  /* line 1110, sass/style.scss */
+  /* line 1094, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1111, sass/style.scss */
+  /* line 1095, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1112, sass/style.scss */
+  /* line 1096, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-moz-keyframes FADEINLANDING {
-  /* line 1115, sass/style.scss */
+  /* line 1099, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1116, sass/style.scss */
+  /* line 1100, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1117, sass/style.scss */
+  /* line 1101, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-o-keyframes FADEINLANDING {
-  /* line 1120, sass/style.scss */
+  /* line 1104, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1121, sass/style.scss */
+  /* line 1105, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1122, sass/style.scss */
+  /* line 1106, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-ms-keyframes FADEINLANDING {
-  /* line 1125, sass/style.scss */
+  /* line 1109, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1126, sass/style.scss */
+  /* line 1110, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1127, sass/style.scss */
+  /* line 1111, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
-/* line 1132, sass/style.scss */
+/* line 1116, sass/style.scss */
 body.home #page > header,
 body.home #page > #main,
 body.home #page > footer {
