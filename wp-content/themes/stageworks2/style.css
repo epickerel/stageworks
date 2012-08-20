@@ -664,53 +664,26 @@ body.home #page > header > span.chrome1 {
   }
 }
 
-/* line 527, sass/style.scss */
-#site-title a {
-  display: block;
-  position: absolute;
-  text-indent: -999em;
-  top: 54px;
-  bottom: 11px;
-  left: 27px;
-  right: 25px;
-  background: white;
-  overflow: visible;
-  -webkit-transition-property: background-color;
-  -moz-transition-property: background-color;
-  -o-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-}
-/* line 544, sass/style.scss */
-#site-title a span.chrome1 {
-  display: block;
-  position: absolute;
-  top: -54px;
-  bottom: -11px;
-  left: -27px;
-  right: -25px;
-  background: url(images/logos/gobo2.png) no-repeat;
-}
-
-/* line 554, sass/style.scss */
-#site-title a:hover {
-  background: white;
-}
-
-/* line 558, sass/style.scss */
+/* line 528, sass/style.scss */
 #site-title a {
   background: transparent;
-  -webkit-perspective-origin: 50% 85%;
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -100px;
+  text-indent: -999em;
 }
-/* line 564, sass/style.scss */
+/* line 540, sass/style.scss */
 #site-title a span.chrome1 {
   background-image: url(images/logos/gobo3.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 200px;
+  height: 46px;
 }
-/* line 567, sass/style.scss */
-#site-title a:hover {
+/* line 547, sass/style.scss */
+#site-title a :hover {
   animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
   -webkit-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
   -ms-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
@@ -721,10 +694,9 @@ body.home #page > header > span.chrome1 {
   -moz-animation-delay: 0;
   -moz-animation-iteration-count: infinite;
   -moz-animation-direction: normal;
-  background: transparent;
 }
 
-/* line 577, sass/style.scss */
+/* line 554, sass/style.scss */
 #site-description {
   position: absolute;
   text-indent: -999em;
@@ -732,18 +704,19 @@ body.home #page > header > span.chrome1 {
 
 /* =Menu
 -------------------------------------------------------------- */
-/* line 586, sass/style.scss */
+/* line 563, sass/style.scss */
 #access {
   position: absolute;
   top: 65px;
   left: 50%;
+  /* Now let's do styling for first rollout */
 }
-/* line 592, sass/style.scss */
+/* line 569, sass/style.scss */
 #access ul {
   padding: 0;
   margin: 0;
 }
-/* line 596, sass/style.scss */
+/* line 573, sass/style.scss */
 #access li {
   list-style: none;
   padding: 0;
@@ -752,7 +725,7 @@ body.home #page > header > span.chrome1 {
   top: 0;
   left: -250px;
 }
-/* line 605, sass/style.scss */
+/* line 581, sass/style.scss */
 #access li a {
   font-size: 18px;
 }
@@ -776,154 +749,24 @@ body.home #page > header > span.chrome1 {
   text-shadow: white -1px -1px 4px, white 1px -1px 4px, white 1px 1px 4px, white -1px 1px 4px;
   text-decoration: none;
 }
-/* line 610, sass/style.scss */
+/* line 586, sass/style.scss */
 #access li + li {
   left: auto;
   right: -250px;
 }
-
-/* =Content
------------------------------------------------ */
-/* line 620, sass/style.scss */
-#main {
-  clear: both;
+/* line 592, sass/style.scss */
+#access li {
+  left: auto;
+  right: -290px;
+  top: -50px;
 }
-
-/* line 624, sass/style.scss */
-body.home #main,
-body.home #main article {
-  padding-top: 0;
-}
-
-/* line 627, sass/style.scss */
-body.home #content > article.intro {
-  margin-top: 0;
-}
-
-/* line 630, sass/style.scss */
-body.home #content > article.intro .entry-content {
-  padding-top: 0;
-}
-
-/* Images */
-/* line 637, sass/style.scss */
-.entry-content img,
-.comment-content img,
-.widget img {
-  /* Fluid images for posts, comments, and widgets */
-}
-
-/* line 643, sass/style.scss */
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"] {
-  height: auto;
-  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-
-/* line 647, sass/style.scss */
-img.size-full,
-img.size-large {
-  max-width: 97.5%;
-  width: auto;
-  /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
-  height: auto;
-  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-
-/* line 652, sass/style.scss */
-.entry-content img.wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-
-/* line 660, sass/style.scss */
-img.alignleft,
-img.alignright,
-img.aligncenter {
-  margin-bottom: 1.625em;
-}
-
-/* line 664, sass/style.scss */
-p img,
-.wp-caption {
-  margin-top: 0.4em;
-}
-
-/* line 667, sass/style.scss */
-.wp-caption {
-  background: #eee;
-  margin-bottom: 1.625em;
-  max-width: 96%;
-  padding: 9px;
-}
-
-/* line 673, sass/style.scss */
-.wp-caption img {
-  display: block;
-  margin: 0 auto;
-  max-width: 98%;
-}
-
-/* line 679, sass/style.scss */
-.wp-caption .wp-caption-text,
-.gallery-caption {
-  color: #666;
-  font-size: 12px;
-}
-
-/* line 683, sass/style.scss */
-.wp-caption .wp-caption-text {
-  margin-bottom: 0.6em;
-  padding: 10px 0 5px 40px;
-  position: relative;
-}
-
-/* line 688, sass/style.scss */
-.wp-caption .wp-caption-text:before {
-  color: #666;
-  content: '\2014';
-  font-size: 14px;
-  font-style: normal;
-  font-weight: bold;
-  margin-right: 5px;
-  position: absolute;
-  left: 10px;
-  top: 7px;
-}
-
-/* line 699, sass/style.scss */
-#content .gallery {
-  margin: 0 auto 1.625em;
-}
-
-/* line 702, sass/style.scss */
-#content .gallery a img {
-  border: none;
-}
-
-/* line 705, sass/style.scss */
-img#wpstats {
-  display: block;
-  margin: 0 auto 1.625em;
-}
-
-/* line 709, sass/style.scss */
-#content .gallery-columns-4 .gallery-item {
-  width: 23%;
-  padding-right: 2%;
-}
-
-/* line 713, sass/style.scss */
-#content .gallery-columns-4 .gallery-item img {
-  width: 100%;
-  height: auto;
+/* line 597, sass/style.scss */
+#access li + li {
+  display: none;
 }
 
 /* Make sure embeds and iframes fit their containers */
-/* line 722, sass/style.scss */
+/* line 608, sass/style.scss */
 embed,
 iframe,
 object {
@@ -931,17 +774,17 @@ object {
 }
 
 /* Password Protected Posts */
-/* line 727, sass/style.scss */
+/* line 613, sass/style.scss */
 .post-password-required .entry-header .comments-link {
   margin: 1.625em 0 0;
 }
 
-/* line 730, sass/style.scss */
+/* line 616, sass/style.scss */
 .post-password-required input[type=password] {
   margin: 0.8125em 0;
 }
 
-/* line 733, sass/style.scss */
+/* line 619, sass/style.scss */
 .post-password-required input[type=password]:focus {
   background: #f7f7f7;
 }
@@ -949,58 +792,59 @@ object {
 /* Author Info */
 /* Comments link */
 /* FEATURED POSTS */
-/* line 749, sass/style.scss */
+/* line 635, sass/style.scss */
 .featured-posts {
   margin: 0 auto;
   padding: 0;
+  display: none;
 }
 
-/* line 757, sass/style.scss */
+/* line 644, sass/style.scss */
 .featured-posts h1 {
   display: none;
 }
 
-/* line 760, sass/style.scss */
+/* line 647, sass/style.scss */
 .featured-posts section {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 764, sass/style.scss */
+/* line 651, sass/style.scss */
 .featured-post {
   position: static;
   top: 0;
 }
-/* line 768, sass/style.scss */
+/* line 655, sass/style.scss */
 .featured-post .entry-meta {
   margin-bottom: 2px;
 }
-/* line 771, sass/style.scss */
+/* line 658, sass/style.scss */
 .featured-post .entry-meta .sep {
   display: none;
 }
-/* line 775, sass/style.scss */
+/* line 662, sass/style.scss */
 .featured-post .entry-summary {
   padding-top: .7em;
 }
 
-/* line 780, sass/style.scss */
+/* line 667, sass/style.scss */
 article {
   position: relative;
   margin-bottom: 30px;
 }
-/* line 784, sass/style.scss */
+/* line 671, sass/style.scss */
 article header {
   padding-top: 1em;
 }
-/* line 786, sass/style.scss */
+/* line 673, sass/style.scss */
 article header h2.entry-title {
   margin: 0;
   padding: 0;
   font-size: 120%;
   font-weight: bold;
 }
-/* line 792, sass/style.scss */
+/* line 679, sass/style.scss */
 article header .entry-meta {
   position: absolute;
   top: 0;
@@ -1010,7 +854,7 @@ article header .entry-meta {
 
 /* =error404
 ----------------------------------------------- */
-/* line 805, sass/style.scss */
+/* line 692, sass/style.scss */
 .error404 #main #searchform {
   border: 1px solid #ddd;
   border-width: 1px 0;
@@ -1019,12 +863,12 @@ article header .entry-meta {
   padding: 1.625em 8.9%;
 }
 
-/* line 812, sass/style.scss */
+/* line 699, sass/style.scss */
 .error404 #main #s {
   width: 95%;
 }
 
-/* line 815, sass/style.scss */
+/* line 702, sass/style.scss */
 .error404 #main .widget {
   clear: none;
   float: left;
@@ -1032,19 +876,19 @@ article header .entry-meta {
   width: 30.85%;
 }
 
-/* line 821, sass/style.scss */
+/* line 708, sass/style.scss */
 .error404 #main .widget_archive {
   margin-right: 0;
 }
 
-/* line 824, sass/style.scss */
+/* line 711, sass/style.scss */
 .error404 #main .widget_tag_cloud {
   float: none;
   margin-right: 0;
   width: 100%;
 }
 
-/* line 829, sass/style.scss */
+/* line 716, sass/style.scss */
 .error404 .widgettitle {
   font-size: 10px;
   letter-spacing: 0.1em;
@@ -1054,29 +898,38 @@ article header .entry-meta {
 
 /* =Footer
 ----------------------------------------------- */
-/* line 843, sass/style.scss */
+/* line 729, sass/style.scss */
+.menu-footer-container {
+  /* First rollout styling -- hide galleries and news */
+}
+/* line 730, sass/style.scss */
 .menu-footer-container ul {
   padding: 20px 0 40px;
   margin: 0;
   text-align: center;
 }
-/* line 848, sass/style.scss */
+/* line 735, sass/style.scss */
 .menu-footer-container li {
   list-style: none;
   display: inline;
   padding: 0 15px;
 }
-/* line 853, sass/style.scss */
+/* line 740, sass/style.scss */
 .menu-footer-container li + li {
   border-left: 1px solid #666;
 }
+/* line 746, sass/style.scss */
+.menu-footer-container .menu-item-103,
+.menu-footer-container .menu-item-112 {
+  display: none;
+}
 
-/* line 857, sass/style.scss */
+/* line 750, sass/style.scss */
 #colophon {
   clear: both;
 }
 
-/* line 860, sass/style.scss */
+/* line 753, sass/style.scss */
 #supplementary {
   border-top: 1px solid #ddd;
   padding: 1.625em 7.6%;
@@ -1084,33 +937,33 @@ article header .entry-meta {
 }
 
 /* Two Footer Widget Areas */
-/* line 867, sass/style.scss */
+/* line 760, sass/style.scss */
 #supplementary.two .widget-area {
   float: left;
   margin-right: 3.7%;
   width: 48.1%;
 }
 
-/* line 872, sass/style.scss */
+/* line 765, sass/style.scss */
 #supplementary.two .widget-area + .widget-area {
   margin-right: 0;
 }
 
 /* Three Footer Widget Areas */
-/* line 877, sass/style.scss */
+/* line 770, sass/style.scss */
 #supplementary.three .widget-area {
   float: left;
   margin-right: 3.7%;
   width: 30.85%;
 }
 
-/* line 882, sass/style.scss */
+/* line 775, sass/style.scss */
 #supplementary.three .widget-area + .widget-area + .widget-area {
   margin-right: 0;
 }
 
 /* Site Generator Line */
-/* line 887, sass/style.scss */
+/* line 780, sass/style.scss */
 #site-generator {
   background: #000;
   color: #666;
@@ -1126,7 +979,7 @@ article header .entry-meta {
   border-bottom-right-radius: 35px;
 }
 
-/* line 897, sass/style.scss */
+/* line 790, sass/style.scss */
 #site-generator a {
   color: #555;
   font-weight: bold;
@@ -1135,14 +988,14 @@ article header .entry-meta {
 /* PAGE SPECIFIC STUFF
 ----------------------------------------------- */
 @-keyframes GLOWPULSE {
-  /* line 906, sass/style.scss */
+  /* line 799, sass/style.scss */
   0%, 100% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 911, sass/style.scss */
+  /* line 804, sass/style.scss */
   50% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
@@ -1151,14 +1004,14 @@ article header .entry-meta {
 }
 
 @-webkit-keyframes GLOWPULSE {
-  /* line 918, sass/style.scss */
+  /* line 811, sass/style.scss */
   0%, 100% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 923, sass/style.scss */
+  /* line 816, sass/style.scss */
   50% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
@@ -1167,14 +1020,14 @@ article header .entry-meta {
 }
 
 @-moz-keyframes GLOWPULSE {
-  /* line 930, sass/style.scss */
+  /* line 823, sass/style.scss */
   0%, 100% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 935, sass/style.scss */
+  /* line 828, sass/style.scss */
   50% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
@@ -1183,14 +1036,14 @@ article header .entry-meta {
 }
 
 @-o-keyframes GLOWPULSE {
-  /* line 942, sass/style.scss */
+  /* line 835, sass/style.scss */
   0%, 100% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 947, sass/style.scss */
+  /* line 840, sass/style.scss */
   50% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
@@ -1199,14 +1052,14 @@ article header .entry-meta {
 }
 
 @-ms-keyframes GLOWPULSE {
-  /* line 954, sass/style.scss */
+  /* line 847, sass/style.scss */
   0%, 100% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
     box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
   }
 
-  /* line 959, sass/style.scss */
+  /* line 852, sass/style.scss */
   50% {
     -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
     -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
@@ -1214,7 +1067,7 @@ article header .entry-meta {
   }
 }
 
-/* line 965, sass/style.scss */
+/* line 858, sass/style.scss */
 #fbgalleries-carrousel {
   width: 570px;
   height: 290px;
@@ -1247,7 +1100,7 @@ article header .entry-meta {
   /* Using old methods because webkit needs to fix many bugs with
      rounded corner clipping */
 }
-/* line 988, sass/style.scss */
+/* line 881, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b {
   position: absolute;
   top: 15px;
@@ -1257,13 +1110,13 @@ article header .entry-meta {
   height: 11px;
   background: url(images/fbgallerycorners.png);
 }
-/* line 997, sass/style.scss */
+/* line 890, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b {
   left: auto;
   right: 15px;
   background-position: top right;
 }
-/* line 1002, sass/style.scss */
+/* line 895, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b {
   width: 10px;
   height: 10px;
@@ -1271,13 +1124,13 @@ article header .entry-meta {
   bottom: 15px;
   background-position: bottom right;
 }
-/* line 1009, sass/style.scss */
+/* line 902, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b + b {
   right: auto;
   left: 15px;
   background-position: bottom left;
 }
-/* line 1015, sass/style.scss */
+/* line 908, sass/style.scss */
 #fbgalleries-carrousel ul {
   margin: 0;
   padding: 0;
@@ -1287,7 +1140,7 @@ article header .entry-meta {
   overflow: hidden;
   position: relative;
 }
-/* line 1024, sass/style.scss */
+/* line 917, sass/style.scss */
 #fbgalleries-carrousel li {
   position: absolute;
   top: 0;
@@ -1305,19 +1158,19 @@ article header .entry-meta {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 1034, sass/style.scss */
+/* line 927, sass/style.scss */
 #fbgalleries-carrousel li.active {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 1038, sass/style.scss */
+/* line 931, sass/style.scss */
 #fbgalleries-carrousel li.fading {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 1042, sass/style.scss */
+/* line 935, sass/style.scss */
 #fbgalleries-carrousel a {
   display: block;
   width: 570px;
@@ -1325,15 +1178,15 @@ article header .entry-meta {
   text-align: center;
   text-decoration: none;
 }
-/* line 1049, sass/style.scss */
+/* line 942, sass/style.scss */
 #fbgalleries-carrousel a .imgwrap {
   display: block;
 }
-/* line 1052, sass/style.scss */
+/* line 945, sass/style.scss */
 #fbgalleries-carrousel a img {
   max-width: none;
 }
-/* line 1055, sass/style.scss */
+/* line 948, sass/style.scss */
 #fbgalleries-carrousel a .title {
   padding: 0;
   margin: 0;
@@ -1345,13 +1198,13 @@ article header .entry-meta {
   text-shadow: black -2px -2px 0, black 2px -2px 0, black 2px 2px 0, black -2px 2px 0, black -2px 0px 0, black 2px 0px 0, black 0px 2px 0, black 0px 2px 0;
 }
 
-/* line 1083, sass/style.scss */
+/* line 976, sass/style.scss */
 #fbcontent .fbalbum ul {
   width: 472px;
   margin: 0 auto;
   padding: 0;
 }
-/* line 1088, sass/style.scss */
+/* line 981, sass/style.scss */
 #fbcontent .fbalbum li {
   margin: 0;
   padding: 0;
@@ -1363,7 +1216,7 @@ article header .entry-meta {
   padding: 2px;
   background: white;
 }
-/* line 1098, sass/style.scss */
+/* line 991, sass/style.scss */
 #fbcontent .fbalbum li a {
   position: relative;
   display: block;
@@ -1371,12 +1224,12 @@ article header .entry-meta {
   width: 100px;
   height: 100px;
 }
-/* line 1106, sass/style.scss */
+/* line 999, sass/style.scss */
 #fbcontent .fbalbum li a img {
   display: block;
 }
 
-/* line 1113, sass/style.scss */
+/* line 1006, sass/style.scss */
 #services .ngg-album {
   border: none;
   width: 25%;
@@ -1384,7 +1237,7 @@ article header .entry-meta {
   padding: 0 0 15px 0;
   margin: 0;
 }
-/* line 1120, sass/style.scss */
+/* line 1013, sass/style.scss */
 #services .ngg-albumtitle {
   margin: 0;
   text-align: center;
@@ -1410,16 +1263,16 @@ article header .entry-meta {
   text-shadow: white -1px -1px 4px, white 1px -1px 4px, white 1px 1px 4px, white -1px 1px 4px;
   text-decoration: none;
 }
-/* line 1126, sass/style.scss */
+/* line 1019, sass/style.scss */
 #services .ngg-thumbnail {
   float: none;
   margin: 0;
 }
-/* line 1130, sass/style.scss */
+/* line 1023, sass/style.scss */
 #services .ngg-thumbnail a {
   display: block;
 }
-/* line 1133, sass/style.scss */
+/* line 1026, sass/style.scss */
 #services .ngg-thumbnail img {
   -webkit-transition-property: box-shadow;
   -moz-transition-property: box-shadow;
@@ -1443,13 +1296,13 @@ article header .entry-meta {
   -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 0 25px, rgba(255, 255, 255, 0.1) 0 0 25px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 0 25px, rgba(255, 255, 255, 0.1) 0 0 25px;
 }
-/* line 1147, sass/style.scss */
+/* line 1040, sass/style.scss */
 #services .ngg-thumbnail img:hover {
   -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0 25px, rgba(255, 255, 255, 0.4) 0 0 25px;
   -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 0 25px, rgba(255, 255, 255, 0.4) 0 0 25px;
   box-shadow: rgba(255, 255, 255, 0.4) 0 0 25px, rgba(255, 255, 255, 0.4) 0 0 25px;
 }
-/* line 1154, sass/style.scss */
+/* line 1047, sass/style.scss */
 #services .ngg-description {
   display: none;
 }
@@ -1471,7 +1324,7 @@ article header .entry-meta {
   display: block;
 }
 */
-/* line 1176, sass/style.scss */
+/* line 1069, sass/style.scss */
 .edit-link {
   display: block;
   position: absolute;
@@ -1486,7 +1339,7 @@ article header .entry-meta {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 1185, sass/style.scss */
+/* line 1078, sass/style.scss */
 .edit-link a {
   font-size: 14px;
   color: #aaf;
@@ -1496,32 +1349,100 @@ article header .entry-meta {
 ----------------------------------------------- */
 /* =Print
 ----------------------------------------------- */
-@-webkit-keyframes FADEIN {
-  /* line 1212, sass/style.scss */
+@keyframes FADEINLANDING {
+  /* line 1105, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1213, sass/style.scss */
+  /* line 1106, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1214, sass/style.scss */
+  /* line 1107, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
-/* line 1219, sass/style.scss */
+@-webkit-keyframes FADEINLANDING {
+  /* line 1110, sass/style.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 1111, sass/style.scss */
+  70% {
+    opacity: 0;
+  }
+
+  /* line 1112, sass/style.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes FADEINLANDING {
+  /* line 1115, sass/style.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 1116, sass/style.scss */
+  70% {
+    opacity: 0;
+  }
+
+  /* line 1117, sass/style.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes FADEINLANDING {
+  /* line 1120, sass/style.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 1121, sass/style.scss */
+  70% {
+    opacity: 0;
+  }
+
+  /* line 1122, sass/style.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes FADEINLANDING {
+  /* line 1125, sass/style.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 1126, sass/style.scss */
+  70% {
+    opacity: 0;
+  }
+
+  /* line 1127, sass/style.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 1132, sass/style.scss */
 body.home #page > header,
 body.home #page > #main,
 body.home #page > footer {
-  animation: FADEIN 4s ease-in 0 1 normal;
-  -webkit-animation: FADEIN 4s ease-in 0 1 normal;
-  -ms-animation: FADEIN 4s ease-in 0 1 normal;
-  -o-animation: FADEIN 4s ease-in 0 1 normal;
-  -moz-animation-name: FADEIN;
+  animation: FADEINLANDING 4s ease-in 0 1 normal;
+  -webkit-animation: FADEINLANDING 4s ease-in 0 1 normal;
+  -ms-animation: FADEINLANDING 4s ease-in 0 1 normal;
+  -o-animation: FADEINLANDING 4s ease-in 0 1 normal;
+  -moz-animation-name: FADEINLANDING;
   -moz-animation-duration: 4s;
   -moz-animation-timing-function: ease-in;
   -moz-animation-delay: 0;

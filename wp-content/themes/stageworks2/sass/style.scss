@@ -524,55 +524,32 @@ body.home #page > header > span.chrome1 {
 }
 
 
-#site-title a {
-  $top: 54px;
-  $bottom: 11px;
-  $left: 27px;
-  $right: 25px;
-  display: block;
-  position: absolute;
-  text-indent: -999em;
-  top: $top;
-  bottom: $bottom;
-  left: $left;
-  right: $right;
-  background: white;
-  overflow:visible;
-  @include transition-property(background-color);
-  @include transition-duration(.2s);
-  
-  span.chrome1 {
-    display: block;
-    position: absolute;
-    top: -$top;
-    bottom: -$bottom;
-    left: -$left;
-    right: -$right;
-    background: url(images/logos/gobo2.png) no-repeat;
-  }
-}
-#site-title a:hover {
-  background: $glowColour1;
-}
 #site-title {
   a {
+    $height: 46px;
+    $width: 200px;
+    
     background: transparent;
-    -webkit-perspective-origin: 50% 85%;
-    //@include transition-property(all);
-    //@include transition-duration(.2s);
-  }
-  a span.chrome1 {
-    background-image: url(images/logos/gobo3.png);
-  }
-  a:hover {
-    @include animation(LOGOFASTTHROB, 1s, ease-out, 0, infinite);
-    background: transparent;
-  }
-  a:hover span.chrome1 {
-    //background-position: 0 -111px;
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -$width/2;
+    text-indent: -999em;
+
+    span.chrome1 {
+      background-image: url(images/logos/gobo3.png);
+      background-repeat: no-repeat;
+      display: block;
+      width: $width;
+      height: $height;
+    }
+    :hover {
+      @include animation(LOGOFASTTHROB, 1s, ease-out, 0, infinite);
+      //background: transparent;
+    }
   }
 }
-
 
 #site-description {
   position: absolute;
@@ -601,7 +578,6 @@ body.home #page > header > span.chrome1 {
     top: 0;
     left: $centreOffset;
     
-    
     a {
       font-size: 18px;
     }
@@ -611,109 +587,19 @@ body.home #page > header > span.chrome1 {
     left: auto;
     right: $centreOffset;
   }
+  
+  /* Now let's do styling for first rollout */
+  li {
+    left: auto;
+    right: -290px;
+    top: -50px;
+  }
+  li + li {
+    display: none;
+  }
 }
 
 
-/* =Content
------------------------------------------------ */
-
-#main {
-	clear: both;
-}
-body.home #main,
-body.home #main article {
-  padding-top: 0;
-}
-body.home #content > article.intro {
-  margin-top: 0;
-}
-body.home #content > article.intro .entry-content {
-  padding-top: 0;
-}
-
-/* Images */
-.entry-content img,
-.comment-content img,
-.widget img {
-	//max-width: 97.5%;
-	/* Fluid images for posts, comments, and widgets */
-}
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"] {
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-img.size-full,
-img.size-large {
-	max-width: 97.5%;
-	width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-.entry-content img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-img.alignleft,
-img.alignright,
-img.aligncenter {
-	margin-bottom: 1.625em;
-}
-p img,
-.wp-caption {
-	margin-top: 0.4em;
-}
-.wp-caption {
-	background: #eee;
-	margin-bottom: 1.625em;
-	max-width: 96%;
-	padding: 9px;
-}
-.wp-caption img {
-	display: block;
-	margin: 0 auto;
-	max-width: 98%;
-}
-.wp-caption .wp-caption-text,
-.gallery-caption {
-	color: #666;
-	font-size: 12px;
-}
-.wp-caption .wp-caption-text {
-	margin-bottom: 0.6em;
-	padding: 10px 0 5px 40px;
-	position: relative;
-}
-.wp-caption .wp-caption-text:before {
-	color: #666;
-	content: '\2014';
-	font-size: 14px;
-	font-style: normal;
-	font-weight: bold;
-	margin-right: 5px;
-	position: absolute;
-	left: 10px;
-	top: 7px;
-}
-#content .gallery {
-	margin: 0 auto 1.625em;
-}
-#content .gallery a img {
-	border: none;
-}
-img#wpstats {
-	display: block;
-	margin: 0 auto 1.625em;
-}
-#content .gallery-columns-4 .gallery-item {
-	width: 23%;
-	padding-right: 2%;
-}
-#content .gallery-columns-4 .gallery-item img {
-	width: 100%;
-	height: auto;
-}
 
 
 /* Make sure embeds and iframes fit their containers */
@@ -749,6 +635,7 @@ object {
 .featured-posts {
   margin: 0 auto;
   padding: 0;
+  display: none;
 }
 .featured-posts section.featured-post {
 }
@@ -852,6 +739,12 @@ article {
   }
   li + li {
     border-left: 1px solid #666;
+  }
+  
+  /* First rollout styling -- hide galleries and news */
+  .menu-item-103,
+  .menu-item-112 {
+    display: none;
   }
 }
 #colophon {
@@ -1208,7 +1101,27 @@ article {
 @media print {
 }
 
-@-webkit-keyframes FADEIN {
+@keyframes FADEINLANDING {
+  0% {opacity: 0;}
+  70% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-webkit-keyframes FADEINLANDING {
+  0% {opacity: 0;}
+  70% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-moz-keyframes FADEINLANDING {
+  0% {opacity: 0;}
+  70% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-o-keyframes FADEINLANDING {
+  0% {opacity: 0;}
+  70% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-ms-keyframes FADEINLANDING {
   0% {opacity: 0;}
   70% {opacity: 0;}
   100% {opacity: 1;}
@@ -1217,7 +1130,7 @@ body.home #page {
   > header,
   > #main,
   > footer {
-    @include animation(FADEIN, 4s, ease-in, 0, 1);
+    @include animation(FADEINLANDING, 4s, ease-in, 0, 1);
   }
 }
 
