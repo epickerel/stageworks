@@ -57,7 +57,7 @@ Text Domain: stageworks2
 $cornerRadius: 35px;
 $glowColour1: #fff;
 $glowColour2: #fff;
-$linkColour: #e4741f;
+$linkColour: #fff;
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
@@ -609,16 +609,6 @@ object {
 	max-width: 100%;
 }
 
-/* Password Protected Posts */
-.post-password-required .entry-header .comments-link {
-	margin: 1.625em 0 0;
-}
-.post-password-required input[type=password] {
-	margin: 0.8125em 0;
-}
-.post-password-required input[type=password]:focus {
-	background: #f7f7f7;
-}
 
 /* Author Info */
 #author-info {
@@ -686,46 +676,12 @@ article {
 }
 
 
-/* =error404
------------------------------------------------ */
-
-.error404 #main #searchform {
-	border: 1px solid #ddd;
-	border-width: 1px 0;
-	margin: 0 -8.9% 1.625em;
-	overflow: hidden;
-	padding: 1.625em 8.9%;
-}
-.error404 #main #s {
-	width: 95%;
-}
-.error404 #main .widget {
-	clear: none;
-	float: left;
-	margin-right: 3.7%;
-	width: 30.85%;
-}
-.error404 #main .widget_archive {
-	margin-right: 0;
-}
-.error404 #main .widget_tag_cloud {
-	float: none;
-	margin-right: 0;
-	width: 100%;
-}
-.error404 .widgettitle {
-	font-size: 10px;
-	letter-spacing: 0.1em;
-	line-height: 2.6em;
-	text-transform: uppercase;
-}
-
-
-
-
 /* =Footer
 ----------------------------------------------- */
 
+body > #page > footer {
+  background: black;
+}
 .menu-footer-container {
   ul {
     padding: 20px 0 40px;
