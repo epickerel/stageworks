@@ -168,7 +168,8 @@
   // Facebook album covers
   var defaults, mergeAlbumsAndPhotos;
   defaults = {
-    template: '<ul>{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
+    template: '<ul>{{#items}}\n<li><a>' +
+        //'<ul>{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
       '<span class="imgwrap"><img src="{{src_big}}" alt="{{title}}"></span>' +
       '<span class="title">{{name}}</span></a></li>\n{{/items}}</ul>' +
       '<span class="chrome1"><b></b><b></b><b></b><b></b></span>',
@@ -227,7 +228,7 @@
             items: albums
           });
           $el.html(html);
-          $images = $el.find('img').fitImageTo(600, 300);
+          $images = $el.find('img').fitImageTo($el.width(), $el.height());
           firstImg = $images[0];
           $.doWhen(function () {
             return !!firstImg.complete;

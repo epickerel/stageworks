@@ -795,71 +795,11 @@ article {
 
 /* PAGE SPECIFIC STUFF
 ----------------------------------------------- */
-@-keyframes GLOWPULSE {
-	0%, 100%   {
-	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px
-    );
-  }
-	50% {
-	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px
-    );
-	}
-}
-@-webkit-keyframes GLOWPULSE {
-	0%, 100%   {
-	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px
-    );
-  }
-	50% {
-	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px
-    );
-	}
-}
-@-moz-keyframes GLOWPULSE {
-	0%, 100%   {
-	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px
-    );
-  }
-	50% {
-	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px
-    );
-	}
-}
-@-o-keyframes GLOWPULSE {
-	0%, 100%   {
-	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px
-    );
-  }
-	50% {
-	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px
-    );
-	}
-}
-@-ms-keyframes GLOWPULSE {
-	0%, 100%   {
-	  @include box-shadow(
-      rgba($glowColour2, 0.25) 0 0 25px
-    );
-  }
-	50% {
-	  @include box-shadow(
-      rgba($glowColour2, 0.3) 0 0 25px
-    );
-	}
-}
 #fbgalleries-carrousel {
-  $wholeWidth: 600px;
+  $wholeWidth: 610px;
   $wholeHeight: 320px;
-  $Hpadding: 15px;
-  $Vpadding: 15px;
+  $Hpadding: 0;
+  $Vpadding: 0;
   $innerWidth: $wholeWidth - (2*$Hpadding);
   $innerHeight: $wholeHeight - (2*$Vpadding);
   width: $innerWidth;
@@ -868,12 +808,6 @@ article {
   position: relative;
   margin: 0 auto;
   padding: $Vpadding $Hpadding;
-  @include border-top-left-radius($cornerRadius/2);
-	@include border-top-right-radius($cornerRadius/2);
-  @include border-bottom-left-radius($cornerRadius/4);
-	@include border-bottom-right-radius($cornerRadius/4);
-	//-webkit-border-radius: 0;
-  @include animation(GLOWPULSE, 2s, linear, 0, infinite);
   
   /* Using old methods because webkit needs to fix many bugs with
      rounded corner clipping */
@@ -1049,6 +983,12 @@ article {
   }
 }
 
+.gallerypage {
+  #content {
+    width: 850px;
+    
+  }
+}
 
 .edit-link {
   display: block;

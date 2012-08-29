@@ -987,160 +987,58 @@ article header .entry-meta {
 
 /* PAGE SPECIFIC STUFF
 ----------------------------------------------- */
-@-keyframes GLOWPULSE {
-  /* line 799, sass/style.scss */
-  0%, 100% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-  }
-
-  /* line 804, sass/style.scss */
-  50% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-  }
-}
-
-@-webkit-keyframes GLOWPULSE {
-  /* line 811, sass/style.scss */
-  0%, 100% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-  }
-
-  /* line 816, sass/style.scss */
-  50% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-  }
-}
-
-@-moz-keyframes GLOWPULSE {
-  /* line 823, sass/style.scss */
-  0%, 100% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-  }
-
-  /* line 828, sass/style.scss */
-  50% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-  }
-}
-
-@-o-keyframes GLOWPULSE {
-  /* line 835, sass/style.scss */
-  0%, 100% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-  }
-
-  /* line 840, sass/style.scss */
-  50% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-  }
-}
-
-@-ms-keyframes GLOWPULSE {
-  /* line 847, sass/style.scss */
-  0%, 100% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.25) 0 0 25px;
-  }
-
-  /* line 852, sass/style.scss */
-  50% {
-    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0 0 25px;
-  }
-}
-
-/* line 858, sass/style.scss */
+/* line 798, sass/style.scss */
 #fbgalleries-carrousel {
-  width: 570px;
-  height: 290px;
+  width: 610px;
+  height: 320px;
   background: black;
   position: relative;
   margin: 0 auto;
-  padding: 15px 15px;
-  -moz-border-radius-topleft: 17.5px;
-  -webkit-border-top-left-radius: 17.5px;
-  border-top-left-radius: 17.5px;
-  -moz-border-radius-topright: 17.5px;
-  -webkit-border-top-right-radius: 17.5px;
-  border-top-right-radius: 17.5px;
-  -moz-border-radius-bottomleft: 8.75px;
-  -webkit-border-bottom-left-radius: 8.75px;
-  border-bottom-left-radius: 8.75px;
-  -moz-border-radius-bottomright: 8.75px;
-  -webkit-border-bottom-right-radius: 8.75px;
-  border-bottom-right-radius: 8.75px;
-  animation: GLOWPULSE 2s linear 0 infinite normal;
-  -webkit-animation: GLOWPULSE 2s linear 0 infinite normal;
-  -ms-animation: GLOWPULSE 2s linear 0 infinite normal;
-  -o-animation: GLOWPULSE 2s linear 0 infinite normal;
-  -moz-animation-name: GLOWPULSE;
-  -moz-animation-duration: 2s;
-  -moz-animation-timing-function: linear;
-  -moz-animation-delay: 0;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-direction: normal;
+  padding: 0 0;
   /* Using old methods because webkit needs to fix many bugs with
      rounded corner clipping */
 }
-/* line 881, sass/style.scss */
+/* line 815, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 0;
+  left: 0;
   display: block;
   width: 11px;
   height: 11px;
   background: url(images/fbgallerycorners.png);
 }
-/* line 890, sass/style.scss */
+/* line 824, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b {
   left: auto;
-  right: 15px;
+  right: 0;
   background-position: top right;
 }
-/* line 895, sass/style.scss */
+/* line 829, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b {
   width: 10px;
   height: 10px;
   top: auto;
-  bottom: 15px;
+  bottom: 0;
   background-position: bottom right;
 }
-/* line 902, sass/style.scss */
+/* line 836, sass/style.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b + b {
   right: auto;
-  left: 15px;
+  left: 0;
   background-position: bottom left;
 }
-/* line 908, sass/style.scss */
+/* line 842, sass/style.scss */
 #fbgalleries-carrousel ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 570px;
-  height: 290px;
+  width: 610px;
+  height: 320px;
   overflow: hidden;
   position: relative;
 }
-/* line 917, sass/style.scss */
+/* line 851, sass/style.scss */
 #fbgalleries-carrousel li {
   position: absolute;
   top: 0;
@@ -1158,35 +1056,35 @@ article header .entry-meta {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 927, sass/style.scss */
+/* line 861, sass/style.scss */
 #fbgalleries-carrousel li.active {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 931, sass/style.scss */
+/* line 865, sass/style.scss */
 #fbgalleries-carrousel li.fading {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 935, sass/style.scss */
+/* line 869, sass/style.scss */
 #fbgalleries-carrousel a {
   display: block;
-  width: 570px;
-  height: 290px;
+  width: 610px;
+  height: 320px;
   text-align: center;
   text-decoration: none;
 }
-/* line 942, sass/style.scss */
+/* line 876, sass/style.scss */
 #fbgalleries-carrousel a .imgwrap {
   display: block;
 }
-/* line 945, sass/style.scss */
+/* line 879, sass/style.scss */
 #fbgalleries-carrousel a img {
   max-width: none;
 }
-/* line 948, sass/style.scss */
+/* line 882, sass/style.scss */
 #fbgalleries-carrousel a .title {
   padding: 0;
   margin: 0;
@@ -1198,13 +1096,13 @@ article header .entry-meta {
   text-shadow: black -2px -2px 0, black 2px -2px 0, black 2px 2px 0, black -2px 2px 0, black -2px 0px 0, black 2px 0px 0, black 0px 2px 0, black 0px 2px 0;
 }
 
-/* line 976, sass/style.scss */
+/* line 910, sass/style.scss */
 #fbcontent .fbalbum ul {
   width: 472px;
   margin: 0 auto;
   padding: 0;
 }
-/* line 981, sass/style.scss */
+/* line 915, sass/style.scss */
 #fbcontent .fbalbum li {
   margin: 0;
   padding: 0;
@@ -1216,7 +1114,7 @@ article header .entry-meta {
   padding: 2px;
   background: white;
 }
-/* line 991, sass/style.scss */
+/* line 925, sass/style.scss */
 #fbcontent .fbalbum li a {
   position: relative;
   display: block;
@@ -1224,12 +1122,12 @@ article header .entry-meta {
   width: 100px;
   height: 100px;
 }
-/* line 999, sass/style.scss */
+/* line 933, sass/style.scss */
 #fbcontent .fbalbum li a img {
   display: block;
 }
 
-/* line 1006, sass/style.scss */
+/* line 940, sass/style.scss */
 #services .ngg-album {
   border: none;
   width: 25%;
@@ -1237,7 +1135,7 @@ article header .entry-meta {
   padding: 0 0 15px 0;
   margin: 0;
 }
-/* line 1013, sass/style.scss */
+/* line 947, sass/style.scss */
 #services .ngg-albumtitle {
   margin: 0;
   text-align: center;
@@ -1263,16 +1161,16 @@ article header .entry-meta {
   text-shadow: white -1px -1px 4px, white 1px -1px 4px, white 1px 1px 4px, white -1px 1px 4px;
   text-decoration: none;
 }
-/* line 1019, sass/style.scss */
+/* line 953, sass/style.scss */
 #services .ngg-thumbnail {
   float: none;
   margin: 0;
 }
-/* line 1023, sass/style.scss */
+/* line 957, sass/style.scss */
 #services .ngg-thumbnail a {
   display: block;
 }
-/* line 1026, sass/style.scss */
+/* line 960, sass/style.scss */
 #services .ngg-thumbnail img {
   -webkit-transition-property: box-shadow;
   -moz-transition-property: box-shadow;
@@ -1296,18 +1194,23 @@ article header .entry-meta {
   -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 0 25px, rgba(255, 255, 255, 0.1) 0 0 25px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 0 25px, rgba(255, 255, 255, 0.1) 0 0 25px;
 }
-/* line 1040, sass/style.scss */
+/* line 974, sass/style.scss */
 #services .ngg-thumbnail img:hover {
   -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0 25px, rgba(255, 255, 255, 0.4) 0 0 25px;
   -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 0 25px, rgba(255, 255, 255, 0.4) 0 0 25px;
   box-shadow: rgba(255, 255, 255, 0.4) 0 0 25px, rgba(255, 255, 255, 0.4) 0 0 25px;
 }
-/* line 1047, sass/style.scss */
+/* line 981, sass/style.scss */
 #services .ngg-description {
   display: none;
 }
 
-/* line 1053, sass/style.scss */
+/* line 987, sass/style.scss */
+.gallerypage #content {
+  width: 850px;
+}
+
+/* line 993, sass/style.scss */
 .edit-link {
   display: block;
   position: absolute;
@@ -1322,7 +1225,7 @@ article header .entry-meta {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 1062, sass/style.scss */
+/* line 1002, sass/style.scss */
 .edit-link a {
   font-size: 14px;
   color: #aaf;
@@ -1333,91 +1236,91 @@ article header .entry-meta {
 /* =Print
 ----------------------------------------------- */
 @keyframes FADEINLANDING {
-  /* line 1089, sass/style.scss */
+  /* line 1029, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1090, sass/style.scss */
+  /* line 1030, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1091, sass/style.scss */
+  /* line 1031, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-webkit-keyframes FADEINLANDING {
-  /* line 1094, sass/style.scss */
+  /* line 1034, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1095, sass/style.scss */
+  /* line 1035, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1096, sass/style.scss */
+  /* line 1036, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-moz-keyframes FADEINLANDING {
-  /* line 1099, sass/style.scss */
+  /* line 1039, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1100, sass/style.scss */
+  /* line 1040, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1101, sass/style.scss */
+  /* line 1041, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-o-keyframes FADEINLANDING {
-  /* line 1104, sass/style.scss */
+  /* line 1044, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1105, sass/style.scss */
+  /* line 1045, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1106, sass/style.scss */
+  /* line 1046, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-ms-keyframes FADEINLANDING {
-  /* line 1109, sass/style.scss */
+  /* line 1049, sass/style.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 1110, sass/style.scss */
+  /* line 1050, sass/style.scss */
   70% {
     opacity: 0;
   }
 
-  /* line 1111, sass/style.scss */
+  /* line 1051, sass/style.scss */
   100% {
     opacity: 1;
   }
 }
 
-/* line 1116, sass/style.scss */
+/* line 1056, sass/style.scss */
 body.home #page > header,
 body.home #page > #main,
 body.home #page > footer {

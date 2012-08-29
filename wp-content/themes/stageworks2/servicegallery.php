@@ -41,6 +41,11 @@ get_header(); ?>
 				</div><!-- .widget-area -->
 
 			</div><!-- #content -->
+<script>
+jQuery('.my-gallery').pikachoose({
+    carousel: true
+});
+</script>
 		</div><!-- #primary -->
 
 <?php get_footer(); ?>

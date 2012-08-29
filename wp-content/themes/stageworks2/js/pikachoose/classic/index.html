@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link type="text/css" href="resources/pikachoose-classic-theme.css" rel="stylesheet" />
+		<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+		<script type="text/javascript" src="resources/jquery.pikachoose.full.js"></script>
+		<script language="javascript">
+			$(document).ready(
+				function (){
+					var preventStageHoverEffect = function(self){
+						self.wrap.unbind('mouseenter').unbind('mouseleave');
+						self.imgNav.append('<a class="tray"></a>');
+						self.imgNav.show();
+						self.hiddenTray = true;
+						self.imgNav.find('.tray').bind('click',function(){
+							if(self.hiddenTray){
+								self.list.parents('.jcarousel-container').animate({height:"80px"});
+							}else{
+								self.list.parents('.jcarousel-container').animate({height:"1px"});
+							}
+							self.hiddenTray = !self.hiddenTray;
+						});
+					}
+					$("#pikame").PikaChoose({bindsFinished: preventStageHoverEffect, carousel:true});
+				});
+		</script>
+
+		
+</head>
+<body>
+<div class="pikachoose-classic">
+	<ul id="pikame" >
+		<li><a href="http://www.pikachoose.com"><img src="http://localhost:8888/stageworks/wp-content/gallery/projection/388585_332864326730209_2050830173_n.jpg"/></a><span><strong>Lorem ipsum</strong> dolor sit amet</span></li>
+		<li><a href="http://www.pikachoose.com"><img src="http://localhost:8888/stageworks/wp-content/gallery/projection/431329_379391538744154_1394384624_n.jpg"/></a><span>Sed sit amet sapien non lectus.</span></li>
+		<li><a href="http://www.pikachoose.com"><img src="http://localhost:8888/stageworks/wp-content/gallery/projection/162740_183053318377978_2572545_n.jpg"/></a><span>Phasellus molestie leo ut urna mollis.</span></li>
+		<li><a href="http://www.pikachoose.com"><img src="resources/4.jpg"/></a><span>Sed eu est sed metus condimentum.</span></li>
+		<li><a href="http://www.pikachoose.com"><img src="resources/5.jpg"/></a><span>Praesent eleifend auctor augue.</span></li>
+		<li><a href="http://www.pikachoose.com"><img src="resources/6.jpg"/></a><span>Aliquam erat volutpat.</span></li>
+		<li><a href="http://www.pikachoose.com"><img src="resources/7.jpg"/></a><span>Ut eget consectetur neque.</span></li>
+		<li><a href="http://www.pikachoose.com"><img src="resources/8.jpg"/></a><span>Phasellus in ligula odio</span></li>
+		<li><a href="http://www.pikachoose.com"><img src="resources/9.jpg"/></a><span>Etiam auctor ultrices nisi.</span></li>
+	</ul>
+</div>
+
+</body>
+</html>

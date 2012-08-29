@@ -1,8 +1,8 @@
 === NextGEN Gallery ===
 Contributors: photocrati
 Tags: photos,flash,slideshow,images,gallery,media,admin,post,photo-albums,pictures,widgets,photo,picture,image,nextgen-gallery,nextgen gallery
-Requires at least: 3.2
-Tested up to: 3.3
+Requires at least: 3.4
+Tested up to: 3.4.1
 Stable tag: trunk
 License: GPLv2
 
@@ -191,6 +191,21 @@ Since the captions are fully HTML capable, you can add external links and any ot
 Yes, NextGEN Gallery has been translated into dozens of languages - <a href="http://www.nextgen-gallery.com/languages/" target="_blank">click here to find out more.</a>
 
 == Changelog == 
+
+= V1.9.6 - 07.21.2012 =
+* Changed: Implemented workaround for bug found in WordPress SEO, resulting in no images being added to sitemap
+* Bugfix: Fixed an issue with users not being able to dismiss the "Photocrati Acquisition Notice"
+* Bugfix: Adjusted Javascript for activating social media pages to load on NextGEN Gallery pages only.
+* Bugfix: Fixed compatibility issue with Simple Facebook Connect
+* Bugfix: Using correct Facebook Page ID in Like button
+
+= V1.9.5 - 18.07.2012 =
+* Changed: Branding changes following Photocrati acquisition (removed donation messages and updated links)
+* Secured: Use WordPress-bundled JavaScript libraries for swfobject and swfupload instead of bundling our own
+* Bugfix: Adjusted thickbox effect styling to ensure that the lightbox is always displayed in the foreground
+* Bugfix: Fixed compatibility issues with Contact Form 7 and other plugins by following WordPress Plugin conventions
+* Bugfix: Fixed network-wide activation in WordPress 3.4
+* Bugfix: Plugin is no longer dependent on it's folder name
 
 = V1.9.3 - 26.02.2012 =
 * Bugfix : Ensure to set the slug for "all" albums
