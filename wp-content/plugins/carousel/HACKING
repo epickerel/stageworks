@@ -1,0 +1,4 @@
+Carousel Plug-in Developer Documenation
+=======================================
+
+See the carousel.php for complete inline developer documentation. There are also plenty of code comments. PHPDoc can be used to generate documenation pages out of this file.

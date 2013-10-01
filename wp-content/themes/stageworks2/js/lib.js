@@ -168,19 +168,26 @@
   // Facebook album covers
   var defaults, mergeAlbumsAndPhotos;
   defaults = {
-    template: '<ul>{{#items}}\n<li><a>' +
-        //'<ul>{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
-      '<span class="imgwrap"><img src="{{src_big}}" alt="{{title}}"></span>' +
-      '<span class="title">{{name}}</span></a></li>\n{{/items}}</ul>' +
+    template: 
+      '<ul>{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
+          '<span class="imgwrap"><img src="{{src_big}}" alt="{{name}}"></span>' +
+          '<span class="title">{{name}}</span></a></li>\n{{/items}}</ul>' +
       '<span class="chrome1"><b></b><b></b><b></b><b></b></span>',
     albumFilter: function(albums){
-      var i, album, newAlbums = [], re = /\*\*$/;
+      var i, album, newAlbums = [], re = /\*\*([0-9]*\.?[0-9]*)$/, res, desc;
       for (i=0; i<albums.length; i++) {
         album = albums[i];
-        if (album.description.match(re)) {
+        desc = album.description;
+        res = re.exec(desc);
+        if (res) {
+          album.sortOrder = (!res[1].length) ? 100 : Number(res[1]);
+          album.description = desc.substring(0, desc.length - res[0].length);
           newAlbums.push(album);
         }
       }
+      newAlbums.sort(function(a, b) {
+          return a.sortOrder - b.sortOrder;
+      });
       return newAlbums;
     }
   };
@@ -259,11 +266,15 @@
   //
   var defaults;
   defaults = {
-    template: '<div class="fbalbum"><h2>{{name}}</h2>' +
-      '<p>{{description}}</p>' +
-      '<ul>{{#photos}}\n<li>' +
-      '<img src="{{src}}" ref="{{src_big}}">{{caption}}' +
-      '</li>\n{{/photos}}</ul></div>'
+    template: '<div class="fbalbum"><h1>{{name}}</h1>' +
+          '<p>{{{description}}}</p>' +
+          '<ul>{{#photos}}\n<li>' +
+            '<div class="thumbnail"><a href="{{src_big}}" rel="prettyPhoto[fb]">' +
+              '<img src="{{src}}" ref="{{src_big}}">' +
+            '</a></div>' +
+            '<p>{{caption}}</p>' +
+          '</li>\n{{/photos}}</ul>' +
+        '</div>'
 /* lightbox
     template: '<div class="fbalbum"><h2>{{name}}</h2>' +
       '<p>{{description}}</p>' +
@@ -275,6 +286,7 @@
   $.fn.fbAlbum = function (aid, opts) {
     var $el = this;
     opts = $.extend({}, defaults, opts);
+    $('body').addClass('fb-album-page');
     $.ajax({
         url: 'http://graph.facebook.com/fql',
         data: {
@@ -289,18 +301,24 @@
           })
         },
         success: function(o){
-          var album, html, $images, $firstImgContext;
+          var album, html, $images, $firstImgContext,
+            re = /\*\*([0-9]*\.?[0-9]*)$/;
           album = o.data[1].fql_result_set[0];
+          album.description = album.description.substr(0, album.description.search(re));
           album.photos = o.data[0].fql_result_set.sort(function(a, b){
             return a.position - b.position;
           });
-          //album.description = album.description.replace('\n', '<br>');
+          album.description = album.description.replace('\n', '<br>');
           html = Mustache.to_html(opts.template, album);
           $el.html(html);
-          //$images = $el.find('img');
-          //$firstImgContext = $images.eq(0).closest('a');
-          //$images.fitImageTo($firstImgContext.width(), $firstImgContext.height());
-          $el.find('ul:first').PikaChoose();
+          $images = $el.find('img');
+          $firstImgContext = $images.eq(0).closest('a');
+          $images.fitImageTo($firstImgContext.width(), $firstImgContext.height());
+          //$el.find('ul:first').PikaChoose();
+          $el.find("a[rel^='prettyPhoto']").prettyPhoto({
+            show_title: true,
+            social_tools: false // '<div class="pp_social"><div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?locale=en_US&href='+location.href+'&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div></div>' /* html or false to disable */
+          });
         },
         dataType: 'jsonp'
     });

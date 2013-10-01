@@ -80,7 +80,7 @@ function twentyeleven_setup() {
 	load_theme_textdomain( 'twentyeleven', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
-	add_editor_style();
+	//add_editor_style();
 
 	// Load up our theme options page and related code.
 	require( get_template_directory() . '/inc/theme-options.php' );

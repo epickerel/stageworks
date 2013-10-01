@@ -1,3 +1,4 @@
+@import "compass/utilities/text/ellipsis";
 @import "compass/css3";
 /*
 Theme Name: Stageworks Two
@@ -194,7 +195,7 @@ body.home #primary {
 .singular #content {
 	margin: 0 auto;
 	position: relative;
-	width: 620px;
+	width: 720px;
 }
 /* Attachments */
 .singular .image-attachment .entry-content {
@@ -599,7 +600,9 @@ body.home #page > header > span.chrome1 {
   }
 }
 
-
+.featured-posts {
+  display: none;
+}
 
 
 /* Make sure embeds and iframes fit their containers */
@@ -621,38 +624,6 @@ object {
 
 
 
-/* FEATURED POSTS */
-.featured-posts {
-  margin: 0 auto;
-  padding: 0;
-  display: none;
-}
-.featured-posts section.featured-post {
-}
-.featured-posts {
-}
-.featured-posts h1 {
-  display: none;
-}
-.featured-posts section {
-  margin-top: 0;
-  padding-top: 0;
-}
-.featured-post {
-  position: static;
-  top: 0;
-
-  .entry-meta {
-    margin-bottom: 2px;
-
-    .sep {
-      display: none;
-    }
-  }
-  .entry-summary {
-    padding-top: .7em;
-  }
-}
 
 article {
   position: relative;
@@ -660,11 +631,12 @@ article {
   
   header {
     padding-top: 1em;
-    h2.entry-title {
+    h1.entry-title {
       margin: 0;
       padding: 0;
-      font-size: 120%;
+      font-size: 150%;
       font-weight: bold;
+      color: #fff;
     }
     .entry-meta {
       position: absolute;
@@ -857,41 +829,8 @@ body > #page > footer {
   }
 }
 
-#fbcontent .fbalbum {
-  $thumbWidth: 100px;
-  $thumbHeight: 100px;
-  $thumbHMargin: 7px;
-  $thumbsAcross: 4;
-  $thumbPadding: 2px;
-  ul {
-    width: ((($thumbPadding + $thumbHMargin)*2) + $thumbWidth) * $thumbsAcross;
-    margin: 0 auto;
-    padding: 0;
-  }
-  li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    float: left;
-    width: $thumbWidth;
-    height: $thumbHeight;
-    margin: 0 5px 15px;
-    padding: $thumbPadding;
-    background: white;
-    a {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      width: $thumbWidth;
-      height: $thumbHeight;
-      //outline: 1px solid red;
-      
-      img {
-        display: block;
-      }
-    }
-  }
-}
+@import '_fbcontent.scss';
+
 #services {
   .ngg-album {
     border: none;
@@ -914,13 +853,13 @@ body > #page > footer {
       display: block;
     }
     img {
-      @include transition-property(box-shadow);
-      @include transition-duration(.2s);
       display: block;
       margin: 0 auto;
       border: none;
       padding: 0;
       width: 148px;
+      @include transition-property(box-shadow);
+      @include transition-duration(.2s);
       @include border-radius(10px);
       @include box-shadow(
         rgba($glowColour1, 0.1) 0 0 25px,
@@ -939,12 +878,6 @@ body > #page > footer {
   }
 }
 
-.gallerypage {
-  #content {
-    width: 850px;
-    
-  }
-}
 
 .edit-link {
   display: block;
@@ -1014,3 +947,6 @@ body.home #page {
   }
 }
 
+@import 'lists';
+
+//@import '_pikachoose';

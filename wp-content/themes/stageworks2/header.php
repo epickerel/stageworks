@@ -48,9 +48,13 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 <link href='http://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
+<link href="<?php echo get_template_directory_uri(); ?>/js/pikachoose/classic/resources/pikachoose-classic-theme.css" type="text/css" media="all" rel="stylesheet" />
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<!--
 <link href="<?php echo get_template_directory_uri(); ?>/js/lightbox/css/lightbox.css" type="text/css" media="all" rel="stylesheet" />
 <link href="<?php echo get_template_directory_uri(); ?>/js/pikachoose/styles/bottom.css" type="text/css" media="all" rel="stylesheet" />
 <link href="<?php echo get_template_directory_uri(); ?>/js/pikachoose/classic/resources/pikachoose-classic-theme.css" type="text/css" media="all" rel="stylesheet" />
+-->
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <!--[if lt IE 9]>
@@ -135,8 +139,9 @@
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/mustache.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lib.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/lightbox/js/lightbox.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+	<!--
 	<script src="<?php echo get_template_directory_uri(); ?>/js/pikachoose/lib/jquery.jcarousel.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/pikachoose/lib/jquery.pikachoose.js"></script>
-
+	-->
 	<div id="main">

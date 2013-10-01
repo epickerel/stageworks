@@ -1,0 +1,7 @@
+Carousel Plugin Installation
+============================
+
+1) Download "carousel.zip".
+2) Unzip "carousel.zip" to a folder called "carousel".
+3) Upload/move the "carousel" folder to "WORDPRESS_INSTALL/wp-content/plugins/" where WORDPRESS_INSTALL your Wordpress installation folder.
+4) Done. Database table creatation is automatically done by the plugin when activated. Please see the README file on instructions to use the plug-in.

@@ -20,7 +20,7 @@ function twentyeleven_admin_enqueue_scripts( $hook_suffix ) {
 	wp_enqueue_script( 'twentyeleven-theme-options', get_template_directory_uri() . '/inc/theme-options.js', array( 'farbtastic' ), '2011-06-10' );
 	wp_enqueue_style( 'farbtastic' );
 }
-add_action( 'admin_print_styles-appearance_page_theme_options', 'twentyeleven_admin_enqueue_scripts' );
+//add_action( 'admin_print_styles-appearance_page_theme_options', 'twentyeleven_admin_enqueue_scripts' );
 
 /**
  * Register the form setting for our twentyeleven_options array.
@@ -61,7 +61,7 @@ function twentyeleven_theme_options_init() {
 	add_settings_field( 'link_color', __( 'Link Color',     'twentyeleven' ), 'twentyeleven_settings_field_link_color', 'theme_options', 'general' );
 	add_settings_field( 'layout',     __( 'Default Layout', 'twentyeleven' ), 'twentyeleven_settings_field_layout',     'theme_options', 'general' );
 }
-add_action( 'admin_init', 'twentyeleven_theme_options_init' );
+//add_action( 'admin_init', 'twentyeleven_theme_options_init' );
 
 /**
  * Change the capability required to save the 'twentyeleven_options' options group.
@@ -366,7 +366,7 @@ function twentyeleven_enqueue_color_scheme() {
 
 	do_action( 'twentyeleven_enqueue_color_scheme', $color_scheme );
 }
-add_action( 'wp_enqueue_scripts', 'twentyeleven_enqueue_color_scheme' );
+//add_action( 'wp_enqueue_scripts', 'twentyeleven_enqueue_color_scheme' );
 
 /**
  * Add a style block to the theme for the current link color.
@@ -414,7 +414,7 @@ function twentyeleven_print_link_color_style() {
 	</style>
 <?php
 }
-add_action( 'wp_head', 'twentyeleven_print_link_color_style' );
+//add_action( 'wp_head', 'twentyeleven_print_link_color_style' );
 
 /**
  * Adds Twenty Eleven layout classes to the array of body classes.
@@ -517,7 +517,7 @@ function twentyeleven_customize_register( $wp_customize ) {
 		'choices'    => $choices,
 	) );
 }
-add_action( 'customize_register', 'twentyeleven_customize_register' );
+//add_action( 'customize_register', 'twentyeleven_customize_register' );
 
 /**
  * Bind JS handlers to make Theme Customizer preview reload changes asynchronously.
@@ -528,4 +528,4 @@ add_action( 'customize_register', 'twentyeleven_customize_register' );
 function twentyeleven_customize_preview_js() {
 	wp_enqueue_script( 'twentyeleven-customizer', get_template_directory_uri() . '/inc/theme-customizer.js', array( 'customize-preview' ), '20120523', true );
 }
-add_action( 'customize_preview_init', 'twentyeleven_customize_preview_js' );
+//add_action( 'customize_preview_init', 'twentyeleven_customize_preview_js' );

@@ -1,0 +1,89 @@
+article h2.entry-title {
+    font-size: 150%;
+    margin-bottom: 15px;
+}
+body.fb-album-page {
+  article h1.entry-title {
+    display: none;
+  }
+  article h2.entry-title {
+    font-size: 150%;
+  }
+  .gallerypage {
+    #content {
+      width: 850px;
+    }
+    h2.entry-title {
+      margin: 0 auto 25px;
+      width: 736px;
+    }
+    .entry-content {
+      margin-left: auto;
+      margin-right: auto;
+      width: 736px;
+    }
+    #fbcontent {
+      margin-top: 35px;
+    }
+    .fbalbum {
+      > p,
+      > h1 {
+        display: none;
+      }
+    }
+  }
+}
+
+#fbcontent .fbalbum {
+  h1 {
+    font-size: 150%;
+  }
+  $thumbWidth: 166px;
+  $thumbHeight: 120px;
+  $thumbHMargin: 7px;
+  $thumbsAcross: 4;
+  $thumbPadding: 2px;
+  ul {
+    width: ((($thumbPadding + $thumbHMargin)*2) + $thumbWidth) * $thumbsAcross;
+    margin: 0 auto;
+    padding: 0;
+  }
+  li {
+    padding: 0;
+    margin: 0 3px;
+    list-style: none;
+    float: left;
+    width: $thumbWidth + 4px;
+    height: $thumbHeight + 35px;
+    padding: $thumbPadding;
+    overflow: visible;
+
+    a {
+      display: block;
+      width: $thumbWidth;
+      height: $thumbHeight;
+      overflow: hidden;
+      @include border-radius(15px);
+        @include transition-property(box-shadow);
+        @include transition-duration(.2s);
+      @include box-shadow(
+        rgba($glowColour1, 0.2) 0 0 25px,
+        rgba($glowColour1, 0.2) 0 0 25px
+      );
+    }
+    a:hover,
+    a:active {
+      @include box-shadow(
+        rgba($glowColour1, 0.4) 0 0 25px,
+        rgba($glowColour1, 0.4) 0 0 25px
+      );
+    }
+
+    p {
+      margin-top: 3px;
+      @include ellipsis(true);
+    }
+  }
+}
+
+

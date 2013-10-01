@@ -1,0 +1,147 @@
+#carouselMain,
+#carouselMain .slide,
+#carouselMain .slide .slideText,
+#carouselMain .slide .slideText h3,
+#carouselMain .slide .slideText h3 a,
+#carouselMain .slide .slideText h3 a:link,
+#carouselMain .slide .slideText h3 a:hover,
+#carouselMain .slide .slideText p,
+#carouselMain .slide .slideText a.readMore,
+#carouselMain .slide .slideText a.readMore:link,
+#carouselMain .thumbContainer,
+#carouselMain .thumbContainer .featureButton,
+#carouselMain .thumbContainer .featureButton a,
+#carouselMain .thumbContainer .featureButton a:link,
+#carouselMain .thumbContainer .featureButton a:hover,
+#carouselMain .thumbContainer .featureButton a img,
+#carouselMain .thumbContainer .controls,
+#carouselMain .thumbContainer .controls a,
+#carouselMain .thumbContainer .controls a:link,
+#carouselMain .thumbContainer .controls a:hover,
+#carouselMain .thumbContainer .controls a img {
+color: white;
+background: none; 
+margin: 0;
+padding: 0;
+border: 0;
+text-decoration: none;
+text-align: left;
+text-transform: none;
+}
+
+#carouselMain {
+font-family: Arial, Helvetica, sans-serif;
+letter-spacing: 0px;
+position: relative;
+margin: 0 10px 10px 0;
+background-color: #030303;
+border: 1px solid #666;
+overflow: hidden;
+_margin:0;
+}
+
+#carouselMain a,
+#carouselMain a:link,
+#carouselMain a:hover {
+-moz-outline: none;
+cursor: pointer;
+}
+
+#carouselMain .slide .slideText a.readMore,
+#carouselMain .slide .slideText a.readMore:link {
+background:transparent url(read_more_arrow.gif) no-repeat scroll 100% 50% !important;
+font-size: 12px;
+font-weight:bold;
+padding-right:10px;
+line-height: 124%;
+}
+
+#carouselMain .slide .slideText h3 a:hover,
+#carouselMain .slide .slideText a.readMore:hover {
+text-decoration: underline;
+}
+
+#carouselMain .slide {
+position: absolute;
+top: 0px;
+left: 0px;
+}
+
+#carouselMain .slide .slideText {
+position: absolute;
+left: 0;
+top: 10px;
+padding-left: 15px;
+z-index: 9;
+}
+
+#carouselMain .slide .slideText h3,
+#carouselMain .slide .slideText h3 a {
+font-family: Georgia, Palatino, Times, Serif;
+color: #fff;
+font-weight: bold;
+font-size: 24px;
+font-style: normal;
+line-height: 110%;
+}
+
+#carouselMain .slide .slideText h3 {
+margin-bottom: 5px;
+}
+
+#carouselMain .slide .slideText p {
+font-family: Arial, sans-serif;
+font-weight: bold;
+line-height: 130%;
+margin: 20px 0px 0px 0px;
+padding: 0px 0px 15px 0px;
+border-bottom: solid white 1px;
+font-size: 11px;
+}
+
+#carouselMain .thumbContainer {
+position: absolute;
+left: 0px;
+}
+
+#carouselMain .thumbContainer .controls {
+position: relative;
+right: 0px;
+top: 22px;
+float: right;
+width: 52px;
+vertical-align: bottom;
+}
+
+#carouselMain .thumbContainer .controls a img {
+padding-right: 2px;
+}
+
+#carouselMain .thumbContainer .selected {
+background: url(reflect_border.png) no-repeat;
+*background-color: transparent;
+height: 47px;
+}
+
+#carouselMain .thumbContainer .featureButton {
+position: relative;
+float: left;
+left: 12px;
+width: 64px;
+margin: 0 12px 0 0;
+overflow: hidden;
+}
+
+#carouselMain .thumbContainer .featureButton a img {
+position: relative;
+border: 1px solid #fafafa;
+margin-bottom: 2px;
+*margin-bottom: 2px;
+}
+
+#carouselMain .featureButton canvas {
+background: url(reflect_border.png);
+margin-top: 2px;
+*margin-top: 2px;
+width: 62px !important;
+}

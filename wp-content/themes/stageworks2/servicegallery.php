@@ -11,7 +11,6 @@
 //wp_enqueue_script( 'twentyeleven-landing', get_template_directory_uri() . '/js/showcase.js', array( 'jquery' ), '2011-04-28' );
 
 get_header(); ?>
-
 		<div id="primary" class="gallerypage">
 			<div id="content" role="main">
 
@@ -41,11 +40,6 @@ get_header(); ?>
 				</div><!-- .widget-area -->
 
 			</div><!-- #content -->
-<script>
-jQuery('.my-gallery').pikachoose({
-    carousel: true
-});
-</script>
 		</div><!-- #primary -->
 
 <?php get_footer(); ?>

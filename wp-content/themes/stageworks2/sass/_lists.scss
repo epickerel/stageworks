@@ -1,0 +1,10 @@
+ul.twoCol {
+    overflow: hidden;
+    width: 520px;
+    list-style: none;
+    li {
+        float: left;
+        width: 240px;
+        margin-right: 10px;
+    }
+}

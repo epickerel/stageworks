@@ -1,0 +1,37 @@
+Carousels Wordpress Plug-in
+===========================
+
+by Simon Baier
+
+Add carousels similar to the one on cnet.com homepage to any Wordpress blog. Each carousel has one or more slides. A slide contains a background image, a thumbmail, a heading, some paragraph of text and some short text meant to convey "read more". At any given time, one slide is displayed along with a panel of all the thumbnails of all slides.
+
+When the page loads, the carousel is in a slide show mode displaying one slide after the other. When the user hovers the mouse over the thumbnail, the slide corresponding to the thumbnail is displayed. Slide show stops as soon as user starts interacting. All transitions are smooth using opacity blending. A left and right arrow buttons next to the thumbnails are also available to navigate the slides. Clicking on a slide navigates to the page corresponding to the slide.
+
+Installation
+============
+
+Please see the INSTALL file.
+
+Usage
+=====
+
+1) Enable the plugin: In the wordpress administration interface, click on the "Plugins" link in the navigation menu. This is bring up the list of plug-in that are installed, activated and deactivated. Active the Carousel plug-in by clicking on the Activate link next to Carousel plug-in. Carousel plugin will automatically created the database tables required.
+
+2) Create a carousel: Soon after activating the carousel plug-in, you will see a Carousels plugin menu in the nativigation menu of the admin pages. Expand the Carousel menu by clicking on the down arrow and click on "Add New" menu item. This will bring up the add carousel form. In this form, enter all the details following the instructions given the description text. Please keep in mind the following:
+- If a slide does not have a heading, it is considered incomplete and will be not be displayed in the carousel.
+- Background image has to be of same width and height as the carousel
+- Thumbnail has to be of of 60 pixels width and 45 pixels height.
+- Name of the carousel should only contain small case characters, underscore, hyphen and digists. This is because it will be used in the shortcode described below.
+
+3) Use the carousel in a post/page: Simply create a new post and wherever a carousel is required, insert the following text "[carousel name="NAME"]". Where NAME should be replaced with the name of the carousel that needs to be inserted.
+
+4) Use the carousel in other places of the site: Open and edit the appropriate theme page and insert the following text:
+
+<?php print do_shortcode("[carousel name='NAME']"); ?>
+
+at the required location. Where NAME should be replaced with the name of the carousel that needs to be inserted.
+
+Maintanence
+===========
+
+For information on how the code is organized, please see the HACKING file.
