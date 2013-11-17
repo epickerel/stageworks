@@ -1,6 +1,6 @@
 article h2.entry-title {
-    font-size: 150%;
-    margin-bottom: 15px;
+  font-size: 150%;
+  margin-bottom: 15px;
 }
 body.fb-album-page {
   article h1.entry-title {
@@ -64,8 +64,8 @@ body.fb-album-page {
       height: $thumbHeight;
       overflow: hidden;
       @include border-radius(15px);
-        @include transition-property(box-shadow);
-        @include transition-duration(.2s);
+      @include transition-property(box-shadow);
+      @include transition-duration(.2s);
       @include box-shadow(
         rgba($glowColour1, 0.2) 0 0 25px,
         rgba($glowColour1, 0.2) 0 0 25px

@@ -77,14 +77,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed">
+<div id="page" class="hfeed"><div id="page-inner">
   <span class="chrome1"></span>
   <span class="chrome2"></span>
 	<header id="branding" role="banner">
 	    <span class="chrome1"></span>
 			<hgroup>
 			  <div id="titlearea">
-          <h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?><span class="chrome1"></span></a></span></h1>
+          <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span><?php bloginfo( 'name' ); ?></span></a></span></h1>
           <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
         </div>
 			</hgroup>
@@ -129,9 +129,6 @@
 
 			<nav id="access" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
-				<?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
-				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
-				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
 				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
@@ -139,7 +136,7 @@
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/mustache.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lib.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 	<!--
 	<script src="<?php echo get_template_directory_uri(); ?>/js/pikachoose/lib/jquery.jcarousel.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/pikachoose/lib/jquery.pikachoose.js"></script>

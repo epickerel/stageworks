@@ -1,0 +1,42 @@
+@mixin linkGlowStyle ($colour1, $colour2) {
+  a {
+    @include transition-property(color);
+    @include transition-duration(.2s);
+    color: $colour1;
+    @include text-shadow(
+      rgba($colour2, 1) -2px -2px 0,
+      rgba($colour2, 1) 2px -2px 0,
+      rgba($colour2, 1) 2px 2px 0,
+      rgba($colour2, 1) -2px 2px 0
+    );
+  }
+  a:active,
+  a:hover {
+    color: $colour2;
+    @include text-shadow(
+      rgba($colour1, 1) -1px -1px 4px,
+      rgba($colour1, 1) 1px -1px 4px,
+      rgba($colour1, 1) 1px 1px 4px,
+      rgba($colour1, 1) -1px 1px 4px
+    );
+    text-decoration: none;
+  }
+}
+
+@mixin animation ($name, $duration,
+      $timing-function:linear,
+      $delay:0,
+      $iteration-count:1,
+      $direction:normal) {
+  animation: $name $duration $timing-function $delay $iteration-count $direction;
+  -webkit-animation: $name $duration $timing-function $delay $iteration-count $direction;
+  -ms-animation: $name $duration $timing-function $delay $iteration-count $direction;
+  -o-animation: $name $duration $timing-function $delay $iteration-count $direction;
+  -moz-animation-name: $name;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: $timing-function;
+  -moz-animation-delay: $delay;
+  -moz-animation-iteration-count: $iteration-count;
+  -moz-animation-direction: $direction;
+}
+

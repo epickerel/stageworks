@@ -10,6 +10,34 @@
   };
 }(jQuery));
 
+(function($,sr){
+
+  // debouncing function from John Hann
+  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+  var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced () {
+          var obj = this, args = arguments;
+          function delayed () {
+              if (!execAsap)
+                  func.apply(obj, args);
+              timeout = null;
+          };
+
+          if (timeout)
+              clearTimeout(timeout);
+          else if (execAsap)
+              func.apply(obj, args);
+
+          timeout = setTimeout(delayed, threshold || 100);
+      };
+  }
+  // smartresize 
+  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+}(jQuery,'smartresize'));
+
 (function($){
   var defaults, tick, start;
   defaults = {
@@ -168,8 +196,7 @@
   // Facebook album covers
   var defaults, mergeAlbumsAndPhotos;
   defaults = {
-    template: 
-      '<ul>{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
+    template: '<ul class="rslides">{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
           '<span class="imgwrap"><img src="{{src_big}}" alt="{{name}}"></span>' +
           '<span class="title">{{name}}</span></a></li>\n{{/items}}</ul>' +
       '<span class="chrome1"><b></b><b></b><b></b><b></b></span>',
@@ -219,14 +246,13 @@
           })
         },*/
         data: {
-          //q: 'SELECT src_big FROM photo WHERE 
           q: JSON.stringify({
             query1: 'SELECT src_big, src, pid FROM photo WHERE pid in (select cover_pid from album where owner = "119186754764635")',
             query2: 'SELECT name, aid, owner, name, description, cover_pid, modified, size FROM album WHERE owner = "119186754764635" ORDER BY created desc'
           })
         },
         success: function(o){
-          var photos, albums, html, $images, firstImg;
+          var photos, albums, html, $images, firstImg, $ul;
           photos = o.data[0].fql_result_set;
           albums = o.data[1].fql_result_set;
           albums = mergeAlbumsAndPhotos(albums, photos);
@@ -235,11 +261,17 @@
             items: albums
           });
           $el.html(html);
-          $images = $el.find('img').fitImageTo($el.width(), $el.height());
+          $ul = $el.children('ul:first');
+          $images = $ul.find('img').fitImageTo($ul.width(), $ul.outerHeight());
           firstImg = $images[0];
           $.doWhen(function () {
             return !!firstImg.complete;
           }, function () {
+            $el.children('ul:first').responsiveSlides();
+            $(window).smartresize(function () {
+              $images.fitImageTo($ul.width(), $ul.outerHeight());
+            });
+          /*
             var lastCount = 0, timer,
               $lis = $el.find('li');
             $lis.eq(0).addClass('active');
@@ -254,10 +286,12 @@
                   $lastLi.removeClass('fading');
                 }, 1000);
               }, true);
+              */
           });
         },
         dataType: 'jsonp'
     });
+    return this;
   };
 }(jQuery));
 

@@ -1,0 +1,157 @@
+body.home {
+  .intro .entry-header {
+    display: none;
+  }
+  .intro {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+  #page {
+    @media #{$query-medium} {
+      border: 4px solid black;
+      border-top: none;
+      border-bottom: none;
+      background: transparent;
+    }
+  }
+  #page-inner {
+    width: 100%;
+    position: relative;
+    background: black;
+    
+    > header,
+    > #main,
+    > footer {
+      @include animation(FADEINLANDING, 4s, ease-in, 0, 1);
+    }
+
+    > header {
+      h2,
+      > span.chrome1 {
+        display: none;
+      }
+    }
+
+    > * {
+      z-index: 5;
+    }
+
+    > span.chrome1,
+    > span.chrome2 {
+      z-index: 0;
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      @include background-size(100%);
+
+      @include transition-property(opacity);
+      @include transition-duration(4s);
+      @include transition-timing-function(ease-in-out);
+    }
+    > span.chrome1 {
+      background-image: url(images/stages/brightfire1.jpg);
+      @include transition-timing-function(ease-in);
+      @include transition-duration(1.5s);
+      @include opacity(0.1);
+      
+      &.active {
+        @include opacity(1);
+      }
+    }
+    > span.chrome2 {
+      background-image: url(images/stages/brightfire3gray-blur.jpg);
+      @include opacity(0);
+      
+      &.active {
+        @include opacity(1);
+      }
+    }
+  }
+  
+  #primary {
+    background: transparent;
+  }
+  
+  #main {
+    position: relative;
+    margin: 0 16%;
+  }
+}
+
+#fbgalleries-carrousel {
+  position: relative;
+
+  span.chrome1 {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+
+    b {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 11px;
+      height: 11px;
+      background: url(images/fbgallerycorners.png);
+    }
+    b + b {
+      left: auto;
+      right: 0;
+      background-position: top right;
+    }
+    b + b + b {
+      width: 10px;
+      height: 10px;
+      top: auto;
+      bottom: 0;
+      background-position: bottom right;
+    }
+    b + b + b + b {
+      right: auto;
+      left: 0;
+      background-position: bottom left;
+    }
+  }
+
+}
+
+.rslides {
+  max-width: 925px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 52%;
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+
+  li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  
+  li:first-child {
+    display: block;
+    float: left;
+  }
+  
+  img {
+    display: block;
+    height: auto;
+    border: 0;
+  }
+}
+

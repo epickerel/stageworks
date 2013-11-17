@@ -142,17 +142,14 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/responsiveslides.min.js"></script>
 <script>
-
-
-(function($){
-  $(function(){
-    $('#page > span.chrome1:first').addClass('active');
-    $('#page > span.chrome2:first').addClass('active');
-    //$('#fbgalleries-carrousel');
+  jQuery(function(){
+    var $ = jQuery;
+    $('#page-inner > span.chrome1:first').addClass('active');
+    $('#page-inner > span.chrome2:first').addClass('active');
     
     $('#fbgalleries-carrousel').FBGallery({});
   });
-}(jQuery));
 </script>
 <?php get_footer(); ?>
