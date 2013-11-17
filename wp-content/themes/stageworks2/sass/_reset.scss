@@ -24,7 +24,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 html {
   color: white;
-  font-size: 1em;
+  font-size: $base-font-size;
+  @media #{$query-small} {
+    font-size: $base-font-size-small;
+  }
 }
 body {
   padding: 0;
