@@ -18,7 +18,7 @@ body.home {
     width: 100%;
     position: relative;
     background: black;
-    
+
     > header,
     > #main,
     > footer {
@@ -26,14 +26,71 @@ body.home {
     }
 
     > header {
-      h2,
-      > span.chrome1 {
+      position: relative;
+      text-align: center;
+      height: 0;
+      padding-bottom: 12%;
+      
+      hgroup {
+        position: absolute;
+        bottom: 0;
+        left: 36%;
+        right: 36%;
+        top: 20%;
+      }
+
+      #titlearea {
+        > span.chrome1 {
+          display: none;
+        }
+      }
+
+      h1 {
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          
+          display: block;
+          background-image: url(images/logos/gobo3.png);
+          background-repeat: no-repeat;
+          @include background-size(100%);
+
+          &:hover {
+            @include animation(LOGOFASTTHROB, 1s, ease-out, 0, infinite);
+          }
+        }
+        
+        img {
+          display: none;
+        }
+        span {
+          position: absolute;
+          left: -999em;
+        }
+      }
+
+      h2, span.chrome1 {
         display: none;
       }
-    }
+      nav {
+        h3 {
+          display: none;
+        }
+        li {
+          position: absolute;
+          display: none;
+          font-size: 112%;
 
-    > * {
-      z-index: 5;
+          &:first-child {
+            display: block;
+            right: 19%;
+            top: 18%;
+          }
+        }
+      }
     }
 
     > span.chrome1,
@@ -43,13 +100,12 @@ body.home {
       display: block;
       left: 0;
       top: 0;
+      margin-top: 0;
       right: 0;
       bottom: 0;
       background-repeat: no-repeat;
       @include background-size(100%);
-
       @include transition-property(opacity);
-      @include transition-duration(4s);
       @include transition-timing-function(ease-in-out);
     }
     > span.chrome1 {
@@ -57,7 +113,7 @@ body.home {
       @include transition-timing-function(ease-in);
       @include transition-duration(1.5s);
       @include opacity(0.1);
-      
+
       &.active {
         @include opacity(1);
       }
@@ -65,20 +121,24 @@ body.home {
     > span.chrome2 {
       background-image: url(images/stages/brightfire3gray-blur.jpg);
       @include opacity(0);
-      
+      @include transition-duration(4s);
+
       &.active {
         @include opacity(1);
       }
     }
   }
-  
+
   #primary {
     background: transparent;
   }
-  
+
   #main {
     position: relative;
     margin: 0 16%;
+  }
+  #primary {
+    margin: 0;
   }
 }
 
@@ -148,12 +208,12 @@ body.home {
       text-align: right;
     }
   }
-  
+
   li:first-child {
     display: block;
     float: left;
   }
-  
+
   img {
     display: block;
     height: auto;

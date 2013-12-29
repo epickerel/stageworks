@@ -81,10 +81,10 @@
   <span class="chrome1"></span>
   <span class="chrome2"></span>
 	<header id="branding" role="banner">
-	    <span class="chrome1"></span>
 			<hgroup>
 			  <div id="titlearea">
-          <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span><?php bloginfo( 'name' ); ?></span></a></span></h1>
+    	    <span class="chrome1"></span>
+          <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/logos/gobo3.png"><span><?php bloginfo( 'name' ); ?></span></a></span></h1>
           <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
         </div>
 			</hgroup>
@@ -134,12 +134,18 @@
 			</nav><!-- #access -->
 	</header><!-- #branding -->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/mustache.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/lib.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.10.2.js"></script>
 	<!--
-  <script src="<?php echo get_template_directory_uri(); ?>/js/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/pikachoose/lib/jquery.jcarousel.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/pikachoose/lib/jquery.pikachoose.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	-->
+  <script>
+  if (!$(document.body).hasClass('home')) {
+    $(document.body).addClass("not-home");
+  }
+  </script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/mustache.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/klass.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/photoswipe/code.photoswipe.jquery-3.0.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/lib.js"></script>
 	<div id="main">
+	  <span class="chrome1"></span>

@@ -43,16 +43,13 @@ $base-font-size-small: 12px;
 
 
 html {
-  background: black;
+  background: black url(images/backgrounds/steelplate2.jpg) repeat-x;
 }
 body {
   padding: 0;
   font-family: 'Allerta Stencil', sans-serif;
 }
 @media #{$query-medium} {
-  html {
-    background: black url(images/backgrounds/steelplate2.jpg) repeat-x;
-  }
   body {
     padding: 0 2em;
   }
@@ -80,56 +77,29 @@ a {
 }
 @include linkGlowStyle(white, black);
 
-header {
-  position: relative;
-  text-align: center;
-  height: 0;
-  padding-bottom: 12%;
-
-  h1 {
-    position: absolute;
-    left: 39%;
-    right: 39%;
-    bottom: 0.35em;
-    font-size: 225%;
-
-    a {
-      display: block;
-      padding-bottom: 22%;
-      background-image: url(images/logos/gobo3.png);
-      background-repeat: no-repeat;
-      @include background-size(100%);
-
-      &:hover {
-        @include animation(LOGOFASTTHROB, 1s, ease-out, 0, infinite);
-      }
-      span {
-        position: absolute;
-        left: -999em;
-      }
-    }
-  }
-
-  nav {
-    h3 {
-      display: none;
-    }
-    li {
-      position: absolute;
-      display: none;
-      font-size: 112%;
-
-      &:first-child {
-        display: block;
-        right: 19%;
-        top: 18%;
-      }
-    }
-  }
-}
-
 .featured-posts {
   display: none;
+}
+
+#primary {
+  margin: 3% 16%;
+}
+
+article {
+  margin: 3% 0;
+
+  header.entry-header {
+    h1 {
+      font-size: 130%;
+      font-weight: bold;
+      margin: 3% 0;
+    }
+  }
+
+  address {
+    display: block;
+    margin: 3% 0;
+  }
 }
 
 footer {
@@ -152,6 +122,12 @@ footer {
 }
 
 @import "_home";
+
+@import "_not-home";
+
+@import "_fbalbum";
+
+@import "_photoswipe";
 
 //@import "_moreshit";
 

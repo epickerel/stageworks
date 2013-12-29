@@ -10,6 +10,7 @@
   };
 }(jQuery));
 
+
 (function($,sr){
 
   // debouncing function from John Hann
@@ -196,10 +197,11 @@
   // Facebook album covers
   var defaults, mergeAlbumsAndPhotos;
   defaults = {
-    template: '<ul class="rslides">{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
-          '<span class="imgwrap"><img src="{{src_big}}" alt="{{name}}"></span>' +
-          '<span class="title">{{name}}</span></a></li>\n{{/items}}</ul>' +
+    outerTemplate: '<ul class="rslides"></ul>' +
       '<span class="chrome1"><b></b><b></b><b></b><b></b></span>',
+    template: '{{#items}}\n<li><a href="galleries?aid={{aid}}">' +
+      '<span class="imgwrap"><img src="{{src_big}}" alt="{{name}}"></span>' +
+      '<span class="title">{{name}}</span></a></li>\n{{/items}}',
     albumFilter: function(albums){
       var i, album, newAlbums = [], re = /\*\*([0-9]*\.?[0-9]*)$/, res, desc;
       for (i=0; i<albums.length; i++) {
@@ -236,22 +238,16 @@
   $.fn.FBGallery = function (opts) {
     var $el = this;
     opts = $.extend({}, defaults, opts);
+    $el.html(Mustache.to_html(opts.outerTemplate, {}));
     $.ajax({
         url: 'http://graph.facebook.com/fql',
-        /*
-        data: {
-          q: JSON.stringify({
-            query1: 'SELECT src_big, src, pid FROM photo WHERE pid in (select cover_pid from album where owner = "119186754764635")',
-            query2: 'SELECT name, aid, owner, name, description, cover_pid, modified, size FROM album WHERE owner = "119186754764635"'
-          })
-        },*/
         data: {
           q: JSON.stringify({
             query1: 'SELECT src_big, src, pid FROM photo WHERE pid in (select cover_pid from album where owner = "119186754764635")',
             query2: 'SELECT name, aid, owner, name, description, cover_pid, modified, size FROM album WHERE owner = "119186754764635" ORDER BY created desc'
           })
         },
-        success: function(o){
+        success: function (o) {
           var photos, albums, html, $images, firstImg, $ul;
           photos = o.data[0].fql_result_set;
           albums = o.data[1].fql_result_set;
@@ -260,10 +256,10 @@
           html = Mustache.to_html(opts.template, {
             items: albums
           });
-          $el.html(html);
-          $ul = $el.children('ul:first');
+          $ul = $el.find('ul:first').html(html);
           $images = $ul.find('img').fitImageTo($ul.width(), $ul.outerHeight());
           firstImg = $images[0];
+
           $.doWhen(function () {
             return !!firstImg.complete;
           }, function () {
@@ -271,22 +267,6 @@
             $(window).smartresize(function () {
               $images.fitImageTo($ul.width(), $ul.outerHeight());
             });
-          /*
-            var lastCount = 0, timer,
-              $lis = $el.find('li');
-            $lis.eq(0).addClass('active');
-            timer = $.makeTimer(6000, $lis.length,
-              function (count) {
-                var $lastLi = $lis.eq(lastCount),
-                  $li = $lis.eq(count);
-                lastCount = count;
-                $li.addClass('active');
-                $lastLi.addClass('fading').removeClass('active');
-                setTimeout(function(){
-                  $lastLi.removeClass('fading');
-                }, 1000);
-              }, true);
-              */
           });
         },
         dataType: 'jsonp'
@@ -298,25 +278,32 @@
 
 (function ($) {
   //
-  var defaults;
-  defaults = {
-    template: '<div class="fbalbum"><h1>{{name}}</h1>' +
-          '<p>{{{description}}}</p>' +
-          '<ul>{{#photos}}\n<li>' +
-            '<div class="thumbnail"><a href="{{src_big}}" rel="prettyPhoto[fb]">' +
-              '<img src="{{src}}" ref="{{src_big}}">' +
-            '</a></div>' +
-            '<p>{{caption}}</p>' +
-          '</li>\n{{/photos}}</ul>' +
-        '</div>'
-/* lightbox
-    template: '<div class="fbalbum"><h2>{{name}}</h2>' +
-      '<p>{{description}}</p>' +
-      '<ul>{{#photos}}\n<li><a href="{{src_big}}" rel="lightbox[{{name}}]" title="{{caption}}">' +
-      '<img src="{{src_big}}">' +
-      '</a></li>\n{{/photos}}</ul></div>'
-*/
+  var defaults = {
+    template:
+      '<div class="fbalbum"><h1>{{name}}</h1>' +
+        '<p>{{{description}}}</p>' +
+        '<ul>\n{{#photos}}<li>' +
+          '<a href="{{src_big}}" style="background-image:url({{thumbnail.source}});">' +
+            '<img src="{{thumbnail.source}}" ref="{{src_big}}">' +
+          '</a>' +
+          '<p style="display:none;">{{caption}}</p>' +
+        '</li>{{/photos}}\n</ul>' +
+      '</div>'
   };
+
+  function filterImageMaxSize(arr, maxW, maxH) {
+    var best, i, img;
+    for (i = 0; i < arr.length; i += 1) {
+      img = arr[i];
+      if (img.width <= maxW && img.height <= maxH) {
+        if (!best || best.width < img.width || best.height < img.height) {
+          best = img;
+        }
+      }
+    }
+    return best;
+  }
+
   $.fn.fbAlbum = function (aid, opts) {
     var $el = this;
     opts = $.extend({}, defaults, opts);
@@ -324,9 +311,8 @@
     $.ajax({
         url: 'http://graph.facebook.com/fql',
         data: {
-          //q: 'SELECT src_big FROM photo WHERE 
           q: JSON.stringify({
-            query1: 'SELECT pid, src_small, src_small_width, src_small_height,' +
+            query1: 'SELECT pid, images, ' +
               'src_big, src_big_width, src_big_height, ' +
               'src, src_width, src_height, caption, position ' +
               'FROM photo WHERE aid="' + aid + '"',
@@ -342,17 +328,16 @@
           album.photos = o.data[0].fql_result_set.sort(function(a, b){
             return a.position - b.position;
           });
+          $.each(album.photos, function () {
+            this.thumbnail = filterImageMaxSize(this.images, 320, 320);
+          });
           album.description = album.description.replace('\n', '<br>');
           html = Mustache.to_html(opts.template, album);
           $el.html(html);
           $images = $el.find('img');
           $firstImgContext = $images.eq(0).closest('a');
-          $images.fitImageTo($firstImgContext.width(), $firstImgContext.height());
-          //$el.find('ul:first').PikaChoose();
-          $el.find("a[rel^='prettyPhoto']").prettyPhoto({
-            show_title: true,
-            social_tools: false // '<div class="pp_social"><div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?locale=en_US&href='+location.href+'&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div></div>' /* html or false to disable */
-          });
+          //$images.fitImageTo($firstImgContext.width(), $firstImgContext.height());
+          $el.find('li > a').photoSwipe();
         },
         dataType: 'jsonp'
     });

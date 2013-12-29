@@ -254,7 +254,7 @@ footer, header, hgroup, menu, nav, section {
 ----------------------------------------------- */
 /* line 45, sass/style.scss */
 html {
-  background: black;
+  background: black url(images/backgrounds/steelplate2.jpg) repeat-x;
 }
 
 /* line 48, sass/style.scss */
@@ -265,16 +265,11 @@ body {
 
 @media only screen and (min-width: 640px) {
   /* line 53, sass/style.scss */
-  html {
-    background: black url(images/backgrounds/steelplate2.jpg) repeat-x;
-  }
-
-  /* line 56, sass/style.scss */
   body {
     padding: 0 2em;
   }
 }
-/* line 60, sass/style.scss */
+/* line 57, sass/style.scss */
 #page {
   position: relative;
   margin: 0 auto;
@@ -282,7 +277,7 @@ body {
   max-width: 925px;
 }
 
-/* line 67, sass/style.scss */
+/* line 64, sass/style.scss */
 a {
   color: white;
   text-decoration: none;
@@ -311,81 +306,41 @@ a:hover {
   text-decoration: none;
 }
 
-/* line 83, sass/style.scss */
-header {
-  position: relative;
-  text-align: center;
-  height: 0;
-  padding-bottom: 12%;
-}
-/* line 89, sass/style.scss */
-header h1 {
-  position: absolute;
-  left: 39%;
-  right: 39%;
-  bottom: 0.35em;
-  font-size: 225%;
-}
-/* line 96, sass/style.scss */
-header h1 a {
-  display: block;
-  padding-bottom: 22%;
-  background-image: url(images/logos/gobo3.png);
-  background-repeat: no-repeat;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-}
-/* line 103, sass/style.scss */
-header h1 a:hover {
-  animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
-  -webkit-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
-  -ms-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
-  -o-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
-  -moz-animation-name: LOGOFASTTHROB;
-  -moz-animation-duration: 1s;
-  -moz-animation-timing-function: ease-out;
-  -moz-animation-delay: 0;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-direction: normal;
-}
-/* line 106, sass/style.scss */
-header h1 a span {
-  position: absolute;
-  left: -999em;
-}
-/* line 114, sass/style.scss */
-header nav h3 {
-  display: none;
-}
-/* line 117, sass/style.scss */
-header nav li {
-  position: absolute;
-  display: none;
-  font-size: 112%;
-}
-/* line 122, sass/style.scss */
-header nav li:first-child {
-  display: block;
-  right: 19%;
-  top: 18%;
-}
-
-/* line 131, sass/style.scss */
+/* line 80, sass/style.scss */
 .featured-posts {
   display: none;
 }
 
-/* line 135, sass/style.scss */
+/* line 84, sass/style.scss */
+#primary {
+  margin: 3% 16%;
+}
+
+/* line 88, sass/style.scss */
+article {
+  margin: 3% 0;
+}
+/* line 92, sass/style.scss */
+article header.entry-header h1 {
+  font-size: 130%;
+  font-weight: bold;
+  margin: 3% 0;
+}
+/* line 99, sass/style.scss */
+article address {
+  display: block;
+  margin: 3% 0;
+}
+
+/* line 105, sass/style.scss */
 footer {
   padding-bottom: 3%;
 }
-/* line 138, sass/style.scss */
+/* line 108, sass/style.scss */
 footer ul {
   text-align: center;
 }
-/* line 140, sass/style.scss */
+/* line 110, sass/style.scss */
 footer ul li {
   display: inline-block;
   border-left: 1px solid #fff;
@@ -393,7 +348,7 @@ footer ul li {
   padding: 0 1%;
   font-size: 85%;
 }
-/* line 147, sass/style.scss */
+/* line 117, sass/style.scss */
 footer ul li:first-child {
   border-left: none;
 }
@@ -437,16 +392,83 @@ body.home #page-inner > footer {
   -moz-animation-iteration-count: 1;
   -moz-animation-direction: normal;
 }
-/* line 30, sass/_home.scss */
-body.home #page-inner > header h2,
-body.home #page-inner > header > span.chrome1 {
+/* line 28, sass/_home.scss */
+body.home #page-inner > header {
+  position: relative;
+  text-align: center;
+  height: 0;
+  padding-bottom: 12%;
+}
+/* line 34, sass/_home.scss */
+body.home #page-inner > header hgroup {
+  position: absolute;
+  bottom: 0;
+  left: 36%;
+  right: 36%;
+  top: 20%;
+}
+/* line 43, sass/_home.scss */
+body.home #page-inner > header #titlearea > span.chrome1 {
   display: none;
 }
-/* line 35, sass/_home.scss */
-body.home #page-inner > * {
-  z-index: 5;
+/* line 49, sass/_home.scss */
+body.home #page-inner > header h1 a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-image: url(images/logos/gobo3.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
 }
-/* line 40, sass/_home.scss */
+/* line 61, sass/_home.scss */
+body.home #page-inner > header h1 a:hover {
+  animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
+  -webkit-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
+  -ms-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
+  -o-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
+  -moz-animation-name: LOGOFASTTHROB;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-delay: 0;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+}
+/* line 66, sass/_home.scss */
+body.home #page-inner > header h1 img {
+  display: none;
+}
+/* line 69, sass/_home.scss */
+body.home #page-inner > header h1 span {
+  position: absolute;
+  left: -999em;
+}
+/* line 75, sass/_home.scss */
+body.home #page-inner > header h2, body.home #page-inner > header span.chrome1 {
+  display: none;
+}
+/* line 79, sass/_home.scss */
+body.home #page-inner > header nav h3 {
+  display: none;
+}
+/* line 82, sass/_home.scss */
+body.home #page-inner > header nav li {
+  position: absolute;
+  display: none;
+  font-size: 112%;
+}
+/* line 87, sass/_home.scss */
+body.home #page-inner > header nav li:first-child {
+  display: block;
+  right: 19%;
+  top: 18%;
+}
+/* line 97, sass/_home.scss */
 body.home #page-inner > span.chrome1,
 body.home #page-inner > span.chrome2 {
   z-index: 0;
@@ -454,6 +476,7 @@ body.home #page-inner > span.chrome2 {
   display: block;
   left: 0;
   top: 0;
+  margin-top: 0;
   right: 0;
   bottom: 0;
   background-repeat: no-repeat;
@@ -465,16 +488,12 @@ body.home #page-inner > span.chrome2 {
   -moz-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 4s;
-  -moz-transition-duration: 4s;
-  -o-transition-duration: 4s;
-  transition-duration: 4s;
   -webkit-transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 55, sass/_home.scss */
+/* line 111, sass/_home.scss */
 body.home #page-inner > span.chrome1 {
   background-image: url(images/stages/brightfire1.jpg);
   -webkit-transition-timing-function: ease-in;
@@ -488,37 +507,45 @@ body.home #page-inner > span.chrome1 {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
   opacity: 0.1;
 }
-/* line 61, sass/_home.scss */
+/* line 117, sass/_home.scss */
 body.home #page-inner > span.chrome1.active {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 65, sass/_home.scss */
+/* line 121, sass/_home.scss */
 body.home #page-inner > span.chrome2 {
   background-image: url(images/stages/brightfire3gray-blur.jpg);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+  -webkit-transition-duration: 4s;
+  -moz-transition-duration: 4s;
+  -o-transition-duration: 4s;
+  transition-duration: 4s;
 }
-/* line 69, sass/_home.scss */
+/* line 126, sass/_home.scss */
 body.home #page-inner > span.chrome2.active {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 75, sass/_home.scss */
+/* line 132, sass/_home.scss */
 body.home #primary {
   background: transparent;
 }
-/* line 79, sass/_home.scss */
+/* line 136, sass/_home.scss */
 body.home #main {
   position: relative;
   margin: 0 16%;
 }
+/* line 140, sass/_home.scss */
+body.home #primary {
+  margin: 0;
+}
 
-/* line 85, sass/_home.scss */
+/* line 145, sass/_home.scss */
 #fbgalleries-carrousel {
   position: relative;
 }
-/* line 90, sass/_home.scss */
+/* line 150, sass/_home.scss */
 #fbgalleries-carrousel span.chrome1 b {
   position: absolute;
   display: block;
@@ -529,13 +556,13 @@ body.home #main {
   background: url(images/fbgallerycorners.png);
   z-index: 5;
 }
-/* line 100, sass/_home.scss */
+/* line 160, sass/_home.scss */
 #fbgalleries-carrousel span.chrome1 b + b {
   left: auto;
   right: 0;
   background-position: top right;
 }
-/* line 105, sass/_home.scss */
+/* line 165, sass/_home.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b {
   width: 10px;
   height: 10px;
@@ -543,14 +570,14 @@ body.home #main {
   bottom: 0;
   background-position: bottom right;
 }
-/* line 112, sass/_home.scss */
+/* line 172, sass/_home.scss */
 #fbgalleries-carrousel span.chrome1 b + b + b + b {
   right: auto;
   left: 0;
   background-position: bottom left;
 }
 
-/* line 121, sass/_home.scss */
+/* line 181, sass/_home.scss */
 .rslides {
   max-width: 925px;
   padding: 0;
@@ -561,7 +588,7 @@ body.home #main {
   height: 0;
   padding-bottom: 52%;
 }
-/* line 131, sass/_home.scss */
+/* line 191, sass/_home.scss */
 .rslides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -573,7 +600,7 @@ body.home #main {
   height: 0;
   padding-bottom: 52%;
 }
-/* line 142, sass/_home.scss */
+/* line 202, sass/_home.scss */
 .rslides li .title {
   position: absolute;
   bottom: 5%;
@@ -582,24 +609,24 @@ body.home #main {
   font-size: 110%;
   text-align: right;
 }
-/* line 152, sass/_home.scss */
+/* line 212, sass/_home.scss */
 .rslides li:first-child {
   display: block;
   float: left;
 }
-/* line 157, sass/_home.scss */
+/* line 217, sass/_home.scss */
 .rslides img {
   display: block;
   height: auto;
   border: 0;
 }
 
-/* line 164, sass/_home.scss */
+/* line 224, sass/_home.scss */
 #services {
   font-size: 0;
   margin: 2% -6% 0;
 }
-/* line 168, sass/_home.scss */
+/* line 228, sass/_home.scss */
 #services .album {
   text-align: center;
   width: 25%;
@@ -610,23 +637,23 @@ body.home #main {
   font-size: 16px;
 }
 @media only screen and (max-width: 640px) {
-  /* line 168, sass/_home.scss */
+  /* line 228, sass/_home.scss */
   #services .album {
     font-size: 12px;
   }
 }
-/* line 181, sass/_home.scss */
+/* line 241, sass/_home.scss */
 #services .albumtitle {
   font-size: 112.5%;
   padding: 0;
 }
-/* line 185, sass/_home.scss */
+/* line 245, sass/_home.scss */
 #services .albumcontent {
   padding: 6% 5% 5%;
   overflow: hidden;
   position: relative;
 }
-/* line 190, sass/_home.scss */
+/* line 250, sass/_home.scss */
 #services .albumcontent a {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -653,13 +680,13 @@ body.home #main {
   -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 0 25px, rgba(255, 255, 255, 0.1) 0 0 25px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 0 25px, rgba(255, 255, 255, 0.1) 0 0 25px;
 }
-/* line 205, sass/_home.scss */
+/* line 265, sass/_home.scss */
 #services .albumcontent a:hover {
   -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0 25px, rgba(255, 255, 255, 0.4) 0 0 25px;
   -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 0 25px, rgba(255, 255, 255, 0.4) 0 0 25px;
   box-shadow: rgba(255, 255, 255, 0.4) 0 0 25px, rgba(255, 255, 255, 0.4) 0 0 25px;
 }
-/* line 212, sass/_home.scss */
+/* line 272, sass/_home.scss */
 #services .albumcontent img {
   display: block;
   -webkit-border-radius: 10px;
@@ -671,4 +698,392 @@ body.home #main {
   padding: 0;
   border: none;
   width: 100%;
+}
+
+/* line 4, sass/_not-home.scss */
+body.not-home #page-inner > * {
+  position: relative;
+}
+/* line 8, sass/_not-home.scss */
+body.not-home #page-inner > header {
+  position: relative;
+  text-align: center;
+}
+/* line 12, sass/_not-home.scss */
+body.not-home #page-inner > header hgroup {
+  margin-top: 20px;
+}
+/* line 15, sass/_not-home.scss */
+body.not-home #page-inner > header hgroup #titlearea {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px 0;
+}
+/* line 20, sass/_not-home.scss */
+body.not-home #page-inner > header hgroup span.chrome1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -webkit-border-radius: 100px 100px 0 0;
+  -moz-border-radius: 100px 100px 0 0;
+  -ms-border-radius: 100px 100px 0 0;
+  -o-border-radius: 100px 100px 0 0;
+  border-radius: 100px 100px 0 0;
+}
+/* line 30, sass/_not-home.scss */
+body.not-home #page-inner > header hgroup h1 {
+  position: relative;
+  z-index: 1;
+}
+/* line 33, sass/_not-home.scss */
+body.not-home #page-inner > header hgroup h1 a {
+  display: block;
+}
+/* line 36, sass/_not-home.scss */
+body.not-home #page-inner > header hgroup h1 a:hover {
+  animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
+  -webkit-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
+  -ms-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
+  -o-animation: LOGOFASTTHROB 1s ease-out 0 infinite normal;
+  -moz-animation-name: LOGOFASTTHROB;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-delay: 0;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+}
+/* line 39, sass/_not-home.scss */
+body.not-home #page-inner > header hgroup h1 a img {
+  width: 80%;
+}
+/* line 42, sass/_not-home.scss */
+body.not-home #page-inner > header hgroup h1 a span {
+  position: absolute;
+  left: -999em;
+}
+/* line 48, sass/_not-home.scss */
+body.not-home #page-inner > header hgroup h2 {
+  position: relative;
+  z-index: 1;
+}
+/* line 55, sass/_not-home.scss */
+body.not-home #page-inner > header nav h3 {
+  display: none;
+}
+/* line 58, sass/_not-home.scss */
+body.not-home #page-inner > header nav li {
+  position: absolute;
+  display: none;
+  font-size: 112%;
+}
+/* line 63, sass/_not-home.scss */
+body.not-home #page-inner > header nav li:first-child {
+  display: block;
+  right: 40px;
+  top: 20px;
+}
+@media only screen and (max-width: 640px) {
+  /* line 63, sass/_not-home.scss */
+  body.not-home #page-inner > header nav li:first-child {
+    right: 20px;
+  }
+}
+/* line 76, sass/_not-home.scss */
+body.not-home #page-inner #main {
+  padding-top: 1px;
+}
+/* line 79, sass/_not-home.scss */
+body.not-home #page-inner #main > span.chrome1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -webkit-border-radius: 35px 35px 0 0;
+  -moz-border-radius: 35px 35px 0 0;
+  -ms-border-radius: 35px 35px 0 0;
+  -o-border-radius: 35px 35px 0 0;
+  border-radius: 35px 35px 0 0;
+}
+/* line 90, sass/_not-home.scss */
+body.not-home #page-inner #main #primary {
+  position: relative;
+  z-index: 2;
+}
+/* line 94, sass/_not-home.scss */
+body.not-home #page-inner #main #primary article > header {
+  display: none;
+}
+
+/* line 2, sass/_fbalbum.scss */
+.fbalbum > h1 {
+  font-size: 150%;
+  margin: .8em 0;
+}
+/* line 6, sass/_fbalbum.scss */
+.fbalbum > p {
+  line-height: 120%;
+}
+/* line 9, sass/_fbalbum.scss */
+.fbalbum > ul {
+  margin: 1em 0;
+  text-align: center;
+  line-height: 0;
+}
+/* line 14, sass/_fbalbum.scss */
+.fbalbum > ul > li {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  position: relative;
+  width: 50%;
+  padding-bottom: 37.5%;
+}
+@media only screen and (min-width: 640px) {
+  /* line 14, sass/_fbalbum.scss */
+  .fbalbum > ul > li {
+    width: 33.33%;
+    padding-bottom: 24.9975%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 14, sass/_fbalbum.scss */
+  .fbalbum > ul > li {
+    width: 25%;
+    padding-bottom: 18.75%;
+  }
+}
+/* line 33, sass/_fbalbum.scss */
+.fbalbum > ul > li a {
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/* line 27, sass/_mixins.scss */
+.fbalbum > ul > li a {
+  -webkit-transition-property: box-shadow;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-box-shadow: black 0 0 0, black 0 0 0, black 0 0 0, black 0 0 0;
+  -moz-box-shadow: black 0 0 0, black 0 0 0, black 0 0 0, black 0 0 0;
+  box-shadow: black 0 0 0, black 0 0 0, black 0 0 0, black 0 0 0;
+}
+/* line 38, sass/_mixins.scss */
+.fbalbum > ul > li a:active,
+.fbalbum > ul > li a:hover {
+  -webkit-box-shadow: #999999 0 0 10px, #999999 0 0 10px, #999999 0 0 10px, #999999 0 0 10px;
+  -moz-box-shadow: #999999 0 0 10px, #999999 0 0 10px, #999999 0 0 10px, #999999 0 0 10px;
+  box-shadow: #999999 0 0 10px, #999999 0 0 10px, #999999 0 0 10px, #999999 0 0 10px;
+  text-decoration: none;
+}
+/* line 47, sass/_fbalbum.scss */
+.fbalbum > ul > li img {
+  display: none;
+}
+
+/*
+ * photoswipe.css
+ * Copyright (c) %%year%% by Code Computerlove (http://www.codecomputerlove.com)
+ * Licensed under the MIT license
+ *
+ * Default styles for PhotoSwipe
+ * Avoid any position or dimension based styles
+ * where possible, unless specified already here.
+ * The gallery automatically works out gallery item
+ * positions etc.
+ */
+/* line 15, sass/_photoswipe.scss */
+body.ps-active, body.ps-building, div.ps-active, div.ps-building {
+  background: #000;
+  overflow: hidden;
+}
+
+/* line 20, sass/_photoswipe.scss */
+body.ps-active *, div.ps-active * {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  display: none;
+}
+
+/* line 25, sass/_photoswipe.scss */
+body.ps-active *:focus, div.ps-active *:focus {
+  outline: 0;
+}
+
+/* Document overlay */
+/* line 32, sass/_photoswipe.scss */
+div.ps-document-overlay {
+  background: #000;
+}
+
+/* UILayer */
+/* line 38, sass/_photoswipe.scss */
+div.ps-uilayer {
+  background: #000;
+  cursor: pointer;
+}
+
+/* Zoom/pan/rotate layer */
+/* line 47, sass/_photoswipe.scss */
+div.ps-zoom-pan-rotate {
+  background: #000;
+}
+
+/* line 50, sass/_photoswipe.scss */
+div.ps-zoom-pan-rotate * {
+  display: block;
+}
+
+/* Carousel */
+/* line 55, sass/_photoswipe.scss */
+div.ps-carousel-item-loading {
+  background: url(loader.gif) no-repeat center center;
+}
+
+/* line 60, sass/_photoswipe.scss */
+div.ps-carousel-item-error {
+  background: url(error.gif) no-repeat center center;
+}
+
+/* Caption */
+/* line 67, sass/_photoswipe.scss */
+div.ps-caption {
+  background: #000000;
+  background: -moz-linear-gradient(top, #303130 0%, #000101 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #303130), color-stop(100%, #000101));
+  border-bottom: 1px solid #42403f;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "Lucida Grande", Helvetica, Arial,Verdana, sans-serif;
+  text-align: center;
+}
+
+/* line 77, sass/_photoswipe.scss */
+div.ps-caption * {
+  display: inline;
+}
+
+/* line 80, sass/_photoswipe.scss */
+div.ps-caption-bottom {
+  border-top: 1px solid #42403f;
+  border-bottom: none;
+  min-height: 44px;
+}
+
+/* line 87, sass/_photoswipe.scss */
+div.ps-caption-content {
+  padding: 13px;
+  display: block;
+}
+
+/* Toolbar */
+/* line 95, sass/_photoswipe.scss */
+div.ps-toolbar {
+  background: #000000;
+  background: -moz-linear-gradient(top, #303130 0%, #000101 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #303130), color-stop(100%, #000101));
+  border-top: 1px solid #42403f;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "Lucida Grande", Helvetica, Arial,Verdana, sans-serif;
+  text-align: center;
+  height: 44px;
+  display: table;
+  table-layout: fixed;
+}
+
+/* line 108, sass/_photoswipe.scss */
+div.ps-toolbar * {
+  display: block;
+}
+
+/* line 113, sass/_photoswipe.scss */
+div.ps-toolbar-top {
+  border-bottom: 1px solid #42403f;
+  border-top: none;
+}
+
+/* line 119, sass/_photoswipe.scss */
+div.ps-toolbar-close, div.ps-toolbar-previous, div.ps-toolbar-next, div.ps-toolbar-play {
+  cursor: pointer;
+  display: table-cell;
+}
+
+/* line 125, sass/_photoswipe.scss */
+div.ps-toolbar div div.ps-toolbar-content {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 0;
+  background-image: url(icons.png);
+  background-repeat: no-repeat;
+}
+
+/* line 134, sass/_photoswipe.scss */
+div.ps-toolbar-close div.ps-toolbar-content {
+  background-position: 0 0;
+}
+
+/* line 139, sass/_photoswipe.scss */
+div.ps-toolbar-previous div.ps-toolbar-content {
+  background-position: -44px 0;
+}
+
+/* line 144, sass/_photoswipe.scss */
+div.ps-toolbar-previous-disabled div.ps-toolbar-content {
+  background-position: -44px -44px;
+}
+
+/* line 149, sass/_photoswipe.scss */
+div.ps-toolbar-next div.ps-toolbar-content {
+  background-position: -132px 0;
+}
+
+/* line 154, sass/_photoswipe.scss */
+div.ps-toolbar-next-disabled div.ps-toolbar-content {
+  background-position: -132px -44px;
+}
+
+/* line 159, sass/_photoswipe.scss */
+div.ps-toolbar-play div.ps-toolbar-content {
+  background-position: -88px 0;
+}
+
+/* line 163, sass/_photoswipe.scss */
+div.ps-toolbar-play-disabled div.ps-toolbar-content {
+  background-position: -88px -44px;
+}
+
+/* Hi-res display */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  /* line 173, sass/_photoswipe.scss */
+  div.ps-toolbar div div.ps-toolbar-content {
+    -moz-background-size: 176px 88px;
+    -o-background-size: 176px 88px;
+    -webkit-background-size: 176px 88px;
+    background-size: 176px 88px;
+    background-image: url(icons-2x.png);
+  }
 }

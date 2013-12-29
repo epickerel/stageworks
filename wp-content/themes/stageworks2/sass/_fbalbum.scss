@@ -1,0 +1,52 @@
+.fbalbum {
+  > h1 {
+    font-size: 150%;
+    margin: .8em 0;
+  }
+  > p {
+    line-height: 120%;
+  }
+  > ul {
+    margin: 1em 0;
+    text-align: center;
+    line-height: 0;
+
+    > li {
+      $width-small: 50%;
+      $width-medium: 33.33%;
+      $width-large: 25%;
+      display: inline-block;
+      margin-bottom: 0.5em;
+      position: relative;
+      width: $width-small;
+      padding-bottom: $width-small * 0.75;
+
+      @media #{$query-medium} {
+        width: $width-medium;
+        padding-bottom: $width-medium * 0.75;
+      }
+      @media #{$query-large} {
+        width: $width-large;
+        padding-bottom: $width-large * 0.75;
+      }
+
+      a {
+        $margin: 8px;
+        display: block;
+        position: absolute;
+        left: $margin;
+        top: $margin;
+        right: $margin;
+        bottom: $margin;
+        @include border-radius(15px);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      @include boxLinkGlowStyle(#999, black);
+      img {
+        display: none;
+      }
+    }
+  }
+}

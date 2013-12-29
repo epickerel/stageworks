@@ -144,12 +144,23 @@ get_header(); ?>
 		</div><!-- #primary -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/responsiveslides.min.js"></script>
 <script>
-  jQuery(function(){
-    var $ = jQuery;
-    $('#page-inner > span.chrome1:first').addClass('active');
-    $('#page-inner > span.chrome2:first').addClass('active');
-    
+  (function ($) {
+    var $pageInner = $('#page-inner'),
+      src1 = $pageInner.children('span.chrome1').css('background-image').substr(4),
+      src2 = $pageInner.children('span.chrome2').css('background-image').substr(4),
+      img1 = new Image,
+      img2 = new Image;
+    img1.src = src1.substr(0, src1.indexOf(')'));
+    img2.src = src2.substr(0, src2.indexOf(')'));
+
+    $.doWhen(function () {
+      return img1.complete && img2.complete;
+    }, function () {
+      $pageInner.children('.chrome1').addClass('active');
+      $pageInner.children('.chrome2').addClass('active');
+    });
+
     $('#fbgalleries-carrousel').FBGallery({});
-  });
+  }(jQuery));
 </script>
 <?php get_footer(); ?>

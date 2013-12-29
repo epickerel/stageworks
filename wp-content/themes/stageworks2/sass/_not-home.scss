@@ -1,0 +1,101 @@
+body.not-home {
+  #page-inner {
+
+    > * {
+      position: relative;
+    }
+
+    > header {
+      position: relative;
+      text-align: center;
+
+      hgroup {
+        margin-top: 20px;
+
+        #titlearea {
+          position: relative;
+          display: inline-block;
+          padding: 10px 20px 0;
+        }
+        span.chrome1 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: black;
+          @include opacity(0.5);
+          @include border-radius(100px 100px 0 0);
+        }
+        h1 {
+          position: relative;
+          z-index: 1;
+          a {
+            display: block;
+
+            &:hover {
+              @include animation(LOGOFASTTHROB, 1s, ease-out, 0, infinite);
+            }
+            img {
+              width: 80%;
+            }
+            span {
+              position: absolute;
+              left: -999em;
+            }
+          }
+        }
+        h2 {
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      nav {
+        h3 {
+          display: none;
+        }
+        li {
+          position: absolute;
+          display: none;
+          font-size: 112%;
+
+          &:first-child {
+            display: block;
+            right: 40px;
+            top: 20px;
+
+            @media #{$query-small} {
+              right: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    #main {
+      padding-top: 1px; //prevent margin fallthrough
+
+      > span.chrome1 {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: black;
+        @include opacity(0.5);
+        @include border-radius(35px 35px 0 0);
+      }
+      #primary {
+        position: relative;
+        z-index: 2;
+
+        article > header {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
